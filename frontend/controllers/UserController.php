@@ -69,11 +69,19 @@ class UserController extends Controller
     }
 
     /**
-     * Displays homepage.
+     * 用户信息首页
      *
      * @return mixed
      */
 	public function actionIndex()
+    {
+        return $this->render('index');
+    }
+    
+    /**
+     *   个人信息详情页面
+     */
+    public function actionInfo()
     {
         $userId = yii::$app->user->id;
         $userObj = User::findOne($userId);
