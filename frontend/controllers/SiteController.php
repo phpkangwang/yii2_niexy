@@ -86,8 +86,7 @@ class SiteController extends Controller
     //项目主页面
     public function actionHome()
     {
-        return $this->render('home', [
-        ]);
+        return $this->render('home');
     }
     
     //微信回调页面

@@ -17,6 +17,7 @@ class AppAsset extends AssetBundle
         'css/other.css',
         'css/user.css',
     ];
+    public $jsOptions = ['position' => \yii\web\View::POS_HEAD];
     public $js = [
         'js/coke.js',
         'js/idangerous.swiper-2.1.min.js',
