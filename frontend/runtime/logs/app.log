@@ -12617,3 +12617,517 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1471619524.5262
     'REQUEST_TIME' => 1471619524
 ]
+2016-08-23 14:42:03 [127.0.0.1][-][-][error][yii\base\ErrorException:64] exception 'yii\base\ErrorException' with message 'Cannot redeclare frontend\assets\AppAsset::$jsOptions' in D:\wamp\www\yii2_niexy\frontend\assets\AppAsset.php:24
+Stack trace:
+#0 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\View.php(13): ::spl_autoload_call()
+#1 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\View.php(325): ::unknown()
+#2 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile()
+#3 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\Controller.php(393): yii\base\View->renderFile()
+#4 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\Controller.php(379): yii\base\Controller->renderContent()
+#5 D:\wamp\www\yii2_niexy\frontend\controllers\UserController.php(78): yii\base\Controller->render()
+#6 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\InlineAction.php(55): frontend\controllers\UserController->actionIndex()
+#7 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\InlineAction.php(55): ::call_user_func_array:{D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\InlineAction.php:55}()
+#8 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams()
+#9 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction()
+#10 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction()
+#11 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest()
+#12 D:\wamp\www\yii2_niexy\frontend\web\index.php(18): yii\base\Application->run()
+#13 {main}
+2016-08-23 14:42:03 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'user/index'
+]
+
+$_COOKIE = [
+    '_csrf-backend' => '5cf86855ea18f8c5bf6ef7652f7d2634052ebd3a5a1827fb63ef206e4fb697d7a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"4zF81vSPPXm04wl2Pg0QmoRC60evVLg7\";}'
+    'advanced-backend' => 's0es79uh9ed06nuusfet3ak0e1'
+    '_identity-backend' => '4a3dc9c4f7b235eee1c3991894d09f1c870d186b51db307394500cd8faba71e8a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[7,\"p31rKbUs3u7yh2gQoQ-r3AmJb6Lq8q5X\",2592000]\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '127.0.0.1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => '_csrf-backend=5cf86855ea18f8c5bf6ef7652f7d2634052ebd3a5a1827fb63ef206e4fb697d7a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%224zF81vSPPXm04wl2Pg0QmoRC60evVLg7%22%3B%7D; advanced-backend=s0es79uh9ed06nuusfet3ak0e1; _identity-backend=4a3dc9c4f7b235eee1c3991894d09f1c870d186b51db307394500cd8faba71e8a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B7%2C%22p31rKbUs3u7yh2gQoQ-r3AmJb6Lq8q5X%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Common Files\\microsoft shared\\TigerKin;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Common Files\\microsoft shared\\TigerKin;D:\\TortoiseGit\\bin;D:\\wamp\\bin\\php\\php5.5.12;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.9 (Win32) PHP/5.5.12 Server at 127.0.0.1 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win32) PHP/5.5.12'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/wamp/www/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp/www/'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'D:/wamp/www/yii2_niexy/frontend/web/index.php'
+    'REMOTE_PORT' => '58206'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=user/index'
+    'REQUEST_URI' => '/yii2_niexy/frontend/web/?r=user/index'
+    'SCRIPT_NAME' => '/yii2_niexy/frontend/web/index.php'
+    'PHP_SELF' => '/yii2_niexy/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1471956123.393
+    'REQUEST_TIME' => 1471956123
+]
+2016-08-23 14:42:37 [127.0.0.1][-][-][error][yii\base\InvalidConfigException] exception 'yii\base\InvalidConfigException' with message 'The directory does not exist: D:/wamp/www/yii2_niexy/frontend/web/assets' in D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\web\AssetManager.php:211
+Stack trace:
+#0 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\Object.php(107): yii\web\AssetManager->init()
+#1 [internal function]: yii\base\Object->__construct(Array)
+#2 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\di\Container.php(373): ReflectionClass->newInstanceArgs(Array)
+#3 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\di\Container.php(154): yii\di\Container->build('yii\\web\\AssetMa...', Array, Array)
+#4 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get('yii\\web\\AssetMa...', Array, Array)
+#5 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\di\ServiceLocator.php(133): yii\BaseYii::createObject(Array)
+#6 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\Application.php(600): yii\di\ServiceLocator->get('assetManager')
+#7 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\web\View.php(223): yii\base\Application->getAssetManager()
+#8 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\web\View.php(283): yii\web\View->getAssetManager()
+#9 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\web\AssetBundle.php(123): yii\web\View->registerAssetBundle('frontend\\assets...')
+#10 D:\wamp\www\yii2_niexy\frontend\views\layouts\main.php(13): yii\web\AssetBundle::register(Object(yii\web\View))
+#11 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\View.php(325): require('D:\\wamp\\www\\yii...')
+#12 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('D:\\wamp\\www\\yii...', Array)
+#13 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\Controller.php(393): yii\base\View->renderFile('D:\\wamp\\www\\yii...', Array, Object(frontend\controllers\UserController))
+#14 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\Controller.php(379): yii\base\Controller->renderContent('<<<<<<< HEAD\r\n<...')
+#15 D:\wamp\www\yii2_niexy\frontend\controllers\UserController.php(78): yii\base\Controller->render('index')
+#16 [internal function]: frontend\controllers\UserController->actionIndex()
+#17 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#18 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#19 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('index', Array)
+#20 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction('user/index', Array)
+#21 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 D:\wamp\www\yii2_niexy\frontend\web\index.php(18): yii\base\Application->run()
+#23 {main}
+2016-08-23 14:42:37 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'user/index'
+]
+
+$_COOKIE = [
+    '_csrf-backend' => '5cf86855ea18f8c5bf6ef7652f7d2634052ebd3a5a1827fb63ef206e4fb697d7a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"4zF81vSPPXm04wl2Pg0QmoRC60evVLg7\";}'
+    'advanced-backend' => 's0es79uh9ed06nuusfet3ak0e1'
+    '_identity-backend' => '4a3dc9c4f7b235eee1c3991894d09f1c870d186b51db307394500cd8faba71e8a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[7,\"p31rKbUs3u7yh2gQoQ-r3AmJb6Lq8q5X\",2592000]\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '127.0.0.1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => '_csrf-backend=5cf86855ea18f8c5bf6ef7652f7d2634052ebd3a5a1827fb63ef206e4fb697d7a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%224zF81vSPPXm04wl2Pg0QmoRC60evVLg7%22%3B%7D; advanced-backend=s0es79uh9ed06nuusfet3ak0e1; _identity-backend=4a3dc9c4f7b235eee1c3991894d09f1c870d186b51db307394500cd8faba71e8a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B7%2C%22p31rKbUs3u7yh2gQoQ-r3AmJb6Lq8q5X%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Common Files\\microsoft shared\\TigerKin;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Common Files\\microsoft shared\\TigerKin;D:\\TortoiseGit\\bin;D:\\wamp\\bin\\php\\php5.5.12;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.9 (Win32) PHP/5.5.12 Server at 127.0.0.1 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win32) PHP/5.5.12'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/wamp/www/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp/www/'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'D:/wamp/www/yii2_niexy/frontend/web/index.php'
+    'REMOTE_PORT' => '58238'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=user/index'
+    'REQUEST_URI' => '/yii2_niexy/frontend/web/?r=user/index'
+    'SCRIPT_NAME' => '/yii2_niexy/frontend/web/index.php'
+    'PHP_SELF' => '/yii2_niexy/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1471956157.231
+    'REQUEST_TIME' => 1471956157
+]
+2016-08-23 14:42:55 [127.0.0.1][-][-][error][yii\base\InvalidConfigException] exception 'yii\base\InvalidConfigException' with message 'The directory does not exist: D:/wamp/www/yii2_niexy/frontend/web/assets' in D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\web\AssetManager.php:211
+Stack trace:
+#0 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\Object.php(107): yii\web\AssetManager->init()
+#1 [internal function]: yii\base\Object->__construct(Array)
+#2 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\di\Container.php(373): ReflectionClass->newInstanceArgs(Array)
+#3 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\di\Container.php(154): yii\di\Container->build('yii\\web\\AssetMa...', Array, Array)
+#4 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get('yii\\web\\AssetMa...', Array, Array)
+#5 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\di\ServiceLocator.php(133): yii\BaseYii::createObject(Array)
+#6 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\Application.php(600): yii\di\ServiceLocator->get('assetManager')
+#7 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\web\View.php(223): yii\base\Application->getAssetManager()
+#8 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\web\View.php(283): yii\web\View->getAssetManager()
+#9 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\web\AssetBundle.php(123): yii\web\View->registerAssetBundle('frontend\\assets...')
+#10 D:\wamp\www\yii2_niexy\frontend\views\layouts\main.php(13): yii\web\AssetBundle::register(Object(yii\web\View))
+#11 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\View.php(325): require('D:\\wamp\\www\\yii...')
+#12 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('D:\\wamp\\www\\yii...', Array)
+#13 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\Controller.php(393): yii\base\View->renderFile('D:\\wamp\\www\\yii...', Array, Object(frontend\controllers\UserController))
+#14 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\Controller.php(379): yii\base\Controller->renderContent('<<<<<<< HEAD\r\n<...')
+#15 D:\wamp\www\yii2_niexy\frontend\controllers\UserController.php(78): yii\base\Controller->render('index')
+#16 [internal function]: frontend\controllers\UserController->actionIndex()
+#17 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#18 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#19 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('index', Array)
+#20 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction('user/index', Array)
+#21 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 D:\wamp\www\yii2_niexy\frontend\web\index.php(18): yii\base\Application->run()
+#23 {main}
+2016-08-23 14:42:55 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'user/index'
+]
+
+$_COOKIE = [
+    '_csrf-backend' => '5cf86855ea18f8c5bf6ef7652f7d2634052ebd3a5a1827fb63ef206e4fb697d7a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"4zF81vSPPXm04wl2Pg0QmoRC60evVLg7\";}'
+    'advanced-backend' => 's0es79uh9ed06nuusfet3ak0e1'
+    '_identity-backend' => '4a3dc9c4f7b235eee1c3991894d09f1c870d186b51db307394500cd8faba71e8a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[7,\"p31rKbUs3u7yh2gQoQ-r3AmJb6Lq8q5X\",2592000]\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '127.0.0.1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => '_csrf-backend=5cf86855ea18f8c5bf6ef7652f7d2634052ebd3a5a1827fb63ef206e4fb697d7a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%224zF81vSPPXm04wl2Pg0QmoRC60evVLg7%22%3B%7D; advanced-backend=s0es79uh9ed06nuusfet3ak0e1; _identity-backend=4a3dc9c4f7b235eee1c3991894d09f1c870d186b51db307394500cd8faba71e8a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B7%2C%22p31rKbUs3u7yh2gQoQ-r3AmJb6Lq8q5X%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Common Files\\microsoft shared\\TigerKin;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Common Files\\microsoft shared\\TigerKin;D:\\TortoiseGit\\bin;D:\\wamp\\bin\\php\\php5.5.12;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.9 (Win32) PHP/5.5.12 Server at 127.0.0.1 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win32) PHP/5.5.12'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/wamp/www/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp/www/'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'D:/wamp/www/yii2_niexy/frontend/web/index.php'
+    'REMOTE_PORT' => '58250'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=user/index'
+    'REQUEST_URI' => '/yii2_niexy/frontend/web/?r=user/index'
+    'SCRIPT_NAME' => '/yii2_niexy/frontend/web/index.php'
+    'PHP_SELF' => '/yii2_niexy/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1471956175.749
+    'REQUEST_TIME' => 1471956175
+]
+2016-08-23 14:43:12 [127.0.0.1][-][-][error][yii\base\InvalidConfigException] exception 'yii\base\InvalidConfigException' with message 'The directory does not exist: D:/wamp/www/yii2_niexy/frontend/web/assets' in D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\web\AssetManager.php:211
+Stack trace:
+#0 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\Object.php(107): yii\web\AssetManager->init()
+#1 [internal function]: yii\base\Object->__construct(Array)
+#2 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\di\Container.php(373): ReflectionClass->newInstanceArgs(Array)
+#3 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\di\Container.php(154): yii\di\Container->build('yii\\web\\AssetMa...', Array, Array)
+#4 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get('yii\\web\\AssetMa...', Array, Array)
+#5 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\di\ServiceLocator.php(133): yii\BaseYii::createObject(Array)
+#6 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\Application.php(600): yii\di\ServiceLocator->get('assetManager')
+#7 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\web\View.php(223): yii\base\Application->getAssetManager()
+#8 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\web\View.php(283): yii\web\View->getAssetManager()
+#9 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\web\AssetBundle.php(123): yii\web\View->registerAssetBundle('frontend\\assets...')
+#10 D:\wamp\www\yii2_niexy\frontend\views\layouts\main.php(13): yii\web\AssetBundle::register(Object(yii\web\View))
+#11 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\View.php(325): require('D:\\wamp\\www\\yii...')
+#12 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('D:\\wamp\\www\\yii...', Array)
+#13 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\Controller.php(393): yii\base\View->renderFile('D:\\wamp\\www\\yii...', Array, Object(frontend\controllers\UserController))
+#14 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\Controller.php(379): yii\base\Controller->renderContent('<<<<<<< HEAD\r\n<...')
+#15 D:\wamp\www\yii2_niexy\frontend\controllers\UserController.php(78): yii\base\Controller->render('index')
+#16 [internal function]: frontend\controllers\UserController->actionIndex()
+#17 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#18 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#19 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('index', Array)
+#20 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction('user/index', Array)
+#21 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 D:\wamp\www\yii2_niexy\frontend\web\index.php(18): yii\base\Application->run()
+#23 {main}
+2016-08-23 14:43:12 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'user/index'
+]
+
+$_COOKIE = [
+    '_csrf-backend' => '5cf86855ea18f8c5bf6ef7652f7d2634052ebd3a5a1827fb63ef206e4fb697d7a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"4zF81vSPPXm04wl2Pg0QmoRC60evVLg7\";}'
+    'advanced-backend' => 's0es79uh9ed06nuusfet3ak0e1'
+    '_identity-backend' => '4a3dc9c4f7b235eee1c3991894d09f1c870d186b51db307394500cd8faba71e8a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[7,\"p31rKbUs3u7yh2gQoQ-r3AmJb6Lq8q5X\",2592000]\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '127.0.0.1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => '_csrf-backend=5cf86855ea18f8c5bf6ef7652f7d2634052ebd3a5a1827fb63ef206e4fb697d7a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%224zF81vSPPXm04wl2Pg0QmoRC60evVLg7%22%3B%7D; advanced-backend=s0es79uh9ed06nuusfet3ak0e1; _identity-backend=4a3dc9c4f7b235eee1c3991894d09f1c870d186b51db307394500cd8faba71e8a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B7%2C%22p31rKbUs3u7yh2gQoQ-r3AmJb6Lq8q5X%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Common Files\\microsoft shared\\TigerKin;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Common Files\\microsoft shared\\TigerKin;D:\\TortoiseGit\\bin;D:\\wamp\\bin\\php\\php5.5.12;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.9 (Win32) PHP/5.5.12 Server at 127.0.0.1 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win32) PHP/5.5.12'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/wamp/www/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp/www/'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'D:/wamp/www/yii2_niexy/frontend/web/index.php'
+    'REMOTE_PORT' => '58255'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=user/index'
+    'REQUEST_URI' => '/yii2_niexy/frontend/web/?r=user/index'
+    'SCRIPT_NAME' => '/yii2_niexy/frontend/web/index.php'
+    'PHP_SELF' => '/yii2_niexy/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1471956192.786
+    'REQUEST_TIME' => 1471956192
+]
+2016-08-23 14:43:14 [127.0.0.1][-][-][error][yii\base\InvalidConfigException] exception 'yii\base\InvalidConfigException' with message 'The directory does not exist: D:/wamp/www/yii2_niexy/frontend/web/assets' in D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\web\AssetManager.php:211
+Stack trace:
+#0 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\Object.php(107): yii\web\AssetManager->init()
+#1 [internal function]: yii\base\Object->__construct(Array)
+#2 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\di\Container.php(373): ReflectionClass->newInstanceArgs(Array)
+#3 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\di\Container.php(154): yii\di\Container->build('yii\\web\\AssetMa...', Array, Array)
+#4 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get('yii\\web\\AssetMa...', Array, Array)
+#5 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\di\ServiceLocator.php(133): yii\BaseYii::createObject(Array)
+#6 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\Application.php(600): yii\di\ServiceLocator->get('assetManager')
+#7 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\web\View.php(223): yii\base\Application->getAssetManager()
+#8 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\web\View.php(283): yii\web\View->getAssetManager()
+#9 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\web\AssetBundle.php(123): yii\web\View->registerAssetBundle('frontend\\assets...')
+#10 D:\wamp\www\yii2_niexy\frontend\views\layouts\main.php(13): yii\web\AssetBundle::register(Object(yii\web\View))
+#11 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\View.php(325): require('D:\\wamp\\www\\yii...')
+#12 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('D:\\wamp\\www\\yii...', Array)
+#13 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\Controller.php(393): yii\base\View->renderFile('D:\\wamp\\www\\yii...', Array, Object(frontend\controllers\UserController))
+#14 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\Controller.php(379): yii\base\Controller->renderContent('<<<<<<< HEAD\r\n<...')
+#15 D:\wamp\www\yii2_niexy\frontend\controllers\UserController.php(78): yii\base\Controller->render('index')
+#16 [internal function]: frontend\controllers\UserController->actionIndex()
+#17 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#18 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#19 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('index', Array)
+#20 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction('user/index', Array)
+#21 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 D:\wamp\www\yii2_niexy\frontend\web\index.php(18): yii\base\Application->run()
+#23 {main}
+2016-08-23 14:43:14 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'user/index'
+]
+
+$_COOKIE = [
+    '_csrf-backend' => '5cf86855ea18f8c5bf6ef7652f7d2634052ebd3a5a1827fb63ef206e4fb697d7a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"4zF81vSPPXm04wl2Pg0QmoRC60evVLg7\";}'
+    'advanced-backend' => 's0es79uh9ed06nuusfet3ak0e1'
+    '_identity-backend' => '4a3dc9c4f7b235eee1c3991894d09f1c870d186b51db307394500cd8faba71e8a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[7,\"p31rKbUs3u7yh2gQoQ-r3AmJb6Lq8q5X\",2592000]\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '127.0.0.1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => '_csrf-backend=5cf86855ea18f8c5bf6ef7652f7d2634052ebd3a5a1827fb63ef206e4fb697d7a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%224zF81vSPPXm04wl2Pg0QmoRC60evVLg7%22%3B%7D; advanced-backend=s0es79uh9ed06nuusfet3ak0e1; _identity-backend=4a3dc9c4f7b235eee1c3991894d09f1c870d186b51db307394500cd8faba71e8a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B7%2C%22p31rKbUs3u7yh2gQoQ-r3AmJb6Lq8q5X%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Common Files\\microsoft shared\\TigerKin;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Common Files\\microsoft shared\\TigerKin;D:\\TortoiseGit\\bin;D:\\wamp\\bin\\php\\php5.5.12;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.9 (Win32) PHP/5.5.12 Server at 127.0.0.1 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win32) PHP/5.5.12'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/wamp/www/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp/www/'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'D:/wamp/www/yii2_niexy/frontend/web/index.php'
+    'REMOTE_PORT' => '58259'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=user/index'
+    'REQUEST_URI' => '/yii2_niexy/frontend/web/?r=user/index'
+    'SCRIPT_NAME' => '/yii2_niexy/frontend/web/index.php'
+    'PHP_SELF' => '/yii2_niexy/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1471956194.598
+    'REQUEST_TIME' => 1471956194
+]
+2016-08-23 14:43:14 [127.0.0.1][-][-][error][yii\base\InvalidConfigException] exception 'yii\base\InvalidConfigException' with message 'The directory does not exist: D:/wamp/www/yii2_niexy/frontend/web/assets' in D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\web\AssetManager.php:211
+Stack trace:
+#0 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\Object.php(107): yii\web\AssetManager->init()
+#1 [internal function]: yii\base\Object->__construct(Array)
+#2 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\di\Container.php(373): ReflectionClass->newInstanceArgs(Array)
+#3 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\di\Container.php(154): yii\di\Container->build('yii\\web\\AssetMa...', Array, Array)
+#4 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get('yii\\web\\AssetMa...', Array, Array)
+#5 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\di\ServiceLocator.php(133): yii\BaseYii::createObject(Array)
+#6 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\Application.php(600): yii\di\ServiceLocator->get('assetManager')
+#7 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\web\View.php(223): yii\base\Application->getAssetManager()
+#8 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\web\View.php(283): yii\web\View->getAssetManager()
+#9 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\web\AssetBundle.php(123): yii\web\View->registerAssetBundle('frontend\\assets...')
+#10 D:\wamp\www\yii2_niexy\frontend\views\layouts\main.php(13): yii\web\AssetBundle::register(Object(yii\web\View))
+#11 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\View.php(325): require('D:\\wamp\\www\\yii...')
+#12 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('D:\\wamp\\www\\yii...', Array)
+#13 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\Controller.php(393): yii\base\View->renderFile('D:\\wamp\\www\\yii...', Array, Object(frontend\controllers\UserController))
+#14 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\Controller.php(379): yii\base\Controller->renderContent('<<<<<<< HEAD\r\n<...')
+#15 D:\wamp\www\yii2_niexy\frontend\controllers\UserController.php(78): yii\base\Controller->render('index')
+#16 [internal function]: frontend\controllers\UserController->actionIndex()
+#17 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#18 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#19 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('index', Array)
+#20 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction('user/index', Array)
+#21 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 D:\wamp\www\yii2_niexy\frontend\web\index.php(18): yii\base\Application->run()
+#23 {main}
+2016-08-23 14:43:14 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'user/index'
+]
+
+$_COOKIE = [
+    '_csrf-backend' => '5cf86855ea18f8c5bf6ef7652f7d2634052ebd3a5a1827fb63ef206e4fb697d7a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"4zF81vSPPXm04wl2Pg0QmoRC60evVLg7\";}'
+    'advanced-backend' => 's0es79uh9ed06nuusfet3ak0e1'
+    '_identity-backend' => '4a3dc9c4f7b235eee1c3991894d09f1c870d186b51db307394500cd8faba71e8a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[7,\"p31rKbUs3u7yh2gQoQ-r3AmJb6Lq8q5X\",2592000]\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '127.0.0.1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => '_csrf-backend=5cf86855ea18f8c5bf6ef7652f7d2634052ebd3a5a1827fb63ef206e4fb697d7a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%224zF81vSPPXm04wl2Pg0QmoRC60evVLg7%22%3B%7D; advanced-backend=s0es79uh9ed06nuusfet3ak0e1; _identity-backend=4a3dc9c4f7b235eee1c3991894d09f1c870d186b51db307394500cd8faba71e8a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B7%2C%22p31rKbUs3u7yh2gQoQ-r3AmJb6Lq8q5X%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Common Files\\microsoft shared\\TigerKin;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Common Files\\microsoft shared\\TigerKin;D:\\TortoiseGit\\bin;D:\\wamp\\bin\\php\\php5.5.12;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.9 (Win32) PHP/5.5.12 Server at 127.0.0.1 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win32) PHP/5.5.12'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/wamp/www/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp/www/'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'D:/wamp/www/yii2_niexy/frontend/web/index.php'
+    'REMOTE_PORT' => '58260'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=user/index'
+    'REQUEST_URI' => '/yii2_niexy/frontend/web/?r=user/index'
+    'SCRIPT_NAME' => '/yii2_niexy/frontend/web/index.php'
+    'PHP_SELF' => '/yii2_niexy/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1471956194.789
+    'REQUEST_TIME' => 1471956194
+]
+2016-08-23 14:43:14 [127.0.0.1][-][-][error][yii\base\InvalidConfigException] exception 'yii\base\InvalidConfigException' with message 'The directory does not exist: D:/wamp/www/yii2_niexy/frontend/web/assets' in D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\web\AssetManager.php:211
+Stack trace:
+#0 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\Object.php(107): yii\web\AssetManager->init()
+#1 [internal function]: yii\base\Object->__construct(Array)
+#2 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\di\Container.php(373): ReflectionClass->newInstanceArgs(Array)
+#3 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\di\Container.php(154): yii\di\Container->build('yii\\web\\AssetMa...', Array, Array)
+#4 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get('yii\\web\\AssetMa...', Array, Array)
+#5 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\di\ServiceLocator.php(133): yii\BaseYii::createObject(Array)
+#6 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\Application.php(600): yii\di\ServiceLocator->get('assetManager')
+#7 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\web\View.php(223): yii\base\Application->getAssetManager()
+#8 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\web\View.php(283): yii\web\View->getAssetManager()
+#9 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\web\AssetBundle.php(123): yii\web\View->registerAssetBundle('frontend\\assets...')
+#10 D:\wamp\www\yii2_niexy\frontend\views\layouts\main.php(13): yii\web\AssetBundle::register(Object(yii\web\View))
+#11 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\View.php(325): require('D:\\wamp\\www\\yii...')
+#12 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('D:\\wamp\\www\\yii...', Array)
+#13 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\Controller.php(393): yii\base\View->renderFile('D:\\wamp\\www\\yii...', Array, Object(frontend\controllers\UserController))
+#14 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\Controller.php(379): yii\base\Controller->renderContent('<<<<<<< HEAD\r\n<...')
+#15 D:\wamp\www\yii2_niexy\frontend\controllers\UserController.php(78): yii\base\Controller->render('index')
+#16 [internal function]: frontend\controllers\UserController->actionIndex()
+#17 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#18 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#19 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('index', Array)
+#20 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction('user/index', Array)
+#21 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 D:\wamp\www\yii2_niexy\frontend\web\index.php(18): yii\base\Application->run()
+#23 {main}
+2016-08-23 14:43:14 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'user/index'
+]
+
+$_COOKIE = [
+    '_csrf-backend' => '5cf86855ea18f8c5bf6ef7652f7d2634052ebd3a5a1827fb63ef206e4fb697d7a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"4zF81vSPPXm04wl2Pg0QmoRC60evVLg7\";}'
+    'advanced-backend' => 's0es79uh9ed06nuusfet3ak0e1'
+    '_identity-backend' => '4a3dc9c4f7b235eee1c3991894d09f1c870d186b51db307394500cd8faba71e8a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[7,\"p31rKbUs3u7yh2gQoQ-r3AmJb6Lq8q5X\",2592000]\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '127.0.0.1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => '_csrf-backend=5cf86855ea18f8c5bf6ef7652f7d2634052ebd3a5a1827fb63ef206e4fb697d7a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%224zF81vSPPXm04wl2Pg0QmoRC60evVLg7%22%3B%7D; advanced-backend=s0es79uh9ed06nuusfet3ak0e1; _identity-backend=4a3dc9c4f7b235eee1c3991894d09f1c870d186b51db307394500cd8faba71e8a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B7%2C%22p31rKbUs3u7yh2gQoQ-r3AmJb6Lq8q5X%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Common Files\\microsoft shared\\TigerKin;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Common Files\\microsoft shared\\TigerKin;D:\\TortoiseGit\\bin;D:\\wamp\\bin\\php\\php5.5.12;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.9 (Win32) PHP/5.5.12 Server at 127.0.0.1 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win32) PHP/5.5.12'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/wamp/www/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp/www/'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'D:/wamp/www/yii2_niexy/frontend/web/index.php'
+    'REMOTE_PORT' => '58261'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=user/index'
+    'REQUEST_URI' => '/yii2_niexy/frontend/web/?r=user/index'
+    'SCRIPT_NAME' => '/yii2_niexy/frontend/web/index.php'
+    'PHP_SELF' => '/yii2_niexy/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1471956194.928
+    'REQUEST_TIME' => 1471956194
+]
