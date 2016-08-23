@@ -77,7 +77,13 @@ class UserController extends Controller
     {
         return $this->render('index');
     }
-    
+    /**
+    *  注册手机
+    */
+    public function actionTelRegister()
+    {
+        return $this->render('telregister');
+    }
     /**
      *   个人信息详情页面
      */

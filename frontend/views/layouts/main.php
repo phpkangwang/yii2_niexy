@@ -14,74 +14,33 @@ AppAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
-<html lang="<?= Yii::$app->language ?>">
+<html lang="en">
 <head>
-    <meta charset="<?= Yii::$app->charset ?>">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta http-equiv="pragma" content="no-cache" />
+    <script charset="utf-8"  type="text/javascript" src="js/jquery.1.8.0.min.js"></script>
     <?= Html::csrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
- 
 </head>
 <body>
 <?php $this->beginBody() ?>
-<div class="moveleft">
- <div class="mlwarp">
-	<i class="mlgomr"></i>
- </div>
- <!-- header -->
-	
- <div id="header">
-  
-    <div class="hewarp">
-		<ul>
-			<li class="index">
-				<a href="<?= Yii::$app->urlManager->createUrl('site/index')?>" title="店铺首页" >
-				<img src="images/top1.png" alt=""/>
-				 首 页
-				</a>
-			</li>
-            
-            	<li class="history">
-			<a href="show/list.asp" title="产品列表">
-				<img src="images/top4.png" alt=""/>
-				我要吃饭 
-			  </a>
-			</li>
-			
-            
-			<li class="narcar">
-			  <a href="<?= Yii::$app->urlManager->createUrl('car/index')?>"  title="我的购物车" >
-				<img src="images/top3.png" alt=""/>
-				购物车
-			 
-			  <span class="count">0</span>  <!-- 加入购物车的数量 --> </a>
-			</li>
-		
-            
-            <li>
-			<a href="<?= Yii::$app->urlManager->createUrl('user/index')?>"  title="会员中心">  
-				<img src="images/top2.png" alt=""/>
-				会员中心
-			  </a>
-			</li>
-            
-		   <li class="classify">
-			<span>
- <a href="javascript:void(0);" onclick="show();">
-				<img src="images/top5.png" alt="">
-				更多分类</a>
-			</span> 
-			</li>
-		</ul>
-	</div>
-  
- </div>
 
 
+
+
+<div class="bottommenu">
+    <a class="top1"><img src="images/top1.png" /><em>首页</em></a><!--
+    --><a class="top2"><img src="images/top4.png" /><em>我要吃饭</em></a><!--
+    --><a class="top3"><img src="images/top3.png" /><em>购物车</em></a><!--
+    --><a class="top4"><img src="images/top2.png" /><em>会员中心</em></a>
+</div>
 <?= Alert::widget() ?>
 <?= $content ?>
-
 <?php $this->endBody() ?>
 </body>
 </html>
