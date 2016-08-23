@@ -1,6 +1,7 @@
 <?php
    $this->title = "个人中心"; 
 ?>
+<<<<<<< HEAD
 <div class="userinfo-top">
     
    <div class="userinfo-head"><img src="images/1.jpg" /></div>
@@ -49,3 +50,10 @@
 
 
 
+=======
+ <input type="text" id="aaa">
+<script>
+
+  alert($("#aaa").val());
+</script>
+>>>>>>> bc5bb9aecf4d7cab2d2a361093b33e76aeba41cb
