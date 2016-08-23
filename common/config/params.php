@@ -30,6 +30,6 @@ return [
     
     'IMAGE_FILE' => [
             'TYPE' => ["image/jpg", "image/jpeg", "image/png"],//限制上传图片的格式
-            'MAXSIZE' => 1024*1024*2,//上传图片最大不能大于2M
+            'MAXSIZE' => 1024*1024*2,//上传图片最大不能大于2M 
             ],
 ];
