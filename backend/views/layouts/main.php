@@ -9,6 +9,7 @@ use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use common\widgets\Alert;
+use yii\helpers\Url;
 
 AppAsset::register($this);
 ?>
@@ -19,7 +20,7 @@ AppAsset::register($this);
     <meta charset="<?= Yii::$app->charset ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?= Html::csrfMetaTags() ?>
-    <title><?= Html::encode($this->title) ?></title>
+    <title>后台管理</title>
     <?php $this->head() ?>
 </head>
 <body>
@@ -28,26 +29,23 @@ AppAsset::register($this);
 <div class="wrap">
     <?php
     NavBar::begin([
-        'brandLabel' => 'My Company',
+        'brandLabel' => '后台管理',
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
             'class' => 'navbar-inverse navbar-fixed-top',
         ],
     ]);
     $menuItems = [
-        ['label' => 'Home', 'url' => ['/site/index']],
+        ['label' => '管理首页', 'url' => ['/site/index']],
     ];
     if (Yii::$app->user->isGuest) {
-        $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
+        $menuItems[] = ['label' => '登陆', 'url' => ['/site/login']];
     } else {
-        $menuItems[] = '<li>'
-            . Html::beginForm(['/site/logout'], 'post')
-            . Html::submitButton(
-                'Logout (' . Yii::$app->user->identity->username . ')',
-                ['class' => 'btn btn-link']
-            )
-            . Html::endForm()
-            . '</li>';
+        $menuItems[] = [
+            'label' => '登出 (' . Yii::$app->user->identity->username . ')',
+            'url' => ['/site/logout'],
+            'linkOptions' => ['data-method' => 'post']
+        ];
     }
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],
@@ -56,23 +54,36 @@ AppAsset::register($this);
     NavBar::end();
     ?>
 
-    <div class="container">
+    <div class="containers main-layout">
         <?= Breadcrumbs::widget([
             'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
         ]) ?>
-        <?= Alert::widget() ?>
-        <?= $content ?>
+        <?= Alert::widget(['options' => ['class' => 'backend-alert']]) ?>
+        <div class="row">
+          <?php if(!Yii::$app->user->isGuest) { ?>
+          <div class=" sidebar">
+            <ul class="nav nav-sidebar">
+              <li><a href="<?= Url::to(['user/index']) ?>">用户管理</a></li>
+              <li><a href="<?= Url::to(['goods/index']) ?>">商品管理</a></li>
+              <li><a href="">拾香得味</a></li>
+              <li><a href="">拾香得味</a></li>
+              <li><a href="">拾香得味</a></li>
+              <li><a href="">拾香得味</a></li>
+              <li><a href="">拾香得味</a></li>
+            </ul>
+            <div class="footer">
+              <p class="pull-left">&copy; 驿渡网 <?= date('Y') ?>
+                <span class="glyphicon glyphicon-heart" style="color:#FF3B30;"></span>
+              </p>
+            </div>
+          </div>
+          <?php } ?>
+          <div class=" main position-sty">
+            <?= $content ?>
+          </div>
+        </div>
     </div>
 </div>
-
-<footer class="footer">
-    <div class="container">
-        <p class="pull-left">&copy; My Company <?= date('Y') ?></p>
-
-        <p class="pull-right"><?= Yii::powered() ?></p>
-    </div>
-</footer>
-
 <?php $this->endBody() ?>
 </body>
 </html>
