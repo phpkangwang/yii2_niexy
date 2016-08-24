@@ -86,7 +86,7 @@ class User extends ActiveRecord implements IdentityInterface
         $user->username = $wxInfo_obj['nickname'];
         $user->sex = $wxInfo_obj['sex'];
         $user->province = $wxInfo_obj['province'];
-        $user->headimgurl = $wxInfo_obj['headimgurl'];
+        $user->wx_imgurl = $wxInfo_obj['headimgurl'];
         $user->last_ip = tool::getIp();
         $user->created_at = time();
         $user->updated_at = time();

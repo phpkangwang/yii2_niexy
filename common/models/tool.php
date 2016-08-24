@@ -4,7 +4,6 @@ namespace  common\models;
 
 use Yii;
 use yii\base\Model;
-use yii\imagine\Image;
 use linslin\yii2\curl\Curl;
 
 class tool extends Model
@@ -61,7 +60,7 @@ class tool extends Model
         $arrImageType = explode("/", $type);
         $image['site'] = Yii::getAlias('@imgcdn').$url;//文件位置
 		tool::createFolders($image['site']);
-        $image['name'] = date("YmdHis",time()).time().rand(10000,99999).".".$arrImageType[1];//生成随机文件名称
+        $image['name'] = date("YmdHis",time()).rand(10000,99999).".".$arrImageType[1];//生成随机文件名称
         $image['url']  = $image['site'].$image['name'];//文件路径
         $image['saveUrl'] = $url.$image['name'];//数据库保存的路径
         
@@ -70,7 +69,34 @@ class tool extends Model
         $reInfo['code'] = 1;
         $reInfo['message'] = "";
         $reInfo['data']['url'] = $image['saveUrl'];
+        
+        //生成缩略图
+        $imagename = explode('.', $image['name']);
+        $s_imageName = $image['site'].$imagename[0].'_s.'.$arrImageType[1];
+        
+        self::img_create_small($image['url'], yii::$app->params['IMAGE_FILE_SMALL']['WIDTH'], yii::$app->params['IMAGE_FILE_SMALL']['HEIGHT'], $s_imageName);
         return $reInfo;
+    }
+    
+    
+    public static function img_create_small($big_img, $width, $height, $small_img) {//原始大图地址，缩略图宽度，高度，缩略图地址
+        $imgage = getimagesize($big_img); //得到原始大图片
+        switch ($imgage[2]) { // 图像类型判断
+            case 1:
+                $im = imagecreatefromgif($big_img);
+                break;
+            case 2:
+                $im = imagecreatefromjpeg($big_img);
+                break;
+            case 3:
+                $im = imagecreatefrompng($big_img);
+                break;
+        }
+        $src_W = $imgage[0]; //获取大图片宽度
+        $src_H = $imgage[1]; //获取大图片高度
+        $tn = imagecreatetruecolor($width, $height); //创建缩略图
+        imagecopyresampled($tn, $im, 0, 0, 0, 0, $width, $height, $src_W, $src_H); //复制图像并改变大小
+        imagejpeg($tn, $small_img); //输出图像
     }
 
 	//创建目录

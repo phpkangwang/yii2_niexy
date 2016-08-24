@@ -18,8 +18,6 @@ $this->title = '后台管理';
           <label>大图片</label>
           <?= Html::fileInput('b_image') ?>
           </br>
-          <label>小图片</label>
-          <?= Html::fileInput('s_image') ?>
           <div class="form-group">
             <?= Html::submitButton($model->isNewRecord ? '创建' : '保存', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
           </div>

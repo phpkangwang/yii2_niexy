@@ -109,22 +109,14 @@ class GoodsController extends Controller
                 $url     = "/images/goods/";
                 $rsImage = tool::uploadImage($name, $type, $tmpName, $size, $url);
                 $model->b_image = $rsImage['data']['url'];
-            }
-            if($_FILES['s_image']['type'] != "")
-            {
-                $name    = $_FILES['s_image']['name'];
-                $type    = $_FILES['s_image']['type'];
-                $tmpName = $_FILES['s_image']['tmp_name'];
-                $size    = $_FILES['s_image']['size'];
-                $url     = "/images/goods/";
-                $rsImage = tool::uploadImage($name, $type, $tmpName, $size, $url);
-                $model->s_image = $rsImage['data']['url'];
+                $imagename = explode('.', $rsImage['data']['url']);
+                $model->s_image = $imagename[0].'_s.'.$imagename[1];
             }
             if($model->validate()){
                 $model->save();
-                Yii::$app->session->setFlash('success', '修改成功');
+                Yii::$app->session->setFlash('success', '创建成功');
             }else{
-                Yii::$app->session->setFlash('success', '修改失败');
+                Yii::$app->session->setFlash('success', '创建失败');
             }
                 return $this->redirect(['index']);
             }
@@ -134,9 +126,32 @@ class GoodsController extends Controller
     //修改用户信息
     public function actionUpdate($id)
     {
-      $model = User::findOne($id);
+      $model = Goods::findOne($id);
       if(yii::$app->request->post()){
-          
+          $POST = yii::$app->request->post('Goods');
+          $model->name        = $POST['name'];
+          $model->description = $POST['description'];
+          $model->price       = $POST['price'];
+          $model->created_at  = time();
+          if($_FILES['b_image']['type'] != "")
+          {
+              $name    = $_FILES['b_image']['name'];
+              $type    = $_FILES['b_image']['type'];
+              $tmpName = $_FILES['b_image']['tmp_name'];
+              $size    = $_FILES['b_image']['size'];
+              $url     = "/images/goods/";
+              $rsImage = tool::uploadImage($name, $type, $tmpName, $size, $url);
+              $model->b_image = $rsImage['data']['url'];
+              $imagename = explode('.', $rsImage['data']['url']);
+              $model->s_image = $imagename[0].'_s.'.$imagename[1];
+          }
+          if($model->validate()){
+              $model->save();
+              Yii::$app->session->setFlash('success', '修改成功');
+          }else{
+              Yii::$app->session->setFlash('success', '修改失败');
+          }
+          return $this->redirect(['index']);
       }
       return $this->render('update', ['model' => $model]);
     }
