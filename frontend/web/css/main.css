@@ -1,0 +1,316 @@
+
+body{
+  font-size: 16px;
+  font-family: 'Microsoft Yahei' !important;
+  background: #f0f0f0;
+}
+input{outline:0px;}
+p{
+  margin: 0 !important;
+  padding: 0 !important;
+}
+a{
+  color: #fff;
+  text-decoration: none;
+}
+a:hover{
+  color: #fff;
+  text-decoration: none;
+}
+
+/*up*/
+.up3{
+  margin-top: 3.33%;
+}
+.up33{
+  margin-top: 33.3%;
+}
+.up6{
+  margin-top: 6.66%;
+}
+.up66{
+  margin-top: 66.6%;
+}
+.up9{
+  margin-top: 9.99%;
+}
+.up99{
+  margin-top: 99.9%;
+}
+/*down*/
+.down3{
+  margin-bottom: 3.33%;
+}
+.down33{
+  margin-bottom: 33.3%;
+}
+.down6{
+  margin-bottom: 6.66%;
+}
+.down66{
+  margin-bottom: 66.6%;
+}
+.down9{
+  margin-bottom: 9.99%;
+}
+.down99{
+  margin-bottom: 99.9%;
+}
+
+
+
+
+.frame{
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+.box{
+  width: 96%;
+  margin: 0 auto;
+}
+.input-frame{
+  margin-top: 9.99%;
+  width: 100%;
+  background: #fff;
+  border: 1px solid #e1e1e1;
+  float: left;
+}
+.input-tel{
+  width:100%;
+  padding: 2.33%;
+  border-bottom: 1px solid #e1e1e1;
+  float: left;
+}
+.input-qh{
+  width: 18%;
+  margin-top: 1.33%;
+  border-right: 1px solid #d7d7d7;
+  float: left;
+}
+.input-qh > span{
+ margin-left: 10%;
+ color: #e1e1e1;
+}
+
+  .arrow-down{
+    position: relative;
+  }
+  .arrow-down:after, .arrow-down:before {
+    border: 10px solid transparent;
+    border-left: 10px solid #fff;
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 0;
+    right: -20px;
+    content: ' '
+  }
+
+  .arrow-down:before {
+    border-left-color: #c7c7cc;
+    right: -21px;
+  }
+
+.input-txt{
+  width: 50%;
+  float: left;
+  margin-left: 5px;
+  margin-top: 1.33%;
+}
+.input-txt > p {
+  margin: 0px 0px 0px 0px;
+}
+.input-a{
+  color: #000;
+  border: 1px solid #ccc;
+  padding: 1.33% 3.33% 1.33% 3.33%;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  float: right;
+}
+
+
+.input-yzm{
+  width:100%;
+  padding: 2.33%;
+  border-bottom: 1px solid #d7d7d7;
+  float: left;
+  font-size: 1.4rem;
+}
+.input-yzm-t{
+  width: 18%;
+  float: left;
+}
+.input-yzm-i{
+  width: 70%;
+  float: left;
+  margin-left: 5px;
+}
+.input-yzm-i > input {
+  border: none;
+}
+.login-a{
+  float: left;
+  width: 100%;
+  padding: 1.33%;
+  background: #f6b9a4;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  color: #fff;
+  font-size: 1.8rem;
+}
+.login-a:hover{
+  background: #e49276;
+  color: #fff;
+}
+
+
+.weixin-frame{
+  margin-top: 9.99%;
+  width: 100%;
+  background: #fff;
+  border: 1px solid #e1e1e1;
+  float: left;
+}
+.weixin-toux{
+  width: 100%;
+  float: left;
+  padding: 3.33%;
+  background: #fff;
+}
+.toux{
+  float: left;
+  background: #d7d7d7;
+  /*border: 1px solid #ddd;*/
+  border-radius: 10px;
+  overflow: hidden;
+}
+.toux > img{
+  width: 50px;
+  height: 50px;
+}
+.toux-name{
+  float: left;
+  font-size: 1.2rem;
+  margin-left: 3%;
+}
+.name-h{
+  font-size: 1.6rem;
+}
+.arrow {
+  width: 3%;
+  float: right;
+  margin-right: 3%;
+  margin-top: 3%;
+}
+
+
+.weixin-list{
+  width: 100%;
+  float: left;
+  padding: 1.33% 3.33% 1.33% 3.33%;
+  background: #fff;
+  border-top: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
+}
+.weixin-list2{
+  width: 100%;
+  float: left;
+  padding: 1.33% 3.33% 1.33% 3.33%;
+  background: #fff;
+}
+
+.list{
+  float: left;
+  background: #d7d7d7;
+  /*border: 1px solid #ddd;*/
+  overflow: hidden;
+}
+.list > img{
+  width: 30px;
+  height: 20px;
+}
+.list-name{
+  float: left;
+  font-size: 1.2rem;
+  margin-left: 3%;
+}
+.list-arrow {
+  width: 3%;
+  float: right;
+  margin-right: 3%;
+}
+
+
+
+.clear-up3{
+  clear: both;
+  margin-top: 3.33%;
+}
+.clear-up33{
+  clear: both;
+  margin-top: 33.3%;
+}
+.clear-up6{
+  clear: both;
+  margin-top: 6.66%;
+}
+.clear-up66{
+  clear: both;
+  margin-top: 66.6%;
+}
+.clear-up9{
+  clear: both;
+  margin-top: 9.9%;
+}
+.clear-up99{
+  clear: both;
+  margin-top: 99.9%;
+}
+
+
+.sale-frame{
+  margin-top: 9.99%;
+  width: 100%;
+  background: #fff;
+  border: 1px solid #e1e1e1;
+  float: left;
+}
+.sale-titel{
+  width:100%;
+  padding: 2.33%;
+  border-bottom: 1px solid #e1e1e1;
+  float: left;
+}
+
+
+.sale-toux{
+  width: 100%;
+  float: left;
+  padding: 3.33%;
+  background: #fff;
+}
+.sale-img{
+  float: left;
+  background: #d7d7d7;
+  /*border: 1px solid #ddd;*/
+  overflow: hidden;
+}
+.sale-img > img{
+  width: 80px;
+  height: 80px;
+}
+.sale-name{
+  float: left;
+  font-size: 1.2rem;
+  margin-left: 3%;
+}
+.sale-name-h{
+  font-size: 1.6rem;
+}
+.sale-name-fl{
+  color: #999;
+  font-size: 1.2rem;
+}
