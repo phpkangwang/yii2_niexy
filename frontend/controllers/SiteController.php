@@ -75,12 +75,19 @@ class SiteController extends Controller
      */
 	public function actionIndex()
     {
-        $appid = yii::$app->params['APP_ID'];
-        $REDIRECT_URI =  Yii::$app->request->hostInfo.Yii::$app->urlManager->createUrl('site/wx-call-back');
-        //$scope='snsapi_base';
-        $scope='snsapi_userinfo';//需要授权
-        $url='https://open.weixin.qq.com/connect/oauth2/authorize?appid='.$appid.'&redirect_uri='.urlencode($REDIRECT_URI).'&response_type=code&scope='.$scope.'&state=1#wechat_redirect';
-        header("Location:".$url);
+        if(Yii::$app->user->isGuest)
+        {
+            $appid = yii::$app->params['APP_ID'];
+            $REDIRECT_URI =  Yii::$app->request->hostInfo.Yii::$app->urlManager->createUrl('site/wx-call-back');
+            //$scope='snsapi_base';
+            $scope='snsapi_userinfo';//需要授权
+            $url='https://open.weixin.qq.com/connect/oauth2/authorize?appid='.$appid.'&redirect_uri='.urlencode($REDIRECT_URI).'&response_type=code&scope='.$scope.'&state=1#wechat_redirect';
+            header("Location:".$url);
+        }
+        else{
+            return $this->redirect(['site/home']);
+        }
+        
     }
     
     //项目主页面

@@ -221,70 +221,8 @@ $this->title = yii::$app->params['WEB_TITLE'];
 <!-- 热门商品 END -->
 
 
-
-<!-- footer -->
-	 
-  <div id="footer" class="clear">
-	<div class="footerwarp">
-		<div class="fttop clearfix">
-			<ul>
-				<li><a href="default.htm" title="店铺首页" >商户首页</a></li>
-				<li><a href="user/default.htm"  title="会员中心">  会员中心</a></li>
-				<li><a href="user/about.asp@id=1"  title="关于我们" >关于我们</a></li>
-			</ul>
-		</div>
-		
-	</div>
-</div>
- 
- <!-- footer END -->
-
 </div>
 
-
-
-<div class="moveright moveright_p" id="pop"  style="display:none;z-index:9999">
-	<div class="mrwarp">
-		<div class=""><strong>栏目分类</strong></div>
-		<div class="mrtype">
-			<ul>
-            
-                  
-  <li> <a href="/show/list.asp?flid=1"> 甜品点心 </a>  </li>
-
-	        
-  <li> <a href="/show/list.asp?flid=2"> 海鲜 </a>  </li>
-
-	        
-  <li> <a href="/show/list.asp?flid=3"> 凉菜 </a>  </li>
-
-	        
-  <li> <a href="/show/list.asp?flid=4"> 酒水 </a>  </li>
-
-	        
-  <li> <a href="/show/list.asp?flid=5"> 汤类 </a>  </li>
-
-	        
-  <li> <a href="/show/list.asp?flid=9"> 炒菜 </a>  </li>
-
-	        
-				 
- 	
-				
-			</ul>
-		</div>
-	</div>
-</div>
-
-
-
-<!-- 右边隐藏的内容 -->
- 
-<!-- 右边隐藏的内容 END -->
-<script src="js/RefreshCarCount.js" type="text/javascript"></script>
-
-
-<script src="js/idangerous.swiper-2.1.min.js" type="text/javascript"></script>
 <script>
   var mySwiper = new Swiper('.swiper-container',{
     pagination: '.pagination',
