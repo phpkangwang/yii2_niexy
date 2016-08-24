@@ -13,6 +13,7 @@ class AppAsset extends AssetBundle
     public $basePath = '@webroot';
     public $baseUrl = '@web';
     public $css = [
+	'css/main.css',
         'css/common.css',
         'css/dsj.css',
         'css/other.css',
@@ -22,6 +23,7 @@ class AppAsset extends AssetBundle
         'css/bootstrap-theme.min.css',
     ];
     public $js = [
+	'js/main.js',
         'js/coke.js',
         'js/idangerous.swiper-2.1.min.js',
         'js/bootstrap.min.js',
