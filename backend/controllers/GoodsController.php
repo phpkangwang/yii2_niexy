@@ -116,14 +116,14 @@ class GoodsController extends Controller
                 $model->save();
                 Yii::$app->session->setFlash('success', '创建成功');
             }else{
-                Yii::$app->session->setFlash('success', '创建失败');
+                Yii::$app->session->setFlash('error', '创建失败');
             }
                 return $this->redirect(['index']);
             }
         return $this->render('create', ['model' => $model]);
     }
     
-    //修改用户信息
+    //修改商品信息
     public function actionUpdate($id)
     {
       $model = Goods::findOne($id);
@@ -149,7 +149,7 @@ class GoodsController extends Controller
               $model->save();
               Yii::$app->session->setFlash('success', '修改成功');
           }else{
-              Yii::$app->session->setFlash('success', '修改失败');
+              Yii::$app->session->setFlash('error', '修改失败');
           }
           return $this->redirect(['index']);
       }
@@ -157,7 +157,7 @@ class GoodsController extends Controller
     }
 
     /**
-     *  禁止用户
+     *  删除用户
      */
     public function actionDelete($id)
     {
@@ -165,10 +165,30 @@ class GoodsController extends Controller
         if($model->delete()){
             Yii::$app->session->setFlash('success', '修改成功');
         }else{
-            Yii::$app->session->setFlash('success', '修改失败');
+            Yii::$app->session->setFlash('error', '修改失败');
         }
         return $this->redirect(['index']);
         
+    }
+    
+    //商品首页推荐
+    public function actionIndexShow($id)
+    {
+        $model = Goods::findOne($id);
+        if($model->index_show == yii::$app->params['GOODS_INDEX_SHOW_NOT'])
+        {
+            //推荐变成不推荐
+            $model->index_show = yii::$app->params['GOODS_INDEX_SHOW'];
+        }else{
+            //不推荐编程推荐
+            $model->index_show = yii::$app->params['GOODS_INDEX_SHOW_NOT'];
+        }
+        if($model->save()){
+            Yii::$app->session->setFlash('success', '推荐成功');
+        }else{
+            Yii::$app->session->setFlash('success', '推荐失败');
+        }
+        return $this->redirect(['index']);
     }
 
 }

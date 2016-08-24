@@ -35,5 +35,7 @@ return [
     'IMAGE_FILE_SMALL'=>[
             'WIDTH' => '80',
             'HEIGHT' => '80',
-    ]
+    ],
+    'GOODS_INDEX_SHOW_NOT'=> 1,//商品首页不推荐
+    'GOODS_INDEX_SHOW'=> 2,//商品首页推荐
 ];
