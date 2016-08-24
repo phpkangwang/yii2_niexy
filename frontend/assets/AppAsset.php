@@ -15,10 +15,7 @@ class AppAsset extends AssetBundle
     public $css = [
 	'css/main.css',
         'css/common.css',
-        'css/dsj.css',
         'css/other.css',
-        'css/user.css',
-        'css/userinfo.css',
         'css/bootstrap.min.css',
         'css/bootstrap-theme.min.css',
     ];
@@ -27,10 +24,6 @@ class AppAsset extends AssetBundle
         'js/coke.js',
         'js/idangerous.swiper-2.1.min.js',
         'js/bootstrap.min.js',
-        'js/jquery.cookie.js',
-        'js/js.js',
-        'js/RefreshCarCount.js',
-        'js/vali_form.js',
     ];
     public $depends = [
         'yii\web\YiiAsset',

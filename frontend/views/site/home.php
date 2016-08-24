@@ -126,92 +126,19 @@ $this->title = yii::$app->params['WEB_TITLE'];
 	    <div class="hotswiper">
 			
 			 <ul class="swiper-wrapper"> 
-                  
+              <?php if(!empty($show)){
+                  foreach ($show as $val){
+              ?>
               <li class="swiper-slide bgstyle">
-					 <a href="show/@id=159"> 
-					<span class="pic"><img src="image/20130904/20130904100151465146.jpg" alt="点击查看详情"  height="80px" width="100px"/></span>
-					<span class="name">鱼虾水蒸蛋 </span>
-                    <span class="name"><em>单价：</em><font color="#00CC33">20</font>元</span>
+					<a href="<?= yii::$app->urlManager->createUrl('goods/info')."&id=".$val['id']?>"> 
+					<span class="pic"><img src="<?= Yii::getAlias('@cdnUrl').$val['s_image']?>" alt="点击查看详情"  height="80px" width="100px"/></span>
+					<span class="name"><?= $val['name']?> </span>
+                    <span class="name"><em>单价：</em><font color="#00CC33"><?= $val['price']?></font>元</span>
 					</a>
 				</li>  
-                  
-                       
-              <li class="swiper-slide bgstyle">
-					 <a href="show/@id=158"> 
-					<span class="pic"><img src="image/20130904/20130904151473157315.jpg" alt="点击查看详情"  height="80px" width="100px"/></span>
-					<span class="name">番茄炒蛋</span>
-                    <span class="name"><em>单价：</em><font color="#00CC33">12</font>元</span>
-					</a>
-				</li>  
-                  
-                       
-              <li class="swiper-slide bgstyle">
-					 <a href="show/@id=154"> 
-					<span class="pic"><img src="image/20130905/20130905135684308430.jpg" alt="点击查看详情"  height="80px" width="100px"/></span>
-					<span class="name">杏仁露</span>
-                    <span class="name"><em>单价：</em><font color="#00CC33">16</font>元</span>
-					</a>
-				</li>  
-                  
-                       
-              <li class="swiper-slide bgstyle">
-					 <a href="show/@id=152"> 
-					<span class="pic"><img src="image/20130904/20130904090294299429.jpg" alt="点击查看详情"  height="80px" width="100px"/></span>
-					<span class="name">凯撒沙拉</span>
-                    <span class="name"><em>单价：</em><font color="#00CC33">10</font>元</span>
-					</a>
-				</li>  
-                  
-                       
-              <li class="swiper-slide bgstyle">
-					 <a href="show/@id=151"> 
-					<span class="pic"><img src="image/20130904/20130904183222312231.jpg" alt="点击查看详情"  height="80px" width="100px"/></span>
-					<span class="name">桂花胭脂藕</span>
-                    <span class="name"><em>单价：</em><font color="#00CC33">16</font>元</span>
-					</a>
-				</li>  
-                  
-                       
-              <li class="swiper-slide bgstyle">
-					 <a href="show/@id=147"> 
-					<span class="pic"><img src="image/20130904/20130904182451395139.jpg" alt="点击查看详情"  height="80px" width="100px"/></span>
-					<span class="name">红莓蛋挞 </span>
-                    <span class="name"><em>单价：</em><font color="#00CC33">10</font>元</span>
-					</a>
-				</li>  
-                  
-                       
-              <li class="swiper-slide bgstyle">
-					 <a href="show/@id=144"> 
-					<span class="pic"><img src="image/20130904/20130904184281428142.jpg" alt="点击查看详情"  height="80px" width="100px"/></span>
-					<span class="name">泡椒虾 </span>
-                    <span class="name"><em>单价：</em><font color="#00CC33">10</font>元</span>
-					</a>
-				</li>  
-                  
-                       
-              <li class="swiper-slide bgstyle">
-					 <a href="show/@id=143"> 
-					<span class="pic"><img src="image/20130904/20130904095891119111.jpg" alt="点击查看详情"  height="80px" width="100px"/></span>
-					<span class="name">清蒸青口贝 </span>
-                    <span class="name"><em>单价：</em><font color="#00CC33">14</font>元</span>
-					</a>
-				</li>  
-                  
-                       
-              <li class="swiper-slide bgstyle">
-					 <a href="show/@id=142"> 
-					<span class="pic"><img src="image/20130904/20130904184463706370.jpg" alt="点击查看详情"  height="80px" width="100px"/></span>
-					<span class="name">章鱼小丸子</span>
-                    <span class="name"><em>单价：</em><font color="#00CC33">16</font>元</span>
-					</a>
-				</li>  
-                  
-                       
-             
-                  
-             
-                 
+              <?php 
+                  }//end foreach
+                  }//end if?>    
  
 			 </ul>
 			

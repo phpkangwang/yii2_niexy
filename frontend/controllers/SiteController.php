@@ -15,6 +15,7 @@ use frontend\models\ContactForm;
 use common\models\User;
 use common\models\tool;
 use common\models\BaseGlobal;
+use common\models\Goods;
 
 /**
  * Site controller
@@ -93,7 +94,9 @@ class SiteController extends Controller
     //项目主页面
     public function actionHome()
     {
-        return $this->render('home');
+        //获取所有的热门推荐商品
+        $indexShow = Goods::getAllShowGoods();
+        return $this->render('home', ['show' => $indexShow]);
     }
     
     //微信回调页面

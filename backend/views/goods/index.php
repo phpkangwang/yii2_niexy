@@ -38,11 +38,24 @@ $this->title = '后台管理';
     ],
     'description',
     'price',
+    [
+    'attribute'=>'index_show',
+    'value' => function($model){
+        if($model->index_show == 1){
+            return "不推荐";
+        }else{
+            return "推荐"; 
+        }
+    }
+    ],
     ['attribute' => 'created_at', 'format' => ['date', 'php:Y-m-d H:i']],
     ['class' => 'yii\grid\ActionColumn',
     'header' => '操作',
-    'template' => ' {update} {delete}',
+    'template' => '{show} {update} {delete}',
     'buttons' => [
+      'show' => function($url, $model) {
+        return Html::a('<span class="glyphicon glyphicon-arrow-up" title="推荐"></span>',['index-show', 'id' => $model->id]);
+      },
       'update' => function($url, $model) {
         return Html::a('<span class="glyphicon glyphicon-pencil" title="修改"></span>',['update', 'id' => $model->id]);
       },
