@@ -89,11 +89,20 @@ class UserController extends Controller
      */
     public function actionInfo()
     {
-        $userId = yii::$app->user->id;
+        //$userId = yii::$app->user->id;
+        $userId = 7;
         $userObj = User::findOne($userId);
         return $this->render('info', [
             'user' => $userObj,
         ]);
+    }
+    
+    /**
+     *  绑定手机号
+     */
+    public function actionBindPhone()
+    {
+        return $this->render('bindphone');
     }
     
     
