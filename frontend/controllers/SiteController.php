@@ -16,6 +16,7 @@ use common\models\User;
 use common\models\tool;
 use common\models\BaseGlobal;
 use common\models\Goods;
+use common\models\Sms;
 
 /**
  * Site controller
@@ -79,7 +80,8 @@ class SiteController extends Controller
         if(Yii::$app->user->isGuest)
         {
             $appid = yii::$app->params['APP_ID'];
-            $REDIRECT_URI =  Yii::$app->request->hostInfo.Yii::$app->urlManager->createUrl('site/wx-call-back');
+            echo $REDIRECT_URI =  Yii::$app->request->hostInfo.Yii::$app->urlManager->createUrl('site/wx-call-back');
+            die;
             //$scope='snsapi_base';
             $scope='snsapi_userinfo';//需要授权
             $url='https://open.weixin.qq.com/connect/oauth2/authorize?appid='.$appid.'&redirect_uri='.urlencode($REDIRECT_URI).'&response_type=code&scope='.$scope.'&state=1#wechat_redirect';
@@ -94,6 +96,12 @@ class SiteController extends Controller
     //项目主页面
     public function actionHome()
     {
+        /*
+         * 调试默认登陆一个用户
+        $userId = 7;
+        $userObj = User::findOne($userId);
+        Yii::$app->user->login($userObj);
+        */
         //获取所有的热门推荐商品
         $indexShow = Goods::getAllShowGoods();
         return $this->render('home', ['show' => $indexShow]);
@@ -102,6 +110,7 @@ class SiteController extends Controller
     //微信回调页面
     public function actionWxCallBack()
     {
+        echo "aaa";die;
         $appid = yii::$app->params['APP_ID'];
         $secret = yii::$app->params['APP_SECRET'];
         $code = $_GET["code"];
@@ -271,5 +280,64 @@ class SiteController extends Controller
         return $this->render('resetPassword', [
             'model' => $model,
         ]);
+    }
+    
+    
+    //发送验证码
+    public function actionSendSms()
+    {
+        if(Yii::$app->request->isAjax)
+        {
+        	   $phone = yii::$app->request->post('phone');
+        	   //1查看手机号是否已经被绑定
+        	   $userObj = User::find()->where("phone != '' and phone=:phone",array(':phone'=>$phone))->one();
+        	   if($userObj != "")
+        	   {
+        	       $reInfo['code'] = -1;
+        	       $reInfo['message'] = "手机号已被绑定";
+        	       $reInfo['data'] = "";
+        	       echo json_encode($reInfo);
+        	       return;
+        	   }
+        	   
+        	   //2默认一分钟发送一次短信，判断发送短信请求是否合法
+        	   $code = rand(10000, 99999);
+        	   $ip = tool::getIp();
+        	   $rs = Sms::addSms($phone,$code,$ip);
+        	   if($rs['code'] == -1)
+        	   {
+        	       $reInfo['code'] = -1;
+        	       $reInfo['message'] = $rs['message'];
+        	       $reInfo['data'] = "";
+        	       echo json_encode($reInfo);
+        	       return;
+        	   }
+        	   //3发送短信验证
+        	   $message = "您的验证码是：".$code;
+        	   tool::sendPhoneMessage($phone, $message);
+    
+        	   $reInfo['code'] = 1;
+        	   $reInfo['message'] = "";
+        	   $reInfo['data'] = "";
+        	   echo json_encode($reInfo);
+        	   return;
+        }
+    }
+    
+    //检查验证码是否正确
+    public function actionCheckSms()
+    {
+        $phone   = yii::$app->request->post('phone');
+        $smsyzm  = yii::$app->request->post('smsyzm');
+        $rs = Sms::checkSmsCode($phone, $smsyzm);
+        if($rs['code'] == 1)
+        {
+            $userId = yii::$app->user->id;
+            $userObj = User::findOne($userId);
+            $userObj->phone = $phone;
+            $userObj->save();
+        }
+        echo json_encode($rs);
+        return;
     }
 }

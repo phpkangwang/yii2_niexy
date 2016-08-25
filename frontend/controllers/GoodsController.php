@@ -6,6 +6,7 @@ use yii\filters\AccessControl;
 use yii\base\Controller;
 use yii\filters\VerbFilter;
 use common\models\Goods;
+use common\models\Car;
 
 /**
  * Site controller
@@ -82,6 +83,23 @@ class GoodsController extends Controller
         $pageMaxNum = ceil($count/$pageSize);//最大页数
         $rs = Goods::getPageAllGoods($pageNo,$pageSize);
         
+        //获取我的购物车
+        $myCarGoods = Car::getMyCarGoods();
+        for ($i=0;$i<count($rs);$i++)
+        {
+            $rs[$i]['mynum'] = 0;
+            if($myCarGoods != ""){
+                foreach ($myCarGoods as $val)
+                {
+                    if($rs[$i]['id'] == $val['goodsId'])
+                    {
+                        $rs[$i]['mynum'] = $val['num'];
+                    }
+                }
+            }
+            
+        }
+        
         $retunInfo = array('data'=>$rs,'pageMaxNum'=>$pageMaxNum,'MaxCount' => $count);
         echo json_encode($retunInfo);
         return;
@@ -96,6 +114,17 @@ class GoodsController extends Controller
     {
         $id = yii::$app->request->get('id');
         $info = Goods::getGoodsInfo($id);
+        
+        //获取我的购物车
+        $myCarGoods = Car::getMyCarGoods();
+        $info['mynum'] = 0;
+        foreach ($myCarGoods as $val)
+        {
+            if($info['id'] == $val['goodsId'])
+            {
+                 $info['mynum'] = $val['num'];
+            }
+        }
         
         return $this->render('info',array('info'=>$info));
     }

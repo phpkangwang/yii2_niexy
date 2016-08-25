@@ -103,4 +103,31 @@ class tool extends Model
     public static function createFolders($dir){
         return is_dir($dir) or (tool::createFolders(dirname($dir)) and mkdir($dir,0777));
     }
+    
+    /**
+     *  发送手机短信
+     * @param unknown $PhoneNum 手机号码
+     * @param unknown $message 短信消息
+     */
+    public static function sendPhoneMessage($PhoneNum,$message)
+    {
+        $url = "http://api.dingdongcloud.com/v1/sms/sendyzm";
+    
+        $post_data = array('account' => yii::$app->params['dingdongyun']['account'], 'pwd' => yii::$app->params['dingdongyun']['pwd'], 'mobile'=> $PhoneNum, 'content'=> '【驿渡网】'.$message);
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch, CURLOPT_POST, 1);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $post_data);
+    
+        $output = curl_exec($ch);
+        curl_close($ch);
+    
+        $reInfo['code'] = 1;
+        $reInfo['message'] = "";
+        $reInfo['data'] = "";
+    
+        return $reInfo;
+    }
+    
 }

@@ -11,6 +11,6 @@ $this->title = 404;
 ?>
 <div class="site-error">
 
-    <h1><?=  ?></h1>
+    <h1>ERROR 404</h1>
 
 </div>
