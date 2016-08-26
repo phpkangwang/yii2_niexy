@@ -80,8 +80,7 @@ class SiteController extends Controller
         if(Yii::$app->user->isGuest)
         {
             $appid = yii::$app->params['APP_ID'];
-            echo $REDIRECT_URI =  Yii::$app->request->hostInfo.Yii::$app->urlManager->createUrl('site/wx-call-back');
-            die;
+            $REDIRECT_URI =  Yii::$app->request->hostInfo.Yii::$app->urlManager->createUrl('site/wx-call-back');
             //$scope='snsapi_base';
             $scope='snsapi_userinfo';//需要授权
             $url='https://open.weixin.qq.com/connect/oauth2/authorize?appid='.$appid.'&redirect_uri='.urlencode($REDIRECT_URI).'&response_type=code&scope='.$scope.'&state=1#wechat_redirect';
@@ -102,6 +101,7 @@ class SiteController extends Controller
         $userObj = User::findOne($userId);
         Yii::$app->user->login($userObj);
         */
+        
         //获取所有的热门推荐商品
         $indexShow = Goods::getAllShowGoods();
         return $this->render('home', ['show' => $indexShow]);
@@ -110,7 +110,6 @@ class SiteController extends Controller
     //微信回调页面
     public function actionWxCallBack()
     {
-        echo "aaa";die;
         $appid = yii::$app->params['APP_ID'];
         $secret = yii::$app->params['APP_SECRET'];
         $code = $_GET["code"];

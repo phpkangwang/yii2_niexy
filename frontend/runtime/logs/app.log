@@ -4673,3 +4673,143 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1472110900.184
     'REQUEST_TIME' => 1472110900
 ]
+2016-08-26 09:13:02 [127.0.0.1][-][hp260g7r5ps6io2sug734vtek0][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Trying to get property of non-object' in D:\wamp\www\yii2_niexy\frontend\views\user\info.php:56
+Stack trace:
+#0 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile()
+#1 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile()
+#2 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\Controller.php(378): yii\base\View->render()
+#3 D:\wamp\www\yii2_niexy\frontend\controllers\UserController.php(94): yii\base\Controller->render()
+#4 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\InlineAction.php(55): frontend\controllers\UserController->actionInfo()
+#5 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\InlineAction.php(55): ::call_user_func_array:{D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\InlineAction.php:55}()
+#6 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams()
+#7 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction()
+#8 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction()
+#9 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest()
+#10 D:\wamp\www\yii2_niexy\frontend\web\index.php(18): yii\base\Application->run()
+#11 {main}
+2016-08-26 09:13:01 [127.0.0.1][-][hp260g7r5ps6io2sug734vtek0][info][application] $_GET = [
+    'r' => 'user/info'
+]
+
+$_COOKIE = [
+    'cart' => ''
+    '_pk_id_1_dc78' => '1efc34b4eebcee5f.1471829518.2.1471832282.1471832282.'
+    'advanced-frontend' => 'hp260g7r5ps6io2sug734vtek0'
+    '_frontend' => 'fd06d0c165b9d0f1761aa1907793c18d5677f7f92589f68135238b5971244951a:2:{i:0;s:9:\"_frontend\";i:1;s:32:\"V8uvSEkGEYu1Ha3XtPyqPH118Fr9UMXe\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '127.0.0.1:10086'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://127.0.0.1:10086/yii2_niexy/frontend/web/index.php?r=site%2Fhome'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'cart=; _pk_id.1.dc78=1efc34b4eebcee5f.1471829518.2.1471832282.1471832282.; advanced-frontend=hp260g7r5ps6io2sug734vtek0; _frontend=fd06d0c165b9d0f1761aa1907793c18d5677f7f92589f68135238b5971244951a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_frontend%22%3Bi%3A1%3Bs%3A32%3A%22V8uvSEkGEYu1Ha3XtPyqPH118Fr9UMXe%22%3B%7D'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;D:\\wamp\\bin\\php\\php5.5.12;C:\\ProgramData\\ComposerSetup\\bin;D:\\git\\bin;D:\\wamp\\bin\\php\\php5.5.12;C:\\Program Files\\nodejs\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.9 (Win64) PHP/5.5.12 Server at 127.0.0.1 Port 10086</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win64) PHP/5.5.12'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '10086'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp/www'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'D:/wamp/www/yii2_niexy/frontend/web/index.php'
+    'REMOTE_PORT' => '51389'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=user%2Finfo'
+    'REQUEST_URI' => '/yii2_niexy/frontend/web/index.php?r=user%2Finfo'
+    'SCRIPT_NAME' => '/yii2_niexy/frontend/web/index.php'
+    'PHP_SELF' => '/yii2_niexy/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1472173981.919
+    'REQUEST_TIME' => 1472173981
+]
+2016-08-26 09:13:34 [127.0.0.1][-][hp260g7r5ps6io2sug734vtek0][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Trying to get property of non-object' in D:\wamp\www\yii2_niexy\frontend\views\user\info.php:56
+Stack trace:
+#0 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile()
+#1 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile()
+#2 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\Controller.php(378): yii\base\View->render()
+#3 D:\wamp\www\yii2_niexy\frontend\controllers\UserController.php(94): yii\base\Controller->render()
+#4 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\InlineAction.php(55): frontend\controllers\UserController->actionInfo()
+#5 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\InlineAction.php(55): ::call_user_func_array:{D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\InlineAction.php:55}()
+#6 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams()
+#7 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction()
+#8 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction()
+#9 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest()
+#10 D:\wamp\www\yii2_niexy\frontend\web\index.php(18): yii\base\Application->run()
+#11 {main}
+2016-08-26 09:13:34 [127.0.0.1][-][hp260g7r5ps6io2sug734vtek0][info][application] $_GET = [
+    'r' => 'user/info'
+]
+
+$_COOKIE = [
+    'cart' => ''
+    '_pk_id_1_dc78' => '1efc34b4eebcee5f.1471829518.2.1471832282.1471832282.'
+    'advanced-frontend' => 'hp260g7r5ps6io2sug734vtek0'
+    '_frontend' => 'fd06d0c165b9d0f1761aa1907793c18d5677f7f92589f68135238b5971244951a:2:{i:0;s:9:\"_frontend\";i:1;s:32:\"V8uvSEkGEYu1Ha3XtPyqPH118Fr9UMXe\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '127.0.0.1:10086'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://127.0.0.1:10086/yii2_niexy/frontend/web/index.php?r=site%2Fhome'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'cart=; _pk_id.1.dc78=1efc34b4eebcee5f.1471829518.2.1471832282.1471832282.; advanced-frontend=hp260g7r5ps6io2sug734vtek0; _frontend=fd06d0c165b9d0f1761aa1907793c18d5677f7f92589f68135238b5971244951a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_frontend%22%3Bi%3A1%3Bs%3A32%3A%22V8uvSEkGEYu1Ha3XtPyqPH118Fr9UMXe%22%3B%7D'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;D:\\wamp\\bin\\php\\php5.5.12;C:\\ProgramData\\ComposerSetup\\bin;D:\\git\\bin;D:\\wamp\\bin\\php\\php5.5.12;C:\\Program Files\\nodejs\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.9 (Win64) PHP/5.5.12 Server at 127.0.0.1 Port 10086</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win64) PHP/5.5.12'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '10086'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp/www'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'D:/wamp/www/yii2_niexy/frontend/web/index.php'
+    'REMOTE_PORT' => '51451'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=user%2Finfo'
+    'REQUEST_URI' => '/yii2_niexy/frontend/web/index.php?r=user%2Finfo'
+    'SCRIPT_NAME' => '/yii2_niexy/frontend/web/index.php'
+    'PHP_SELF' => '/yii2_niexy/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1472174014.175
+    'REQUEST_TIME' => 1472174014
+]
