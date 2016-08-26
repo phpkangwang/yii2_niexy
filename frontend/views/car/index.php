@@ -1,5 +1,5 @@
 <?php
-   $this->title = "购物车"; 
+   $this->title = "购物车";
 ?>
 <!--
  *@购物车
@@ -16,10 +16,10 @@
             <div class="sale-name">
               <p class="sale-name-h">正品包邮|德国LAMY凌美T10</p>
               <p class="sale-name-fl">颜色分类：天蓝（5支装）</p>
-              <p class="sale-price">$ 19 
+              <p class="sale-price">$ 19
                     <span class="">
                 		   <span class="lgadd fr">
-                             <button type=button class='lgminus' >   -   </button> 
+                             <button type=button class='lgminus' >   -   </button>
                              <input type=text value="1" id="numb" name='numb' size='2' class="addtext" maxlength='3' dataType='Number' msg='必须为数字' readonly="readonly">
                              <button type=button class='lgplus'  >   +   </button>
                              <div class="car_item_piao">+1</div>
@@ -27,16 +27,16 @@
             	   </span>
               </p>
         </div>
-        
+
         <div class="sale-toux">
             <div class="sale-img"><input type="checkbox" name="goods"/><img src=""/></div>
             <div class="sale-name">
               <p class="sale-name-h">正品包邮|德国LAMY凌美T10</p>
               <p class="sale-name-fl">颜色分类：天蓝（5支装）</p>
-              <p class="sale-price">$ 19 
+              <p class="sale-price">$ 19
                     <span class="">
                 		   <span class="lgadd fr">
-                             <button type=button class='lgminus' >   -   </button> 
+                             <button type=button class='lgminus' >   -   </button>
                              <input type=text value="1" id="numb" name='numb' size='2' class="addtext" maxlength='3' dataType='Number' msg='必须为数字' readonly="readonly">
                              <button type=button class='lgplus'  >   +   </button>
                              <div class="car_item_piao">+1</div>
@@ -44,16 +44,16 @@
             	   </span>
               </p>
         </div>
-        
+
         <div class="sale-toux">
             <div class="sale-img"><input type="checkbox" name="goods"/><img src=""/></div>
             <div class="sale-name">
               <p class="sale-name-h">正品包邮|德国LAMY凌美T10</p>
               <p class="sale-name-fl">颜色分类：天蓝（5支装）</p>
-              <p class="sale-price">$ 19 
+              <p class="sale-price">$ 19
                     <span class="">
                 		   <span class="lgadd fr">
-                             <button type=button class='lgminus' >   -   </button> 
+                             <button type=button class='lgminus' >   -   </button>
                              <input type=text value="1" id="numb" name='numb' size='2' class="addtext" maxlength='3' dataType='Number' msg='必须为数字' readonly="readonly">
                              <button type=button class='lgplus'  >   +   </button>
                              <div class="car_item_piao">+1</div>
@@ -62,10 +62,21 @@
               </p>
         </div>
     </div>
-    
+
 </div>
 
-    
+
+<div class="fixed-frame">
+  <div class="fixed-box">
+    <div class="fixed-titel">
+      <div class="fixed-qh"><input type="radio" name="username"/></div>
+      <div class="fixed-txt"><p>全选<span class="fixed-span">合计：<span class="span-jg">$0 <span class="span-yf">不含运费</span></span></span></p></div>
+      <a class="fixed-a">结算(0)</a>
+    </div>
+  </div>
+</div>
+
+
 <script type="text/javascript">
   $(".bottommenu").hide();
-</script>    
+</script>

@@ -6024,3 +6024,72 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1472192562.735
     'REQUEST_TIME' => 1472192562
 ]
+2016-08-26 08:31:20 [127.0.0.1][-][2e3cvk7io6ht35h3le4veon636][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Trying to get property of non-object' in F:\wamp\www\yii2_niexy\frontend\views\user\info.php:56
+Stack trace:
+#0 F:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile()
+#1 F:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile()
+#2 F:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\Controller.php(378): yii\base\View->render()
+#3 F:\wamp\www\yii2_niexy\frontend\controllers\UserController.php(94): yii\base\Controller->render()
+#4 F:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\InlineAction.php(55): frontend\controllers\UserController->actionInfo()
+#5 F:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\InlineAction.php(55): ::call_user_func_array:{F:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\InlineAction.php:55}()
+#6 F:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams()
+#7 F:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction()
+#8 F:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction()
+#9 F:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest()
+#10 F:\wamp\www\yii2_niexy\frontend\web\index.php(18): yii\base\Application->run()
+#11 {main}
+2016-08-26 08:31:19 [127.0.0.1][-][2e3cvk7io6ht35h3le4veon636][info][application] $_GET = [
+    'r' => 'user/info'
+]
+
+$_COOKIE = [
+    '_pk_id_1_dc78' => '851fa209b6a29472.1463453761.2.1467164165.1467164165.'
+    '_backendUser' => 'bc7ee88edb6f5d8e247487fe2a5cbb61ca1833870be7bd9e1238bbb3b2d8f219a:2:{i:0;s:12:\"_backendUser\";i:1;s:47:\"[22,\"C7GvSDAMn5Du7K-KqKgSaCDrdr07NesX\",2592000]\";}'
+    '_identity' => '8fd8348a79f46f77c5e0cdf23097d664722ba6f37bdaca7d2534464dc12ed31ea:2:{i:0;s:9:\"_identity\";i:1;s:48:\"[352,\"238XOcy3Wkzx0vilGL41X8MHSOgz_cV8\",2592000]\";}'
+    'advanced-frontend' => '2e3cvk7io6ht35h3le4veon636'
+    '_frontend' => '063a1b09775bdcd6336f12a1dd5a57ff95387415c04d5de4775850970dbcc554a:2:{i:0;s:9:\"_frontend\";i:1;s:32:\"NQxVQyXtrlprqsOUhO9NnlsnLdpOZtlE\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '127.0.0.1:10086'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1'
+    'HTTP_REFERER' => 'http://127.0.0.1:10086/yii2_niexy/frontend/web/?r=user/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en;q=0.6'
+    'HTTP_COOKIE' => '_pk_id.1.dc78=851fa209b6a29472.1463453761.2.1467164165.1467164165.; _backendUser=bc7ee88edb6f5d8e247487fe2a5cbb61ca1833870be7bd9e1238bbb3b2d8f219a%3A2%3A%7Bi%3A0%3Bs%3A12%3A%22_backendUser%22%3Bi%3A1%3Bs%3A47%3A%22%5B22%2C%22C7GvSDAMn5Du7K-KqKgSaCDrdr07NesX%22%2C2592000%5D%22%3B%7D; _identity=8fd8348a79f46f77c5e0cdf23097d664722ba6f37bdaca7d2534464dc12ed31ea%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A48%3A%22%5B352%2C%22238XOcy3Wkzx0vilGL41X8MHSOgz_cV8%22%2C2592000%5D%22%3B%7D; advanced-frontend=2e3cvk7io6ht35h3le4veon636; _frontend=063a1b09775bdcd6336f12a1dd5a57ff95387415c04d5de4775850970dbcc554a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_frontend%22%3Bi%3A1%3Bs%3A32%3A%22NQxVQyXtrlprqsOUhO9NnlsnLdpOZtlE%22%3B%7D'
+    'PATH' => 'c:\\Program Files (x86)\\Intel\\iCLS Client\\;c:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;F:\\TortoiseGit\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.9 (Win64) PHP/5.5.12 Server at 127.0.0.1 Port 10086</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win64) PHP/5.5.12'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '10086'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/wamp/www'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'F:/wamp/www/yii2_niexy/frontend/web/index.php'
+    'REMOTE_PORT' => '52596'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=user%2Finfo'
+    'REQUEST_URI' => '/yii2_niexy/frontend/web/index.php?r=user%2Finfo'
+    'SCRIPT_NAME' => '/yii2_niexy/frontend/web/index.php'
+    'PHP_SELF' => '/yii2_niexy/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1472193079.573
+    'REQUEST_TIME' => 1472193079
+]

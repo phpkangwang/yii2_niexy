@@ -296,17 +296,17 @@ a:hover{
   float: left;
   padding: 3.33%;
   background: #fff;
+  border-bottom: 1px solid #d7d7d7;
 }
 .sale-img{
   float: left;
   /*border: 1px solid #ddd;*/
   overflow: hidden;
 }
-.sale-img > input{
-}
 .sale-img > img{
   width: 80px;
   height: 80px;
+  margin-left: 5px;
 }
 .sale-name{
   width: 60%;
@@ -365,9 +365,68 @@ a:hover{
   font-size: 1.2rem;
   float: right;
 }
-
-
-
+.fixed-frame{
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  position: fixed;
+  bottom: 0px;
+  z-index: 99;
+}
+.fixed-box{
+  margin-top: 9.99%;
+  width: 100%;
+  background: #fff;
+  border: 1px solid #e1e1e1;
+  float: left;
+}
+.fixed-titel{
+  width:100%;
+  padding: 2.33%;
+  border-bottom: 1px solid #e1e1e1;
+  float: left;
+}
+.fixed-qh{
+  margin-top: 1.33%;
+  float: left;
+}
+.fixed-qh > img{
+  width: 15px;
+  height: 15px;
+  margin-left: 3.33%;
+  position: relative;
+  top: -3px;
+}
+.fixed-qh > span{
+ margin-left: 10%;
+ color: #e1e1e1;
+}
+.fixed-txt{
+  width: 70%;
+  float: left;
+  margin-left: 5px;
+  margin-top: 1.33%;
+}
+.fixed-span{
+  margin-left: 5px;
+  float: right;
+}
+.span-jg{
+  color:#ff5500;
+}
+.span-yf{
+  color:#aeaeae;
+  font-size: 0.8rem;
+  margin-left: 5px;
+}
+.fixed-a{
+  color: #fff;
+  padding: 2.33% 4.33% 2.33% 4.33%;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  float: right;
+  background: #ff5500;
+}
 
 
 
