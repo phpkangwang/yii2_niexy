@@ -4813,3 +4813,69 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1472174014.175
     'REQUEST_TIME' => 1472174014
 ]
+2016-08-26 13:44:51 [127.0.0.1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined variable: info' in D:\wamp\www\yii2_niexy\frontend\views\car\index.php:23
+Stack trace:
+#0 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile()
+#1 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile()
+#2 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\Controller.php(378): yii\base\View->render()
+#3 D:\wamp\www\yii2_niexy\frontend\controllers\CarController.php(79): yii\base\Controller->render()
+#4 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\InlineAction.php(55): frontend\controllers\CarController->actionIndex()
+#5 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\InlineAction.php(55): ::call_user_func_array:{D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\InlineAction.php:55}()
+#6 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams()
+#7 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction()
+#8 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction()
+#9 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest()
+#10 D:\wamp\www\yii2_niexy\frontend\web\index.php(18): yii\base\Application->run()
+#11 {main}
+2016-08-26 13:44:51 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'car/index'
+]
+
+$_COOKIE = [
+    'cart' => ''
+    '_pk_id_1_dc78' => '1efc34b4eebcee5f.1471829518.2.1471832282.1471832282.'
+    'advanced-frontend' => 'p2bm2c5hgcct4ughohihivc9d3'
+    '_frontend' => '29f34db6e9ba5596713863028648adc5dc426682c33f07e33363ef5b407f03a7a:2:{i:0;s:9:\"_frontend\";i:1;s:32:\"1nu0l8aQ_7qodCuc3dV4c6eDw8X9WlJe\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '127.0.0.1:10086'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://127.0.0.1:10086/yii2_niexy/frontend/web/index.php?r=user%2Finfo'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'cart=; _pk_id.1.dc78=1efc34b4eebcee5f.1471829518.2.1471832282.1471832282.; advanced-frontend=p2bm2c5hgcct4ughohihivc9d3; _frontend=29f34db6e9ba5596713863028648adc5dc426682c33f07e33363ef5b407f03a7a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_frontend%22%3Bi%3A1%3Bs%3A32%3A%221nu0l8aQ_7qodCuc3dV4c6eDw8X9WlJe%22%3B%7D'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;D:\\wamp\\bin\\php\\php5.5.12;C:\\ProgramData\\ComposerSetup\\bin;D:\\git\\bin;D:\\wamp\\bin\\php\\php5.5.12;C:\\Program Files\\nodejs\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.9 (Win64) PHP/5.5.12 Server at 127.0.0.1 Port 10086</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win64) PHP/5.5.12'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '10086'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp/www'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'D:/wamp/www/yii2_niexy/frontend/web/index.php'
+    'REMOTE_PORT' => '55128'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=car%2Findex'
+    'REQUEST_URI' => '/yii2_niexy/frontend/web/index.php?r=car%2Findex'
+    'SCRIPT_NAME' => '/yii2_niexy/frontend/web/index.php'
+    'PHP_SELF' => '/yii2_niexy/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1472190291.034
+    'REQUEST_TIME' => 1472190291
+]

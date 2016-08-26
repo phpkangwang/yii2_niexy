@@ -96,11 +96,11 @@ class SiteController extends Controller
     public function actionHome()
     {
         /*
-         * 调试默认登陆一个用户
+         * 调试默认登陆一个用户*/
         $userId = 7;
         $userObj = User::findOne($userId);
         Yii::$app->user->login($userObj);
-        */
+        
         
         //获取所有的热门推荐商品
         $indexShow = Goods::getAllShowGoods();
