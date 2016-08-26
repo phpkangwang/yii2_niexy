@@ -41,6 +41,13 @@ class Car extends ActiveRecord
         }
         
         $userId = yii::$app->user->id;
+        if($userId == "")
+        {
+            $reInfo['code'] = -1;
+            $reInfo['message'] = "请先登录";
+            $reInfo['data'] = "";
+            return $reInfo;
+        }
         //现查找用户是否有购物车
         $carObj = self::findOne(['user_id'=>$userId]);
         if(empty($carObj))
@@ -93,6 +100,13 @@ class Car extends ActiveRecord
     public static function subCarGoods($goodsId)
     {
         $userId = yii::$app->user->id;
+        if($userId == "")
+        {
+            $reInfo['code'] = -1;
+            $reInfo['message'] = "请先登录";
+            $reInfo['data'] = "";
+            return $reInfo;
+        }
         //现查找用户是否有购物车
         $carObj = self::findOne(['user_id'=>$userId]);
         if(empty($carObj))
@@ -132,6 +146,55 @@ class Car extends ActiveRecord
                 $reInfo['data'] = print_r($carObj->getErrors());
                 return $reInfo;
             }
+    }
+    
+    /**
+     *  删除购物车里所有传过来id的物品，不论数量
+     * @param unknown $goodsId
+     */
+    public static function  subCarOneGoodsNum($goodsIds)
+    {
+        $userId = yii::$app->user->id;
+        if($userId == "")
+        {
+            $reInfo['code'] = -1;
+            $reInfo['message'] = "请先登录";
+            $reInfo['data'] = "";
+            return $reInfo;
+        }
+        //现查找用户是否有购物车
+        $carObj = self::findOne(['user_id'=>$userId]);
+        if(empty($carObj))
+        {
+            $reInfo['code'] = -1;
+            $reInfo['message'] = "购物车不存在";
+            $reInfo['data'] = "";
+            return $reInfo;
+        }
+        $content = json_decode($carObj->content,true);
+        for ($i=0; $i<count($content); $i++)
+        {
+            //假如传过来的商品id在购物车里
+            if(in_array($content[$i]['goodsId'], $goodsIds))
+            {
+              unset($content[$i]);
+            }
+        }
+        sort($content);
+        $carObj->content = json_encode($content);
+        $carObj->updated_at = time();
+        if($carObj->save())
+        {
+            $reInfo['code'] = 1;
+            $reInfo['message'] = "购物车减去商品成功";
+            $reInfo['data'] = "";
+            return $reInfo;
+        }else{
+            $reInfo['code'] = -1;
+            $reInfo['message'] = "购物车减去商品失败";
+            $reInfo['data'] = print_r($carObj->getErrors());
+            return $reInfo;
+        }
     }
     
     /**

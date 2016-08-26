@@ -44,7 +44,7 @@
     <div class="fixed-titel">
       <div class="fixed-qh"><input type="checkbox" name="quanxuan"/></div>
       <div class="fixed-txt"><p>全选<span class="fixed-span">合计：<span class="span-jg"><span id="sumPrice">0</span> 元 <span class="span-yf">不含运费</span></span></span></p></div>
-      <a class="fixed-a">结算(0)</a>
+      <a class="fixed-a">结算(<span  id="sumNum">0</span>)</a>
     </div>
   </div>
 </div>
@@ -59,12 +59,43 @@
 	  var id = $(obj).data("id");
 	  //获取总价格
 	  var sumPrice = parseInt($("#sumPrice").text());
+	  var sumNum = parseInt($("#sumNum").text());
 	  if($('#checkbox'+id).is(':checked')) {
 		    // do something
 		  sumPrice += price*num;
+		  sumNum += num;
 		}else{
 			sumPrice -= price*num;
+			sumNum -= num;
 		}
 	  $("#sumPrice").text(sumPrice);
+	  $("#sumNum").text(sumNum);
   }
+
+  $(".fixed-a").click(function(){
+	    var ids = [];
+	    var nums = [];
+		$("input:checkbox[name='goods']:checked").each(function() { // 遍历name=test的多选框
+			ids.push($(this).data("id"));
+			nums.push($(this).data("num"));
+		});
+
+		var data = {};
+		data.ids = ids;
+		data.nums = nums;
+	    data._frontend = '<?php echo Yii::$app->request->getCsrfToken() ?>';
+	    $.ajax({
+	      type: 'post',
+	      dataType: 'json',
+	      url: '<?= Yii::$app->urlManager->createUrl('car/create-order') ?>',
+	      data: data,
+	      async:false,
+	      success: function(res) {
+	          if(res.code == 1)
+	          {
+		          
+	          }
+	      }
+	    });
+  });
 </script>

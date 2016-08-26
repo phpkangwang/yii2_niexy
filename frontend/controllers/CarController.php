@@ -17,6 +17,7 @@ use common\models\tool;
 use common\models\BaseGlobal;
 use common\models\Car;
 use common\models\Goods;
+use common\models\Order;
 
 /**
  * Site controller
@@ -117,6 +118,39 @@ class CarController extends Controller
         $rs = Car::clealCar();
         echo json_encode($rs);
         return;
+    }
+    
+    /**
+     *  生成订单
+     */
+    public function actionCreateOrder()
+    {
+        $ids = yii::$app->request->post('ids');
+        $nums = yii::$app->request->post('nums');
+        $rs = Order::createOrder($ids, $nums);
+        echo json_encode($rs);
+        return;
+    }
+    
+    /**
+     *   渲染所有订单页面
+     */
+    public function actionAllOrder()
+    {
+        //获取我所有的订单
+        $allOrder = Order::getAllOrder();
+        for ($j=0;$j<count($allOrder);$j++)
+        {
+           $contents = json_decode($allOrder[$j]['content'],true);
+           for($i=0;$i<count($contents);$i++)
+           {
+               $goodsInfo = Goods::getGoodsInfo($contents[$i]['goodsId']);
+               $contents[$i]['name'] = $goodsInfo['name'];
+               $contents[$i]['price'] = $goodsInfo['price'];
+           }
+           $allOrder[$j]['content']= $contents;
+        }
+        return $this->render('allOrder',array('allOrder'=>$allOrder));
     }
     
 }

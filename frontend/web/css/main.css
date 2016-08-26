@@ -315,6 +315,7 @@ a:hover{
   margin-left: 3%;
 }
 .sale-name-h{
+  width: 90%;	
   float: left;
   font-size: 1.6rem;
 }
@@ -429,7 +430,50 @@ a:hover{
 }
 
 
+/**
+ *   订单
+ */
+.order-position{
+	width:100%;
+	float: left;	
+	border-bottom: 1px solid #eee;
+	letter-spacing: 2px;
+	line-height: 20px;
+	font-size: 10px;
+}
+.order-content{
+	width : 70%;
+	margin-left: 10%;
+	margin-top: 1.33%;
+	float: left;	
+}
+.order-price{
+	width : 20%;
+	margin-top: 1.33%;
+	float: left;
+	margin-bottom: 1.33%;
+}
+.order-sumprice{
+}
 
+.order-content-p{
+	margin-top: 5%;
+}
+
+.order-name-h{
+  width: 100%;	
+  float: left;
+  font-size: 1.6rem;
+  border-bottom: 1px solid #eee;
+}
+.order-title{
+	margin-top: 1.33%;
+}
+
+.order-button{
+	margin-top:1%;
+	padding: 1.33% 2.33% 1.33% 2.33%;
+}
 
 
 
