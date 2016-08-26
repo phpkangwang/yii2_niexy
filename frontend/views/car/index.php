@@ -78,5 +78,5 @@
 
 
 <script type="text/javascript">
-  $(".bottommenu").hide();
+  //$(".bottommenu").hide();
 </script>
