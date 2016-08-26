@@ -88,18 +88,43 @@
 <div class="frame">
   <div class="sale-frame">
     <div class="sale-titel">
-      <div class="input-qh">+86 <span class="">V</span></div>
-      <div class="input-txt"><p>18049929305</p></div>
-      <a class="input-a">获取验证码</a>
+      <div class="sale-qh"><input type="radio" name="username"/><img src=""/></div>
+      <div class="sale-txt"><p>pennote笔记<span class="sale-span">></span></p></div>
+      <a class="sale-a">编辑</a>
     </div>
     <div class="sale-toux">
-        <div class="sale-img"><img src=""/></div>
+        <div class="sale-img"><input type="radio" name="username"/><img src=""/></div>
         <div class="sale-name">
           <p class="sale-name-h">正品包邮|德国LAMY凌美T10</p>
           <p class="sale-name-fl">颜色分类：天蓝（5支装）</p>
+          <p class="sale-price">$ 19 <span class="">X1</span></p>
         </div>
+        <div class=""></div>
     </div>
+  </div>
+</div>
 
 
+
+
+<!--
+ *@购物车
+-->
+<div class="frame">
+  <div class="sale-frame">
+    <div class="sale-titel">
+      <div class="sale-qh"><input type="radio" name="username"/><img src=""/></div>
+      <div class="sale-txt"><p>pennote笔记<span class="sale-span">></span></p></div>
+      <a class="sale-a">编辑</a>
+    </div>
+    <div class="sale-toux">
+        <div class="sale-img"><input type="radio" name="username"/><img src=""/></div>
+        <div class="sale-name">
+          <p class="sale-name-h">正品包邮|德国LAMY凌美T10</p>
+          <p class="sale-name-fl">颜色分类：天蓝（5支装）</p>
+          <p class="sale-price">$ 19 <span class="">X1</span></p>
+        </div>
+        <div class=""></div>
+    </div>
   </div>
 </div>
