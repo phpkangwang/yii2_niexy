@@ -91,9 +91,57 @@ class UserController extends Controller
     {
         $userId = yii::$app->user->id;
         $userObj = User::findOne($userId);
-        return $this->render('info', [
-            'user' => $userObj,
-        ]);
+        return $this->render('info', ['user' => $userObj]);
+    }
+    
+    /**
+     *  绑定手机号
+     */
+    public function actionBindPhone()
+    {
+        $userId = yii::$app->user->id;
+        $userObj = User::findOne($userId);
+        if(yii::$app->request->ispost){
+            $arrdess = yii::$app->request->post('phone');
+            $userObj->phone = $arrdess;
+            if($userObj->save()){
+                $reInfo['code'] = 1;
+                $reInfo['message'] = "";
+                $reInfo['data'] = "";
+            }else{
+                $reInfo['code'] = -1;
+                $reInfo['message'] = "绑定手机号";
+                $reInfo['data'] = "";
+            }
+            echo json_encode($reInfo);
+            return;
+        }
+        return $this->render('bindphone', ['user' => $userObj]);
+    }
+    
+    /**
+     *  修改地址
+     */
+    public function actionAddress()
+    {
+        $userId = yii::$app->user->id;
+        $userObj = User::findOne($userId);
+        if(yii::$app->request->ispost){
+            $arrdess = yii::$app->request->post('address');
+            $userObj->address = $arrdess;
+            if($userObj->save()){
+                $reInfo['code'] = 1;
+                $reInfo['message'] = "";
+                $reInfo['data'] = "";
+            }else{
+                $reInfo['code'] = -1;
+                $reInfo['message'] = "保存地址失败";
+                $reInfo['data'] = "";
+            }
+            echo json_encode($reInfo);
+            return;
+        }
+        return $this->render('address', ['user' => $userObj]);
     }
     
     

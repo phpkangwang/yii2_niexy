@@ -37,7 +37,7 @@ AppAsset::register($this);
     <a href="<?= Yii::$app->urlManager->createUrl('site/index')?>" class="top1"><img src="images/top1.png" /><em>首页</em></a>
     <a href="<?= Yii::$app->urlManager->createUrl('goods/index')?>" class="top2"><img src="images/top4.png" /><em>我要吃饭</em></a>
     <a href="<?= Yii::$app->urlManager->createUrl('car/index')?>" class="top3"><img src="images/top3.png" /><em>购物车</em></a>
-    <a href="<?= Yii::$app->urlManager->createUrl('user/index')?>" class="top4"><img src="images/top2.png" /><em>会员中心</em></a>
+    <a href="<?= Yii::$app->urlManager->createUrl('user/info')?>" class="top4"><img src="images/top2.png" /><em>会员中心</em></a>
 </div>
 <?= Alert::widget() ?>
 <?= $content ?>

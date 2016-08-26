@@ -15,6 +15,7 @@ use frontend\models\ContactForm;
 use common\models\User;
 use common\models\tool;
 use common\models\BaseGlobal;
+use common\models\Car;
 
 /**
  * Site controller
@@ -78,6 +79,37 @@ class CarController extends Controller
         return $this->render('index');
     }
     
+    /**
+     *  添加购物车 一件一件商品的添加
+     */
+    public function actionAddCarGoods()
+    {
+        $goodsId = yii::$app->request->post('id');
+        $rs = Car::addCarGoods($goodsId);
+        echo json_encode($rs);
+        return;
+    }
     
+    
+    /**
+     *  减去购物车 一件一件商品的添加
+     */
+    public function actionSubCarGoods()
+    {
+        $goodsId = yii::$app->request->post('id');
+        $rs = Car::subCarGoods($goodsId);
+        echo json_encode($rs);
+        return;
+    }
+    
+    /**
+     *  清空购物车
+     */
+    public function actionClealCar()
+    {
+        $rs = Car::clealCar();
+        echo json_encode($rs);
+        return;
+    }
     
 }

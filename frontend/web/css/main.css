@@ -194,10 +194,16 @@ a:hover{
   float: left;
   font-size: 1.2rem;
   margin-left: 3%;
+  margin-top: 4%;
 }
 .name-h{
-  font-size: 1.6rem;
+  font-size: 1.2rem;
 }
+
+.phone-num{
+  color: red;
+}
+
 .arrow {
   width: 3%;
   float: right;
@@ -209,7 +215,7 @@ a:hover{
 .weixin-list{
   width: 100%;
   float: left;
-  padding: 1.33% 3.33% 1.33% 3.33%;
+  padding: 2.33% 3.33% 2.33% 3.33%;
   background: #fff;
   border-top: 1px solid #d9d9d9;
   border-bottom: 1px solid #d9d9d9;
@@ -217,12 +223,13 @@ a:hover{
 .weixin-list2{
   width: 100%;
   float: left;
-  padding: 1.33% 3.33% 1.33% 3.33%;
+  padding: 2.33% 3.33% 2.33% 3.33%;
   background: #fff;
 }
 
 .list{
   float: left;
+  /*background: #d7d7d7;*/
   /*border: 1px solid #ddd;*/
   overflow: hidden;
 }

@@ -6,6 +6,7 @@ return [
     'WEB_TITLE' => "拾香得味",
     'APP_ID' => "wxc78c73cf4012af64",
     'APP_SECRET' => "b5cb9f7a16b03f279cc2a0c60eba9d5b",
+    'dingdongyun'=>['account'=>"17715239502",'pwd'=>"ameson025"],//叮咚云短信
     
     'LOGIN_TYPE_WX' => 1,//微信登录
     'LOGIN_TYPE_ACCOUNT' => 2,//账户登录

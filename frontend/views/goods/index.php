@@ -71,15 +71,15 @@ $(document).ready(function(){
 				           '<input  type="hidden"  value="159"   name="spid"/>'+
 				          '<dt>  <a href="<?=  yii::$app->urlManager->createUrl('goods/info')."&id="?>'+res.data[i]['id']+'">  <img src="<?= Yii::getAlias('@cdnUrl')?>'+res.data[i]['s_image']+'" alt=""/>  </a></dt>'+
 				         '<dd>'+
-						       '<strong><a href="index.asp@id=159"> '+res.data[i]['name']+' </a></strong>'+
+						       '<strong><a href=""> '+res.data[i]['name']+' </a></strong>'+
 							   '<div class="listgoodsinfo">'+
 									'<span class="pr"> ￥'+res.data[i]['price']+'<font> '+res.data[i]['description']+'</font> </span>'+
 				               '</div>'+
 							   '<div class="clearfix">'+
 								   '<span class="lgadd fr">'+
-				                     '<button type=button class="lgminus">   -   </button>' +
-				                     '<input type=text value="0" id="numb" name="numb" size="2" class="addtext" maxlength="3" dataType="Number" msg="必须为数字" readonly="readonly">'+
-				                     '<button type=button class="lgplus"  >   +   </button>'+
+				                     '<button type=button class="lgminus" data-id='+res.data[i]['id']+'>   -   </button>' +
+				                     '<input type=text value="'+res.data[i]['mynum']+'" id="numb" name="numb" size="2" class="addtext" maxlength="3" dataType="Number" msg="必须为数字" readonly="readonly">'+
+				                     '<button type=button class="lgplus"  data-id='+res.data[i]['id']+'>   +   </button>'+
 				                     '<div class="car_item_piao">+1</div>'+
 				 				   '</span>'+
 				 			   '</div>'+
@@ -112,15 +112,15 @@ $(document).ready(function(){
 		   	     html = '<dl class="bgstyle">'+ 
 		          '<dt>  <a href="<?=  yii::$app->urlManager->createUrl('goods/info')."&id="?>'+res.data[i]['id']+'">  <img src="<?= Yii::getAlias('@cdnUrl')?>'+res.data[i]['s_image']+'" alt=""/>  </a></dt>'+
 		         '<dd>'+
-				       '<strong><a href="index.asp@id=159"> '+res.data[i]['name']+' </a></strong>'+
+				       '<strong><a href=""> '+res.data[i]['name']+' </a></strong>'+
 					   '<div class="listgoodsinfo">'+
 							'<span class="pr"> ￥'+res.data[i]['price']+'<font> '+res.data[i]['description']+'</font> </span>'+
 		               '</div>'+
 					   '<div class="clearfix">'+
 						   '<span class="lgadd fr">'+
-		                     '<button type=button class="lgminus">   -   </button>' +
-		                     '<input type=text value="0" id="numb" name="numb" size="2" class="addtext" maxlength="3" dataType="Number" msg="必须为数字" readonly="readonly">'+
-		                     '<button type=button class="lgplus"  >   +   </button>'+
+		                     '<button type=button class="lgminus" data-id='+res.data[i]['id']+'>   -   </button>' +
+		                     '<input type=text value="'+res.data[i]['mynum']+'" id="numb" name="numb" size="2" class="addtext" maxlength="3" dataType="Number" msg="必须为数字" readonly="readonly">'+
+		                     '<button type=button class="lgplus" data-id='+res.data[i]['id']+' >   +   </button>'+
 		                     '<div class="car_item_piao">+1</div>'+
 		 				   '</span>'+
 		 			   '</div>'+
@@ -133,19 +133,60 @@ $(document).ready(function(){
 
     //数量加一
     $(document).on('click','.lgplus',function(){
-    	var num = parseInt($(this).siblings('#numb').val())+1;
-    	$(this).siblings("#numb").val(num);
+        var id = $(this).data("id");
+    	var data = {};
+    	var r = false;
+        data.id = id;
+        data._frontend = '<?php echo Yii::$app->request->getCsrfToken() ?>';
+        $.ajax({
+          type: 'post',
+          dataType: 'json',
+          url: '<?= Yii::$app->urlManager->createUrl('car/add-car-goods') ?>',
+          data: data,
+          async:false,
+          success: function(res) {
+              if(res.code == 1)
+              {
+            	  r = true;
+              }
+          }
+        });
+        if(r)
+        {
+        	var num = parseInt($(this).siblings('#numb').val())+1;
+        	$(this).siblings("#numb").val(num);
+        }
     });
 
     //数量减一
     $(document).on('click','.lgminus',function(){
     	var num = parseInt($(this).siblings('#numb').val());
     	if(num > 0){
-    		$(this).siblings("#numb").val(num-1);
-    	}else{
-    		$(this).siblings("#numb").val(num);
+    		var id = $(this).data("id");
+    		var r = false;
+        	var data = {};
+            data.id = id;
+            data._frontend = '<?php echo Yii::$app->request->getCsrfToken() ?>';
+            $.ajax({
+              type: 'post',
+              dataType: 'json',
+              url: '<?= Yii::$app->urlManager->createUrl('car/sub-car-goods') ?>',
+              data: data,
+              async:false,
+              success: function(res) {
+            	  if(res.code == 1)
+                  {
+                	  r = true;
+                  }
+              }
+            });
+            if(r)
+            {
+          	  $(this).siblings("#numb").val(num-1);
+            }
     	}
     });
+
     
 });
 
