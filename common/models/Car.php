@@ -112,7 +112,8 @@ class Car extends ActiveRecord
                 {
                     $content[$i]['num'] -= 1;
                     if($content[$i]['num']<=0){
-                       unset($content[$i]);  
+                       unset($content[$i]); 
+                       sort($content);
                     }
                 }
             }
