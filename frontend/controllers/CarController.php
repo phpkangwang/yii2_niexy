@@ -16,6 +16,7 @@ use common\models\User;
 use common\models\tool;
 use common\models\BaseGlobal;
 use common\models\Car;
+use common\models\Goods;
 
 /**
  * Site controller
@@ -76,7 +77,13 @@ class CarController extends Controller
      */
 	public function actionIndex()
     {
-        return $this->render('index');
+        //获取我购物车所有的商品
+        $myGoods = Car::getMyCarGoods();
+        for ($i=0;$i<count($myGoods);$i++)
+        {
+            $myGoods[$i]['info'] = Goods::getGoodsInfo($myGoods[$i]['goodsId']);
+        }
+        return $this->render('index',array('myGoods'=>$myGoods));
     }
     
     /**
