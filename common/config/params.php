@@ -39,4 +39,15 @@ return [
     ],
     'GOODS_INDEX_SHOW_NOT'=> 1,//商品首页不推荐
     'GOODS_INDEX_SHOW'=> 2,//商品首页推荐
+    
+    'PAY_STATU'=>[
+       'NOT_PAY'      =>1,//1未支付 2已支付 3待发货 4待收货 5待评价 6退款中 7订单完成 8过期
+       'READY_PAY'    =>2,
+       'NOT_SEND'     =>3,
+       'PRE_ACCEPT'   =>4,
+       'NOT_APPRAISE' =>5,
+       'REFUND'       =>6,
+       'COMPLETE'     =>7,
+       'PASSTIME'     =>8
+    ],
 ];

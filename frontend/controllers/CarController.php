@@ -153,4 +153,88 @@ class CarController extends Controller
         return $this->render('allOrder',array('allOrder'=>$allOrder));
     }
     
+    /**
+     *   渲染所有待发货页面
+     */
+    public function actionSendOrder()
+    {
+        //获取我所有的订单
+        $allOrder = Order::getAllOrder();
+        for ($j=0;$j<count($allOrder);$j++)
+        {
+            $contents = json_decode($allOrder[$j]['content'],true);
+            for($i=0;$i<count($contents);$i++)
+            {
+                $goodsInfo = Goods::getGoodsInfo($contents[$i]['goodsId']);
+                $contents[$i]['name'] = $goodsInfo['name'];
+                $contents[$i]['price'] = $goodsInfo['price'];
+            }
+                $allOrder[$j]['content']= $contents;
+        }
+        return $this->render('sendorder',array('allOrder'=>$allOrder));
+    }
+    
+    /**
+     *   渲染所有待收货页面
+     */
+    public function actionAcceptOrder()
+    {
+        //获取我所有的订单
+        $allOrder = Order::getAllOrder();
+        for ($j=0;$j<count($allOrder);$j++)
+        {
+            $contents = json_decode($allOrder[$j]['content'],true);
+            for($i=0;$i<count($contents);$i++)
+            {
+                $goodsInfo = Goods::getGoodsInfo($contents[$i]['goodsId']);
+                $contents[$i]['name'] = $goodsInfo['name'];
+                $contents[$i]['price'] = $goodsInfo['price'];
+            }
+            $allOrder[$j]['content']= $contents;
+        }
+        return $this->render('acceptorder',array('allOrder'=>$allOrder));
+    }
+    
+    /**
+     *   渲染所有待评价页面
+     */
+    public function actionAppraiseOrder()
+    {
+        //获取我所有的订单
+        $allOrder = Order::getAllOrder();
+        for ($j=0;$j<count($allOrder);$j++)
+        {
+        $contents = json_decode($allOrder[$j]['content'],true);
+            for($i=0;$i<count($contents);$i++)
+            {
+            $goodsInfo = Goods::getGoodsInfo($contents[$i]['goodsId']);
+            $contents[$i]['name'] = $goodsInfo['name'];
+            $contents[$i]['price'] = $goodsInfo['price'];
+            }
+            $allOrder[$j]['content']= $contents;
+        }
+        return $this->render('appraiseorder',array('allOrder'=>$allOrder));
+    }
+    
+    /**
+     *   渲染所有退款中页面
+     */
+    public function actionRefundOrder()
+    {
+        //获取我所有的订单
+        $allOrder = Order::getAllOrder();
+        for ($j=0;$j<count($allOrder);$j++)
+        {
+            $contents = json_decode($allOrder[$j]['content'],true);
+            for($i=0;$i<count($contents);$i++)
+            {
+                $goodsInfo = Goods::getGoodsInfo($contents[$i]['goodsId']);
+                $contents[$i]['name'] = $goodsInfo['name'];
+                $contents[$i]['price'] = $goodsInfo['price'];
+            }
+            $allOrder[$j]['content']= $contents;
+        }
+        return $this->render('refundorder',array('allOrder'=>$allOrder));
+    }
+    
 }
