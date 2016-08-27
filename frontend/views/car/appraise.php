@@ -2,32 +2,37 @@
    $this->title = "我的订单";
 ?>
 <div class="frame">
-  <div class="sale-frame">
-  
-       <?php if($allOrder != ""){
-           foreach ($allOrder as $val){
-       ?>
-         <div class="sale-toux">
-            <p class="order-name-h order-title">拾香得味 ></p>
-            <div class="order-position">
-                <div class="order-content">
-                  <?php foreach ($val['content'] as $content){?>
-                  <p><?= $content['name']?></p>
-                  <?php }?>
+    <div class="assess-frame">
+         <div class="assess-toux">
+                <div class="assess-title">拾香得味</div>
+                <div class="assess-list">
+                <ul>
+                    <li>口水鸡    
+                      <span>
+                        <a class="ding"><img src="images/icon/zan.png"/></a>
+                        <a class="cai"><img src="images/icon/cai.png"/></a>
+                      </span>
+                    </li>
+                   <textarea class="form-control" rows="3" placeholder="说说那里满意,帮大家选择"></textarea>
+                   <li>口水鸡  
+                      <span>
+                        <a class="ding"><img src="images/icon/zan.png"/></a>
+                        <a class="cai"><img src="images/icon/cai.png"/></a>
+                      </span>
+                    </li>
+                    <textarea class="form-control" rows="3" placeholder="说说那里满意,帮大家选择"></textarea>
+                    <li>口水鸡    
+                      <span>
+                        <a class="ding"><img src="images/icon/zan.png"/></a>
+                        <a class="cai"><img src="images/icon/cai.png"/></a>
+                      </span>
+                    </li>
+                    <textarea class="form-control" rows="3" placeholder="说说那里满意,帮大家选择"></textarea>
+                </ul>
                 </div>
-                
-                <div class="order-price">
-                  <?php foreach ($val['content'] as $content){?>
-                  <p>x <?= $content['num']?></p>
-                  <?php }?>
+                <div class="assess-submit">
+                 <button type="button" class="btn btn-success assess-submit-btn">提交</button>
                 </div>
-            </div>
-            <div class="order-sumprice">总价格:<span><?= $val['pay_price']?></span>元</div>
-            <a class="fixed-a order-button">结算</a>
-         </div>
-         <?php }}?>
-         
-            
          </div>
     </div>
 </div>

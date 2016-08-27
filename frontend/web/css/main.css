@@ -584,3 +584,60 @@ a:hover{
 .bottommenu .top4{
     left: 75%;
 }
+
+.assess-frame{
+  margin-top: 5.99%;
+  width: 100%;
+  background: #fff;
+  border: 1px solid #e1e1e1;
+}
+.assess-toux{
+  font-family:"Microsoft YaHei","MicrosoftJhengHei";
+  width: 100%;
+  background: #fff;
+}
+.assess-title{
+  font-size: 2rem;
+  font-weight: bold;
+  width: 100%;
+  text-align: center;
+  ;line-height: 50px;
+}
+.assess-list{
+   border: 2px solid #e1e1e1;
+   margin-top: 1%;
+}
+.assess-list ul{
+  margin-top: 2%;
+  width:80%;
+  margin-left: 10%;
+  list-style: none;
+
+}
+.assess-list ul li{
+  margin: 10px auto;
+}
+.assess-list ul span{
+  float: right;
+}
+.assess-list ul a{
+  position: absolute;
+  display:block;
+  width:10%;
+}
+.assess-list ul .ding{
+   right: 18%;
+}
+.assess-list ul .cai{
+   right: 7%;
+}
+.assess-list ul a img{
+   width:60%;
+}
+.assess-submit{
+  width:100%;
+  margin: 5% auto;
+}
+.assess-submit-btn{
+  margin-left:40%;
+}
