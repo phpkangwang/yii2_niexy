@@ -21,8 +21,12 @@
                   <p>x <?= $content['num']?></p>
                   <?php }?>
                 </div>
+                <div class="order-sumprice">
+                共<span>8</span>份
+                <strong>总价格:<span>20</span>元</strong>
+                </div>
             </div>
-            <div class="order-sumprice">总价格:<span><?= $val['pay_price']?></span>元</div>
+            
             <a class="fixed-a order-button">结算</a>
          </div>
          <?php }}?>

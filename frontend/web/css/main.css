@@ -292,11 +292,11 @@ a:hover{
 
 
 .sale-toux{
+  font-family:"Microsoft YaHei","MicrosoftJhengHei";
   width: 100%;
   float: left;
-  padding: 3.33%;
   background: #fff;
-  border-bottom: 1px solid #d7d7d7;
+  border-bottom: 10px solid #d7d7d7;
 }
 .sale-img{
   float: left;
@@ -454,6 +454,8 @@ a:hover{
 	margin-bottom: 1.33%;
 }
 .order-sumprice{
+	margin-bottom: 1%;
+  margin-left: 55%;
 }
 
 .order-content-p{
@@ -471,8 +473,10 @@ a:hover{
 }
 
 .order-button{
-	margin-top:1%;
-	padding: 1.33% 2.33% 1.33% 2.33%;
+  display: block;
+
+	margin:2% 1%;
+
 }
 
 
