@@ -28,11 +28,16 @@
 	    $id = $notify->data["attach"];//订单表主键
 	    
 	    $ch = curl_init();
-	    curl_setopt($ch, CURLOPT_URL, "http://www.eduugo.com/?r=pay/update-donation-satatu&id=".$id);
+	    $url = "http://shixiangdewei.cn/frontend/web/index.php?r=car/order-pay-success&id=".$id."&wxOrderid=".$notify->data["transaction_id"];
+	    curl_setopt($ch, CURLOPT_URL, $url);
 	    curl_setopt($ch, CURLOPT_HEADER, false);
 	    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); //如果把这行注释掉的话，就会直接输出
 	    $result=curl_exec($ch);
 	    curl_close($ch);
+	    
+	    $log_ = new WxLog();
+	    $log_name="./notify_url.log";//log文件路径
+	    $log_->log_result($log_name,"【执行的URL】:\n".$url."\n");
 	    
 		$notify->setReturnParameter("return_code","SUCCESS");//设置返回码
 	}

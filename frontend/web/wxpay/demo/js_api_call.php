@@ -1,4 +1,5 @@
 <?php
+use yii\helpers\StringHelper;
 /**
  * JS_API支付demo
  * ====================================================
@@ -10,15 +11,18 @@
 */
 	include_once("../WxPayPubHelper/WxPayPubHelper.php");
 	
+	$money = $_GET['money'];
+	$orderId = $_GET['orderId'];
 	//使用jsapi接口
 	$jsApi = new JsApi_pub();
 
 	//=========步骤1：网页授权获取用户openid============
 	//通过code获得openid
+	/*
 	if (!isset($_GET['code']))
 	{
 		//触发微信返回code码
-		$url = $jsApi->createOauthUrlForCode(WxPayConf_pub::JS_API_CALL_URL);
+		$url = $jsApi->createOauthUrlForCode(WxPayConf_pub::JS_API_CALL_URL."?money=".$money."&orderId=".$orderId);
 		Header("Location: $url"); 
 	}else
 	{
@@ -27,7 +31,8 @@
 		$jsApi->setCode($code);
 		$openid = $jsApi->getOpenId();
 	}
-	
+	*/
+	$openid = $_GET['openid'];
 	//=========步骤2：使用统一支付接口，获取prepay_id============
 	//使用统一支付接口
 	$unifiedOrder = new UnifiedOrder_pub();
@@ -40,18 +45,19 @@
 	//spbill_create_ip已填,商户无需重复填写
 	//sign已填,商户无需重复填写
 	$unifiedOrder->setParameter("openid","$openid");//商品描述
-	$unifiedOrder->setParameter("body","贡献一分钱");//商品描述
+	$unifiedOrder->setParameter("body","拾香得味");//商品描述
 	//自定义订单号，此处仅作举例
 	$timeStamp = time();
-	$out_trade_no = WxPayConf_pub::APPID."$timeStamp";
+	$out_trade_no = WxPayConf_pub::APPID."$timeStamp".$orderId;
+	//$out_trade_no = "sxdw".$orderId;
 	$unifiedOrder->setParameter("out_trade_no","$out_trade_no");//商户订单号 
-	$unifiedOrder->setParameter("total_fee","1");//总金额 单位分
+	$unifiedOrder->setParameter("total_fee",$money);//总金额 单位分
 	$unifiedOrder->setParameter("notify_url",WxPayConf_pub::NOTIFY_URL);//通知地址 
 	$unifiedOrder->setParameter("trade_type","JSAPI");//交易类型
 	//非必填参数，商户可根据实际情况选填
 	//$unifiedOrder->setParameter("sub_mch_id","XXXX");//子商户号  
 	//$unifiedOrder->setParameter("device_info","XXXX");//设备号 
-	//$unifiedOrder->setParameter("attach","XXXX");//附加数据 
+	$unifiedOrder->setParameter("attach","$orderId");//附加数据 
 	//$unifiedOrder->setParameter("time_start","XXXX");//交易起始时间
 	//$unifiedOrder->setParameter("time_expire","XXXX");//交易结束时间 
 	//$unifiedOrder->setParameter("goods_tag","XXXX");//商品标记 
@@ -72,7 +78,8 @@
     <title>微信安全支付</title>
 
 	<script type="text/javascript">
-
+	    callpay();
+	
 		//调用微信JS api 支付
 		function jsApiCall()
 		{
@@ -102,9 +109,11 @@
 	</script>
 </head>
 <body>
+    <!--  
 	</br></br></br></br>
 	<div align="center">
 		<button style="width:210px; height:30px; background-color:#FE6714; border:0px #FE6714 solid; cursor: pointer;  color:white;  font-size:16px;" type="button" onclick="callpay()" >贡献一下</button>
 	</div>
+	-->
 </body>
 </html>

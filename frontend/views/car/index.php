@@ -9,26 +9,25 @@
     <div class="sale-titel">
       <div class="sale-qh"><img src="<?= Yii::getAlias('@cdnUrl')?>/images/icon/gouwuche.png"/></div>
       <div class="sale-txt"><p>拾香得味<span class="sale-span">></span></p></div>
-      <a class="sale-a">编辑</a>
     </div>
         <?php
         if($myGoods != ""){ 
         foreach ($myGoods as $val){?>
-         <div class="sale-toux">
-            <div class="sale-img"><input type="checkbox" name="goods" id="checkbox<?= $val['info']['id']?>" data-id="<?= $val['info']['id']?>" data-price="<?= $val['info']['price']?>"  data-num="<?= $val['num']?>" onclick="javascript:change(this);"/><img src="<?= Yii::getAlias('@cdnUrl').$val['info']['s_image']?>"/></div>
+         <div class="sale-toux" id="tou<?= $val['info']['id']?>">
             <div class="sale-name">
               <p class="sale-name-h"><?= $val['info']['name']?></p>
               <p class="sale-name-fl"><?= mb_substr($val['info']['description'], 0,15,'utf-8')?></p>
-              <p class="sale-price">$ <?= $val['info']['price']?>
-                    <span class="">
+              <p class="sale-price">$ <i class="show-price"><?= $val['info']['price']?></i>
                 		   <span class="lgadd fr">
                              <button type=button class='lgminus' data-id='<?= $val['info']['id']?>'>   -   </button>
                              <input type=text value="<?= $val['num']?>" id="numb" name='numb' size='2' class="addtext" maxlength='3' dataType='Number' msg='必须为数字' readonly="readonly">
                              <button type=button class='lgplus'  data-id='<?= $val['info']['id']?>'>   +   </button>
                              <div class="car_item_piao">+1</div>
-                	   </div>
-            	   </span>
-              </p>
+                            </span>
+               </p>
+             </div>
+            	   
+              
         </div>
         <?php }
         }
@@ -42,8 +41,7 @@
 <div class="fixed-frame">
   <div class="fixed-box">
     <div class="fixed-titel">
-      <div class="fixed-qh"><input type="checkbox" name="quanxuan"/></div>
-      <div class="fixed-txt"><p>全选<span class="fixed-span">合计：<span class="span-jg"><span id="sumPrice">0</span> 元 <span class="span-yf">不含运费</span></span></span></p></div>
+      <div class="fixed-txt"><p><span class="fixed-span">合计：<span class="span-jg"><span id="sumPrice">0</span> 元 <span class="span-yf">不含运费</span></span></span></p></div>
       <a class="fixed-a">结算(<span  id="sumNum">0</span>)</a>
     </div>
   </div>
@@ -51,35 +49,31 @@
 
 
 <script type="text/javascript">
-  //$(".bottommenu").hide();
-  function change(obj)
+    $(document).ready(function(){
+    	 getPrice();
+    });
+  //计算所有的价格
+  function getPrice()
   {
-	  var price = $(obj).data("price");
-	  var num = $(obj).data("num");
-	  var id = $(obj).data("id");
-	  //获取总价格
-	  var sumPrice = parseInt($("#sumPrice").text());
-	  var sumNum = parseInt($("#sumNum").text());
-	  if($('#checkbox'+id).is(':checked')) {
-		    // do something
-		  sumPrice += price*num;
-		  sumNum += num;
-		}else{
-			sumPrice -= price*num;
-			sumNum -= num;
-		}
-	  $("#sumPrice").text(sumPrice);
-	  $("#sumNum").text(sumNum);
+	   var sumMoney = 0;
+	   var sumNum = 0;
+	   $(".sale-toux").each(function(){
+		  sumMoney += parseInt($(this).find(".show-price").text()) * parseInt($(this).find("#numb").val());
+		  sumNum += parseInt($(this).find("#numb").val());
+		  $("#sumPrice").text(sumMoney);
+		  $("#sumNum").text(sumNum);
+	  });
   }
+  
 
   $(".fixed-a").click(function(){
 	    var ids = [];
 	    var nums = [];
-		$("input:checkbox[name='goods']:checked").each(function() { // 遍历name=test的多选框
-			ids.push($(this).data("id"));
-			nums.push($(this).data("num"));
-		});
-
+	    $(".sale-toux").each(function(){
+	    	ids.push($(this).find(".lgminus").data("id"));
+	    	nums.push($(this).find("#numb").val());
+	    });
+	    
 		var data = {};
 		data.ids = ids;
 		data.nums = nums;
@@ -97,5 +91,67 @@
 	          }
 	      }
 	    });
+  });
+
+//数量加一
+  $(document).on('click','.lgplus',function(){
+      var id = $(this).data("id");
+  	  var data = {};
+  	  var r = false;
+      data.id = id;
+      data._frontend = '<?php echo Yii::$app->request->getCsrfToken() ?>';
+      $.ajax({
+        type: 'post',
+        dataType: 'json',
+        url: '<?= Yii::$app->urlManager->createUrl('car/add-car-goods') ?>',
+        data: data,
+        async:false,
+        success: function(res) {
+            if(res.code == 1)
+            {
+          	  r = true;
+            }
+        }
+      });
+      if(r)
+      {
+      	var num = parseInt($(this).siblings('#numb').val())+1;
+      	$(this).siblings("#numb").val(num);
+      	getPrice();
+      }
+  });
+
+  //数量减一
+  $(document).on('click','.lgminus',function(){
+  	var num = parseInt($(this).siblings('#numb').val());
+  	if(num > 0){
+  		var id = $(this).data("id");
+  		var r = false;
+      	var data = {};
+          data.id = id;
+          data._frontend = '<?php echo Yii::$app->request->getCsrfToken() ?>';
+          $.ajax({
+            type: 'post',
+            dataType: 'json',
+            url: '<?= Yii::$app->urlManager->createUrl('car/sub-car-goods') ?>',
+            data: data,
+            async:false,
+            success: function(res) {
+          	  if(res.code == 1)
+                {
+              	  r = true;
+                }
+            }
+          });
+          if(r)
+          {
+        	  $(this).siblings("#numb").val(num-1);
+        	  if(num-1 == 0)
+        	  {
+        		  $("#tou"+id).remove();
+              }
+        	  getPrice();
+          }
+  	}
   });
 </script>

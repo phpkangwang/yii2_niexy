@@ -6768,3 +6768,802 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1472266051.0524
     'REQUEST_TIME' => 1472266051
 ]
+2016-09-02 09:39:16 [127.0.0.1][7][fd3g39kiv0l5778oifor1kcin5][error][yii\base\ErrorException:2] exception 'yii\base\ErrorException' with message 'in_array() expects parameter 2 to be array, null given' in D:\wamp\www\yii2_niexy\common\models\Car.php:178
+Stack trace:
+#0 D:\wamp\www\yii2_niexy\common\models\Order.php(56): common\models\Car::subCarOneGoodsNum()
+#1 D:\wamp\www\yii2_niexy\frontend\controllers\CarController.php(130): common\models\Order::createOrder()
+#2 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\InlineAction.php(55): frontend\controllers\CarController->actionCreateOrder()
+#3 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\InlineAction.php(55): ::call_user_func_array:{D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\InlineAction.php:55}()
+#4 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams()
+#5 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction()
+#6 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction()
+#7 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest()
+#8 D:\wamp\www\yii2_niexy\frontend\web\index.php(18): yii\base\Application->run()
+#9 {main}
+2016-09-02 09:39:16 [127.0.0.1][7][fd3g39kiv0l5778oifor1kcin5][info][application] $_GET = [
+    'r' => 'car/create-order'
+]
+
+$_POST = [
+    '_frontend' => 'VkVkc01vNU8ZFTUiDzhHBzQkXR8nBmYkbjUmAT9bZR5jN1YidAl2Ow=='
+]
+
+$_COOKIE = [
+    '_pk_id_1_dc78' => '174dd4f9ea2f62ef.1459416451.76.1471584948.1471584948.'
+    '_backendUser' => '8f6c25ec5992583ec6da2643ea215d4eee37119aef8ac4afb8023f596671635ea:2:{i:0;s:12:\"_backendUser\";i:1;s:46:\"[4,\"KFXb_AaIJByQwi3wNB8AsgH4WMCkZDsA\",2592000]\";}'
+    '_frontendUser' => '74ded0b757b0dbfd3695b2fb31f13a5567df4c43d3ab1d5cc512f60c0323c8f3a:2:{i:0;s:13:\"_frontendUser\";i:1;s:49:\"[1007,\"yB8dcChCAp9-1qjnEA1hv5uiPIve7WUu\",2592000]\";}'
+    '_identity-backend' => '4a3dc9c4f7b235eee1c3991894d09f1c870d186b51db307394500cd8faba71e8a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[7,\"p31rKbUs3u7yh2gQoQ-r3AmJb6Lq8q5X\",2592000]\";}'
+    'advanced-frontend' => 'fd3g39kiv0l5778oifor1kcin5'
+    '_frontend' => '5be89750ec38fb9fd4b8c7634e8fc1e4de9ba2ed00136fdacbbbbe6582142af1a:2:{i:0;s:9:\"_frontend\";i:1;s:32:\"OPQQBWrHba9ljiSk8pBrr4PQ5r2Q9fCt\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 7
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '127.0.0.1:10086'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:48.0) Gecko/20100101 Firefox/48.0 FirePHP/0.7.4'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_DNT' => '1'
+    'HTTP_X_CSRF_TOKEN' => 'VkVkc01vNU8ZFTUiDzhHBzQkXR8nBmYkbjUmAT9bZR5jN1YidAl2Ow=='
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://127.0.0.1:10086/yii2_niexy/frontend/web/index.php?r=car%2Findex'
+    'CONTENT_LENGTH' => '70'
+    'HTTP_COOKIE' => '_pk_id.1.dc78=174dd4f9ea2f62ef.1459416451.76.1471584948.1471584948.; _backendUser=8f6c25ec5992583ec6da2643ea215d4eee37119aef8ac4afb8023f596671635ea%3A2%3A%7Bi%3A0%3Bs%3A12%3A%22_backendUser%22%3Bi%3A1%3Bs%3A46%3A%22%5B4%2C%22KFXb_AaIJByQwi3wNB8AsgH4WMCkZDsA%22%2C2592000%5D%22%3B%7D; _frontendUser=74ded0b757b0dbfd3695b2fb31f13a5567df4c43d3ab1d5cc512f60c0323c8f3a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_frontendUser%22%3Bi%3A1%3Bs%3A49%3A%22%5B1007%2C%22yB8dcChCAp9-1qjnEA1hv5uiPIve7WUu%22%2C2592000%5D%22%3B%7D; _identity-backend=4a3dc9c4f7b235eee1c3991894d09f1c870d186b51db307394500cd8faba71e8a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B7%2C%22p31rKbUs3u7yh2gQoQ-r3AmJb6Lq8q5X%22%2C2592000%5D%22%3B%7D; advanced-frontend=fd3g39kiv0l5778oifor1kcin5; _frontend=5be89750ec38fb9fd4b8c7634e8fc1e4de9ba2ed00136fdacbbbbe6582142af1a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_frontend%22%3Bi%3A1%3Bs%3A32%3A%22OPQQBWrHba9ljiSk8pBrr4PQ5r2Q9fCt%22%3B%7D'
+    'HTTP_X_INSIGHT' => 'activate'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;D:\\wamp\\bin\\php\\php5.5.12;C:\\ProgramData\\ComposerSetup\\bin;D:\\git\\bin;D:\\wamp\\bin\\php\\php5.5.12;C:\\Program Files\\nodejs\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.9 (Win64) PHP/5.5.12 Server at 127.0.0.1 Port 10086</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win64) PHP/5.5.12'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '10086'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp/www'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'D:/wamp/www/yii2_niexy/frontend/web/index.php'
+    'REMOTE_PORT' => '53022'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=car%2Fcreate-order'
+    'REQUEST_URI' => '/yii2_niexy/frontend/web/index.php?r=car%2Fcreate-order'
+    'SCRIPT_NAME' => '/yii2_niexy/frontend/web/index.php'
+    'PHP_SELF' => '/yii2_niexy/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1472780356.347
+    'REQUEST_TIME' => 1472780356
+]
+2016-09-02 09:39:17 [127.0.0.1][7][fd3g39kiv0l5778oifor1kcin5][error][yii\base\ErrorException:2] exception 'yii\base\ErrorException' with message 'in_array() expects parameter 2 to be array, null given' in D:\wamp\www\yii2_niexy\common\models\Car.php:178
+Stack trace:
+#0 D:\wamp\www\yii2_niexy\common\models\Order.php(56): common\models\Car::subCarOneGoodsNum()
+#1 D:\wamp\www\yii2_niexy\frontend\controllers\CarController.php(130): common\models\Order::createOrder()
+#2 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\InlineAction.php(55): frontend\controllers\CarController->actionCreateOrder()
+#3 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\InlineAction.php(55): ::call_user_func_array:{D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\InlineAction.php:55}()
+#4 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams()
+#5 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction()
+#6 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction()
+#7 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest()
+#8 D:\wamp\www\yii2_niexy\frontend\web\index.php(18): yii\base\Application->run()
+#9 {main}
+2016-09-02 09:39:17 [127.0.0.1][7][fd3g39kiv0l5778oifor1kcin5][info][application] $_GET = [
+    'r' => 'car/create-order'
+]
+
+$_POST = [
+    '_frontend' => 'VkVkc01vNU8ZFTUiDzhHBzQkXR8nBmYkbjUmAT9bZR5jN1YidAl2Ow=='
+]
+
+$_COOKIE = [
+    '_pk_id_1_dc78' => '174dd4f9ea2f62ef.1459416451.76.1471584948.1471584948.'
+    '_backendUser' => '8f6c25ec5992583ec6da2643ea215d4eee37119aef8ac4afb8023f596671635ea:2:{i:0;s:12:\"_backendUser\";i:1;s:46:\"[4,\"KFXb_AaIJByQwi3wNB8AsgH4WMCkZDsA\",2592000]\";}'
+    '_frontendUser' => '74ded0b757b0dbfd3695b2fb31f13a5567df4c43d3ab1d5cc512f60c0323c8f3a:2:{i:0;s:13:\"_frontendUser\";i:1;s:49:\"[1007,\"yB8dcChCAp9-1qjnEA1hv5uiPIve7WUu\",2592000]\";}'
+    '_identity-backend' => '4a3dc9c4f7b235eee1c3991894d09f1c870d186b51db307394500cd8faba71e8a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[7,\"p31rKbUs3u7yh2gQoQ-r3AmJb6Lq8q5X\",2592000]\";}'
+    'advanced-frontend' => 'fd3g39kiv0l5778oifor1kcin5'
+    '_frontend' => '5be89750ec38fb9fd4b8c7634e8fc1e4de9ba2ed00136fdacbbbbe6582142af1a:2:{i:0;s:9:\"_frontend\";i:1;s:32:\"OPQQBWrHba9ljiSk8pBrr4PQ5r2Q9fCt\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 7
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '127.0.0.1:10086'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:48.0) Gecko/20100101 Firefox/48.0 FirePHP/0.7.4'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_DNT' => '1'
+    'HTTP_X_CSRF_TOKEN' => 'VkVkc01vNU8ZFTUiDzhHBzQkXR8nBmYkbjUmAT9bZR5jN1YidAl2Ow=='
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://127.0.0.1:10086/yii2_niexy/frontend/web/index.php?r=car%2Findex'
+    'CONTENT_LENGTH' => '70'
+    'HTTP_COOKIE' => '_pk_id.1.dc78=174dd4f9ea2f62ef.1459416451.76.1471584948.1471584948.; _backendUser=8f6c25ec5992583ec6da2643ea215d4eee37119aef8ac4afb8023f596671635ea%3A2%3A%7Bi%3A0%3Bs%3A12%3A%22_backendUser%22%3Bi%3A1%3Bs%3A46%3A%22%5B4%2C%22KFXb_AaIJByQwi3wNB8AsgH4WMCkZDsA%22%2C2592000%5D%22%3B%7D; _frontendUser=74ded0b757b0dbfd3695b2fb31f13a5567df4c43d3ab1d5cc512f60c0323c8f3a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_frontendUser%22%3Bi%3A1%3Bs%3A49%3A%22%5B1007%2C%22yB8dcChCAp9-1qjnEA1hv5uiPIve7WUu%22%2C2592000%5D%22%3B%7D; _identity-backend=4a3dc9c4f7b235eee1c3991894d09f1c870d186b51db307394500cd8faba71e8a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B7%2C%22p31rKbUs3u7yh2gQoQ-r3AmJb6Lq8q5X%22%2C2592000%5D%22%3B%7D; advanced-frontend=fd3g39kiv0l5778oifor1kcin5; _frontend=5be89750ec38fb9fd4b8c7634e8fc1e4de9ba2ed00136fdacbbbbe6582142af1a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_frontend%22%3Bi%3A1%3Bs%3A32%3A%22OPQQBWrHba9ljiSk8pBrr4PQ5r2Q9fCt%22%3B%7D'
+    'HTTP_X_INSIGHT' => 'activate'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;D:\\wamp\\bin\\php\\php5.5.12;C:\\ProgramData\\ComposerSetup\\bin;D:\\git\\bin;D:\\wamp\\bin\\php\\php5.5.12;C:\\Program Files\\nodejs\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.9 (Win64) PHP/5.5.12 Server at 127.0.0.1 Port 10086</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win64) PHP/5.5.12'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '10086'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp/www'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'D:/wamp/www/yii2_niexy/frontend/web/index.php'
+    'REMOTE_PORT' => '53025'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=car%2Fcreate-order'
+    'REQUEST_URI' => '/yii2_niexy/frontend/web/index.php?r=car%2Fcreate-order'
+    'SCRIPT_NAME' => '/yii2_niexy/frontend/web/index.php'
+    'PHP_SELF' => '/yii2_niexy/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1472780357.15
+    'REQUEST_TIME' => 1472780357
+]
+2016-09-02 09:39:19 [127.0.0.1][7][fd3g39kiv0l5778oifor1kcin5][error][yii\base\ErrorException:2] exception 'yii\base\ErrorException' with message 'in_array() expects parameter 2 to be array, null given' in D:\wamp\www\yii2_niexy\common\models\Car.php:178
+Stack trace:
+#0 D:\wamp\www\yii2_niexy\common\models\Order.php(56): common\models\Car::subCarOneGoodsNum()
+#1 D:\wamp\www\yii2_niexy\frontend\controllers\CarController.php(130): common\models\Order::createOrder()
+#2 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\InlineAction.php(55): frontend\controllers\CarController->actionCreateOrder()
+#3 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\InlineAction.php(55): ::call_user_func_array:{D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\InlineAction.php:55}()
+#4 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams()
+#5 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction()
+#6 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction()
+#7 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest()
+#8 D:\wamp\www\yii2_niexy\frontend\web\index.php(18): yii\base\Application->run()
+#9 {main}
+2016-09-02 09:39:18 [127.0.0.1][7][fd3g39kiv0l5778oifor1kcin5][info][application] $_GET = [
+    'r' => 'car/create-order'
+]
+
+$_POST = [
+    '_frontend' => 'VkVkc01vNU8ZFTUiDzhHBzQkXR8nBmYkbjUmAT9bZR5jN1YidAl2Ow=='
+]
+
+$_COOKIE = [
+    '_pk_id_1_dc78' => '174dd4f9ea2f62ef.1459416451.76.1471584948.1471584948.'
+    '_backendUser' => '8f6c25ec5992583ec6da2643ea215d4eee37119aef8ac4afb8023f596671635ea:2:{i:0;s:12:\"_backendUser\";i:1;s:46:\"[4,\"KFXb_AaIJByQwi3wNB8AsgH4WMCkZDsA\",2592000]\";}'
+    '_frontendUser' => '74ded0b757b0dbfd3695b2fb31f13a5567df4c43d3ab1d5cc512f60c0323c8f3a:2:{i:0;s:13:\"_frontendUser\";i:1;s:49:\"[1007,\"yB8dcChCAp9-1qjnEA1hv5uiPIve7WUu\",2592000]\";}'
+    '_identity-backend' => '4a3dc9c4f7b235eee1c3991894d09f1c870d186b51db307394500cd8faba71e8a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[7,\"p31rKbUs3u7yh2gQoQ-r3AmJb6Lq8q5X\",2592000]\";}'
+    'advanced-frontend' => 'fd3g39kiv0l5778oifor1kcin5'
+    '_frontend' => '5be89750ec38fb9fd4b8c7634e8fc1e4de9ba2ed00136fdacbbbbe6582142af1a:2:{i:0;s:9:\"_frontend\";i:1;s:32:\"OPQQBWrHba9ljiSk8pBrr4PQ5r2Q9fCt\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 7
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '127.0.0.1:10086'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:48.0) Gecko/20100101 Firefox/48.0 FirePHP/0.7.4'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_DNT' => '1'
+    'HTTP_X_CSRF_TOKEN' => 'VkVkc01vNU8ZFTUiDzhHBzQkXR8nBmYkbjUmAT9bZR5jN1YidAl2Ow=='
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://127.0.0.1:10086/yii2_niexy/frontend/web/index.php?r=car%2Findex'
+    'CONTENT_LENGTH' => '70'
+    'HTTP_COOKIE' => '_pk_id.1.dc78=174dd4f9ea2f62ef.1459416451.76.1471584948.1471584948.; _backendUser=8f6c25ec5992583ec6da2643ea215d4eee37119aef8ac4afb8023f596671635ea%3A2%3A%7Bi%3A0%3Bs%3A12%3A%22_backendUser%22%3Bi%3A1%3Bs%3A46%3A%22%5B4%2C%22KFXb_AaIJByQwi3wNB8AsgH4WMCkZDsA%22%2C2592000%5D%22%3B%7D; _frontendUser=74ded0b757b0dbfd3695b2fb31f13a5567df4c43d3ab1d5cc512f60c0323c8f3a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_frontendUser%22%3Bi%3A1%3Bs%3A49%3A%22%5B1007%2C%22yB8dcChCAp9-1qjnEA1hv5uiPIve7WUu%22%2C2592000%5D%22%3B%7D; _identity-backend=4a3dc9c4f7b235eee1c3991894d09f1c870d186b51db307394500cd8faba71e8a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B7%2C%22p31rKbUs3u7yh2gQoQ-r3AmJb6Lq8q5X%22%2C2592000%5D%22%3B%7D; advanced-frontend=fd3g39kiv0l5778oifor1kcin5; _frontend=5be89750ec38fb9fd4b8c7634e8fc1e4de9ba2ed00136fdacbbbbe6582142af1a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_frontend%22%3Bi%3A1%3Bs%3A32%3A%22OPQQBWrHba9ljiSk8pBrr4PQ5r2Q9fCt%22%3B%7D'
+    'HTTP_X_INSIGHT' => 'activate'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;D:\\wamp\\bin\\php\\php5.5.12;C:\\ProgramData\\ComposerSetup\\bin;D:\\git\\bin;D:\\wamp\\bin\\php\\php5.5.12;C:\\Program Files\\nodejs\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.9 (Win64) PHP/5.5.12 Server at 127.0.0.1 Port 10086</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win64) PHP/5.5.12'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '10086'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp/www'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'D:/wamp/www/yii2_niexy/frontend/web/index.php'
+    'REMOTE_PORT' => '53028'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=car%2Fcreate-order'
+    'REQUEST_URI' => '/yii2_niexy/frontend/web/index.php?r=car%2Fcreate-order'
+    'SCRIPT_NAME' => '/yii2_niexy/frontend/web/index.php'
+    'PHP_SELF' => '/yii2_niexy/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1472780358.536
+    'REQUEST_TIME' => 1472780358
+]
+2016-09-02 09:40:26 [127.0.0.1][7][fd3g39kiv0l5778oifor1kcin5][error][yii\base\ErrorException:2] exception 'yii\base\ErrorException' with message 'in_array() expects parameter 2 to be array, null given' in D:\wamp\www\yii2_niexy\common\models\Car.php:178
+Stack trace:
+#0 D:\wamp\www\yii2_niexy\common\models\Order.php(56): common\models\Car::subCarOneGoodsNum()
+#1 D:\wamp\www\yii2_niexy\frontend\controllers\CarController.php(130): common\models\Order::createOrder()
+#2 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\InlineAction.php(55): frontend\controllers\CarController->actionCreateOrder()
+#3 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\InlineAction.php(55): ::call_user_func_array:{D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\InlineAction.php:55}()
+#4 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams()
+#5 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction()
+#6 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction()
+#7 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest()
+#8 D:\wamp\www\yii2_niexy\frontend\web\index.php(18): yii\base\Application->run()
+#9 {main}
+2016-09-02 09:40:25 [127.0.0.1][7][fd3g39kiv0l5778oifor1kcin5][info][application] $_GET = [
+    'r' => 'car/create-order'
+]
+
+$_POST = [
+    '_frontend' => 'SGtRVHcxbEEHOwAFNWYeCSoKaDgdWD8qcBsTJgUFPBB9GWMFTlcvNQ=='
+]
+
+$_COOKIE = [
+    '_pk_id_1_dc78' => '174dd4f9ea2f62ef.1459416451.76.1471584948.1471584948.'
+    '_backendUser' => '8f6c25ec5992583ec6da2643ea215d4eee37119aef8ac4afb8023f596671635ea:2:{i:0;s:12:\"_backendUser\";i:1;s:46:\"[4,\"KFXb_AaIJByQwi3wNB8AsgH4WMCkZDsA\",2592000]\";}'
+    '_frontendUser' => '74ded0b757b0dbfd3695b2fb31f13a5567df4c43d3ab1d5cc512f60c0323c8f3a:2:{i:0;s:13:\"_frontendUser\";i:1;s:49:\"[1007,\"yB8dcChCAp9-1qjnEA1hv5uiPIve7WUu\",2592000]\";}'
+    '_identity-backend' => '4a3dc9c4f7b235eee1c3991894d09f1c870d186b51db307394500cd8faba71e8a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[7,\"p31rKbUs3u7yh2gQoQ-r3AmJb6Lq8q5X\",2592000]\";}'
+    'advanced-frontend' => 'fd3g39kiv0l5778oifor1kcin5'
+    '_frontend' => '5be89750ec38fb9fd4b8c7634e8fc1e4de9ba2ed00136fdacbbbbe6582142af1a:2:{i:0;s:9:\"_frontend\";i:1;s:32:\"OPQQBWrHba9ljiSk8pBrr4PQ5r2Q9fCt\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 7
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '127.0.0.1:10086'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:48.0) Gecko/20100101 Firefox/48.0 FirePHP/0.7.4'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_DNT' => '1'
+    'HTTP_X_CSRF_TOKEN' => 'SGtRVHcxbEEHOwAFNWYeCSoKaDgdWD8qcBsTJgUFPBB9GWMFTlcvNQ=='
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://127.0.0.1:10086/yii2_niexy/frontend/web/index.php?r=car%2Findex'
+    'CONTENT_LENGTH' => '70'
+    'HTTP_COOKIE' => '_pk_id.1.dc78=174dd4f9ea2f62ef.1459416451.76.1471584948.1471584948.; _backendUser=8f6c25ec5992583ec6da2643ea215d4eee37119aef8ac4afb8023f596671635ea%3A2%3A%7Bi%3A0%3Bs%3A12%3A%22_backendUser%22%3Bi%3A1%3Bs%3A46%3A%22%5B4%2C%22KFXb_AaIJByQwi3wNB8AsgH4WMCkZDsA%22%2C2592000%5D%22%3B%7D; _frontendUser=74ded0b757b0dbfd3695b2fb31f13a5567df4c43d3ab1d5cc512f60c0323c8f3a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_frontendUser%22%3Bi%3A1%3Bs%3A49%3A%22%5B1007%2C%22yB8dcChCAp9-1qjnEA1hv5uiPIve7WUu%22%2C2592000%5D%22%3B%7D; _identity-backend=4a3dc9c4f7b235eee1c3991894d09f1c870d186b51db307394500cd8faba71e8a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B7%2C%22p31rKbUs3u7yh2gQoQ-r3AmJb6Lq8q5X%22%2C2592000%5D%22%3B%7D; advanced-frontend=fd3g39kiv0l5778oifor1kcin5; _frontend=5be89750ec38fb9fd4b8c7634e8fc1e4de9ba2ed00136fdacbbbbe6582142af1a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_frontend%22%3Bi%3A1%3Bs%3A32%3A%22OPQQBWrHba9ljiSk8pBrr4PQ5r2Q9fCt%22%3B%7D'
+    'HTTP_X_INSIGHT' => 'activate'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;D:\\wamp\\bin\\php\\php5.5.12;C:\\ProgramData\\ComposerSetup\\bin;D:\\git\\bin;D:\\wamp\\bin\\php\\php5.5.12;C:\\Program Files\\nodejs\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.9 (Win64) PHP/5.5.12 Server at 127.0.0.1 Port 10086</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win64) PHP/5.5.12'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '10086'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp/www'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'D:/wamp/www/yii2_niexy/frontend/web/index.php'
+    'REMOTE_PORT' => '53091'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=car%2Fcreate-order'
+    'REQUEST_URI' => '/yii2_niexy/frontend/web/index.php?r=car%2Fcreate-order'
+    'SCRIPT_NAME' => '/yii2_niexy/frontend/web/index.php'
+    'PHP_SELF' => '/yii2_niexy/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1472780425.913
+    'REQUEST_TIME' => 1472780425
+]
+2016-09-02 09:41:15 [127.0.0.1][7][fd3g39kiv0l5778oifor1kcin5][error][yii\base\ErrorException:2] exception 'yii\base\ErrorException' with message 'in_array() expects parameter 2 to be array, null given' in D:\wamp\www\yii2_niexy\common\models\Car.php:178
+Stack trace:
+#0 D:\wamp\www\yii2_niexy\common\models\Order.php(56): common\models\Car::subCarOneGoodsNum()
+#1 D:\wamp\www\yii2_niexy\frontend\controllers\CarController.php(130): common\models\Order::createOrder()
+#2 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\InlineAction.php(55): frontend\controllers\CarController->actionCreateOrder()
+#3 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\InlineAction.php(55): ::call_user_func_array:{D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\InlineAction.php:55}()
+#4 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams()
+#5 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction()
+#6 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction()
+#7 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest()
+#8 D:\wamp\www\yii2_niexy\frontend\web\index.php(18): yii\base\Application->run()
+#9 {main}
+2016-09-02 09:41:14 [127.0.0.1][7][fd3g39kiv0l5778oifor1kcin5][info][application] $_GET = [
+    'r' => 'car/create-order'
+]
+
+$_POST = [
+    '_frontend' => 'bUxhWnZRTm4iHDALNAY8Jg8tWDYcOB0FVTwjKARlHj9YPlMLTzcNGg=='
+]
+
+$_COOKIE = [
+    '_pk_id_1_dc78' => '174dd4f9ea2f62ef.1459416451.76.1471584948.1471584948.'
+    '_backendUser' => '8f6c25ec5992583ec6da2643ea215d4eee37119aef8ac4afb8023f596671635ea:2:{i:0;s:12:\"_backendUser\";i:1;s:46:\"[4,\"KFXb_AaIJByQwi3wNB8AsgH4WMCkZDsA\",2592000]\";}'
+    '_frontendUser' => '74ded0b757b0dbfd3695b2fb31f13a5567df4c43d3ab1d5cc512f60c0323c8f3a:2:{i:0;s:13:\"_frontendUser\";i:1;s:49:\"[1007,\"yB8dcChCAp9-1qjnEA1hv5uiPIve7WUu\",2592000]\";}'
+    '_identity-backend' => '4a3dc9c4f7b235eee1c3991894d09f1c870d186b51db307394500cd8faba71e8a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[7,\"p31rKbUs3u7yh2gQoQ-r3AmJb6Lq8q5X\",2592000]\";}'
+    'advanced-frontend' => 'fd3g39kiv0l5778oifor1kcin5'
+    '_frontend' => '5be89750ec38fb9fd4b8c7634e8fc1e4de9ba2ed00136fdacbbbbe6582142af1a:2:{i:0;s:9:\"_frontend\";i:1;s:32:\"OPQQBWrHba9ljiSk8pBrr4PQ5r2Q9fCt\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 7
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '127.0.0.1:10086'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:48.0) Gecko/20100101 Firefox/48.0 FirePHP/0.7.4'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_DNT' => '1'
+    'HTTP_X_CSRF_TOKEN' => 'bUxhWnZRTm4iHDALNAY8Jg8tWDYcOB0FVTwjKARlHj9YPlMLTzcNGg=='
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://127.0.0.1:10086/yii2_niexy/frontend/web/index.php?r=car%2Findex'
+    'CONTENT_LENGTH' => '70'
+    'HTTP_COOKIE' => '_pk_id.1.dc78=174dd4f9ea2f62ef.1459416451.76.1471584948.1471584948.; _backendUser=8f6c25ec5992583ec6da2643ea215d4eee37119aef8ac4afb8023f596671635ea%3A2%3A%7Bi%3A0%3Bs%3A12%3A%22_backendUser%22%3Bi%3A1%3Bs%3A46%3A%22%5B4%2C%22KFXb_AaIJByQwi3wNB8AsgH4WMCkZDsA%22%2C2592000%5D%22%3B%7D; _frontendUser=74ded0b757b0dbfd3695b2fb31f13a5567df4c43d3ab1d5cc512f60c0323c8f3a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_frontendUser%22%3Bi%3A1%3Bs%3A49%3A%22%5B1007%2C%22yB8dcChCAp9-1qjnEA1hv5uiPIve7WUu%22%2C2592000%5D%22%3B%7D; _identity-backend=4a3dc9c4f7b235eee1c3991894d09f1c870d186b51db307394500cd8faba71e8a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B7%2C%22p31rKbUs3u7yh2gQoQ-r3AmJb6Lq8q5X%22%2C2592000%5D%22%3B%7D; advanced-frontend=fd3g39kiv0l5778oifor1kcin5; _frontend=5be89750ec38fb9fd4b8c7634e8fc1e4de9ba2ed00136fdacbbbbe6582142af1a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_frontend%22%3Bi%3A1%3Bs%3A32%3A%22OPQQBWrHba9ljiSk8pBrr4PQ5r2Q9fCt%22%3B%7D'
+    'HTTP_X_INSIGHT' => 'activate'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;D:\\wamp\\bin\\php\\php5.5.12;C:\\ProgramData\\ComposerSetup\\bin;D:\\git\\bin;D:\\wamp\\bin\\php\\php5.5.12;C:\\Program Files\\nodejs\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.9 (Win64) PHP/5.5.12 Server at 127.0.0.1 Port 10086</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win64) PHP/5.5.12'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '10086'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp/www'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'D:/wamp/www/yii2_niexy/frontend/web/index.php'
+    'REMOTE_PORT' => '53147'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=car%2Fcreate-order'
+    'REQUEST_URI' => '/yii2_niexy/frontend/web/index.php?r=car%2Fcreate-order'
+    'SCRIPT_NAME' => '/yii2_niexy/frontend/web/index.php'
+    'PHP_SELF' => '/yii2_niexy/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1472780474.947
+    'REQUEST_TIME' => 1472780474
+]
+2016-09-02 09:41:16 [127.0.0.1][7][fd3g39kiv0l5778oifor1kcin5][error][yii\base\ErrorException:2] exception 'yii\base\ErrorException' with message 'in_array() expects parameter 2 to be array, null given' in D:\wamp\www\yii2_niexy\common\models\Car.php:178
+Stack trace:
+#0 D:\wamp\www\yii2_niexy\common\models\Order.php(56): common\models\Car::subCarOneGoodsNum()
+#1 D:\wamp\www\yii2_niexy\frontend\controllers\CarController.php(130): common\models\Order::createOrder()
+#2 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\InlineAction.php(55): frontend\controllers\CarController->actionCreateOrder()
+#3 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\InlineAction.php(55): ::call_user_func_array:{D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\InlineAction.php:55}()
+#4 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams()
+#5 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction()
+#6 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction()
+#7 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest()
+#8 D:\wamp\www\yii2_niexy\frontend\web\index.php(18): yii\base\Application->run()
+#9 {main}
+2016-09-02 09:41:16 [127.0.0.1][7][fd3g39kiv0l5778oifor1kcin5][info][application] $_GET = [
+    'r' => 'car/create-order'
+]
+
+$_POST = [
+    '_frontend' => 'bUxhWnZRTm4iHDALNAY8Jg8tWDYcOB0FVTwjKARlHj9YPlMLTzcNGg=='
+]
+
+$_COOKIE = [
+    '_pk_id_1_dc78' => '174dd4f9ea2f62ef.1459416451.76.1471584948.1471584948.'
+    '_backendUser' => '8f6c25ec5992583ec6da2643ea215d4eee37119aef8ac4afb8023f596671635ea:2:{i:0;s:12:\"_backendUser\";i:1;s:46:\"[4,\"KFXb_AaIJByQwi3wNB8AsgH4WMCkZDsA\",2592000]\";}'
+    '_frontendUser' => '74ded0b757b0dbfd3695b2fb31f13a5567df4c43d3ab1d5cc512f60c0323c8f3a:2:{i:0;s:13:\"_frontendUser\";i:1;s:49:\"[1007,\"yB8dcChCAp9-1qjnEA1hv5uiPIve7WUu\",2592000]\";}'
+    '_identity-backend' => '4a3dc9c4f7b235eee1c3991894d09f1c870d186b51db307394500cd8faba71e8a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[7,\"p31rKbUs3u7yh2gQoQ-r3AmJb6Lq8q5X\",2592000]\";}'
+    'advanced-frontend' => 'fd3g39kiv0l5778oifor1kcin5'
+    '_frontend' => '5be89750ec38fb9fd4b8c7634e8fc1e4de9ba2ed00136fdacbbbbe6582142af1a:2:{i:0;s:9:\"_frontend\";i:1;s:32:\"OPQQBWrHba9ljiSk8pBrr4PQ5r2Q9fCt\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 7
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '127.0.0.1:10086'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:48.0) Gecko/20100101 Firefox/48.0 FirePHP/0.7.4'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_DNT' => '1'
+    'HTTP_X_CSRF_TOKEN' => 'bUxhWnZRTm4iHDALNAY8Jg8tWDYcOB0FVTwjKARlHj9YPlMLTzcNGg=='
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://127.0.0.1:10086/yii2_niexy/frontend/web/index.php?r=car%2Findex'
+    'CONTENT_LENGTH' => '70'
+    'HTTP_COOKIE' => '_pk_id.1.dc78=174dd4f9ea2f62ef.1459416451.76.1471584948.1471584948.; _backendUser=8f6c25ec5992583ec6da2643ea215d4eee37119aef8ac4afb8023f596671635ea%3A2%3A%7Bi%3A0%3Bs%3A12%3A%22_backendUser%22%3Bi%3A1%3Bs%3A46%3A%22%5B4%2C%22KFXb_AaIJByQwi3wNB8AsgH4WMCkZDsA%22%2C2592000%5D%22%3B%7D; _frontendUser=74ded0b757b0dbfd3695b2fb31f13a5567df4c43d3ab1d5cc512f60c0323c8f3a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_frontendUser%22%3Bi%3A1%3Bs%3A49%3A%22%5B1007%2C%22yB8dcChCAp9-1qjnEA1hv5uiPIve7WUu%22%2C2592000%5D%22%3B%7D; _identity-backend=4a3dc9c4f7b235eee1c3991894d09f1c870d186b51db307394500cd8faba71e8a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B7%2C%22p31rKbUs3u7yh2gQoQ-r3AmJb6Lq8q5X%22%2C2592000%5D%22%3B%7D; advanced-frontend=fd3g39kiv0l5778oifor1kcin5; _frontend=5be89750ec38fb9fd4b8c7634e8fc1e4de9ba2ed00136fdacbbbbe6582142af1a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_frontend%22%3Bi%3A1%3Bs%3A32%3A%22OPQQBWrHba9ljiSk8pBrr4PQ5r2Q9fCt%22%3B%7D'
+    'HTTP_X_INSIGHT' => 'activate'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;D:\\wamp\\bin\\php\\php5.5.12;C:\\ProgramData\\ComposerSetup\\bin;D:\\git\\bin;D:\\wamp\\bin\\php\\php5.5.12;C:\\Program Files\\nodejs\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.9 (Win64) PHP/5.5.12 Server at 127.0.0.1 Port 10086</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win64) PHP/5.5.12'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '10086'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp/www'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'D:/wamp/www/yii2_niexy/frontend/web/index.php'
+    'REMOTE_PORT' => '53150'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=car%2Fcreate-order'
+    'REQUEST_URI' => '/yii2_niexy/frontend/web/index.php?r=car%2Fcreate-order'
+    'SCRIPT_NAME' => '/yii2_niexy/frontend/web/index.php'
+    'PHP_SELF' => '/yii2_niexy/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1472780475.992
+    'REQUEST_TIME' => 1472780475
+]
+2016-09-02 09:44:41 [127.0.0.1][-][it9a39jjlpaskpni88hugt1jg7][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "home/index".' in D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\Module.php:460
+Stack trace:
+#0 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction('home/index', Array)
+#1 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\wamp\www\yii2_niexy\frontend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\web\Application.php:99
+Stack trace:
+#0 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\wamp\www\yii2_niexy\frontend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2016-09-02 09:44:41 [127.0.0.1][-][it9a39jjlpaskpni88hugt1jg7][info][application] $_GET = [
+    'r' => 'home/index'
+]
+
+$_COOKIE = [
+    '_frontendUser' => '74ded0b757b0dbfd3695b2fb31f13a5567df4c43d3ab1d5cc512f60c0323c8f3a:2:{i:0;s:13:\"_frontendUser\";i:1;s:49:\"[1007,\"yB8dcChCAp9-1qjnEA1hv5uiPIve7WUu\",2592000]\";}'
+    '_pk_id_1_dc78' => '1efc34b4eebcee5f.1471829518.4.1472524164.1472524164.'
+    'advanced-frontend' => 'it9a39jjlpaskpni88hugt1jg7'
+    '_frontend' => '0f14ead7ce83838f64bad6e4f6b41642ef53252389f83f5ac3b358b593037016a:2:{i:0;s:9:\"_frontend\";i:1;s:32:\"i-bDyrSZ0LcZn-KvkILO15o1D-RNAb3e\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 7
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '127.0.0.1:10086'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => '_frontendUser=74ded0b757b0dbfd3695b2fb31f13a5567df4c43d3ab1d5cc512f60c0323c8f3a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_frontendUser%22%3Bi%3A1%3Bs%3A49%3A%22%5B1007%2C%22yB8dcChCAp9-1qjnEA1hv5uiPIve7WUu%22%2C2592000%5D%22%3B%7D; _pk_id.1.dc78=1efc34b4eebcee5f.1471829518.4.1472524164.1472524164.; advanced-frontend=it9a39jjlpaskpni88hugt1jg7; _frontend=0f14ead7ce83838f64bad6e4f6b41642ef53252389f83f5ac3b358b593037016a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_frontend%22%3Bi%3A1%3Bs%3A32%3A%22i-bDyrSZ0LcZn-KvkILO15o1D-RNAb3e%22%3B%7D'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;D:\\wamp\\bin\\php\\php5.5.12;C:\\ProgramData\\ComposerSetup\\bin;D:\\git\\bin;D:\\wamp\\bin\\php\\php5.5.12;C:\\Program Files\\nodejs\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.9 (Win64) PHP/5.5.12 Server at 127.0.0.1 Port 10086</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win64) PHP/5.5.12'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '10086'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp/www'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'D:/wamp/www/yii2_niexy/frontend/web/index.php'
+    'REMOTE_PORT' => '53372'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Findex'
+    'REQUEST_URI' => '/yii2_niexy/frontend/web/index.php?r=home%2Findex'
+    'SCRIPT_NAME' => '/yii2_niexy/frontend/web/index.php'
+    'PHP_SELF' => '/yii2_niexy/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1472780681.655
+    'REQUEST_TIME' => 1472780681
+]
+2016-09-02 10:11:21 [127.0.0.1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined variable: content' in D:\wamp\www\yii2_niexy\frontend\views\car\allorder.php:26
+Stack trace:
+#0 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile()
+#1 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile()
+#2 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\Controller.php(378): yii\base\View->render()
+#3 D:\wamp\www\yii2_niexy\frontend\controllers\CarController.php(153): yii\base\Controller->render()
+#4 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\InlineAction.php(55): frontend\controllers\CarController->actionAllOrder()
+#5 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\InlineAction.php(55): ::call_user_func_array:{D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\InlineAction.php:55}()
+#6 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams()
+#7 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction()
+#8 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction()
+#9 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest()
+#10 D:\wamp\www\yii2_niexy\frontend\web\index.php(18): yii\base\Application->run()
+#11 {main}
+2016-09-02 10:11:20 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'car/all-order'
+]
+
+$_COOKIE = [
+    '_frontendUser' => '74ded0b757b0dbfd3695b2fb31f13a5567df4c43d3ab1d5cc512f60c0323c8f3a:2:{i:0;s:13:\"_frontendUser\";i:1;s:49:\"[1007,\"yB8dcChCAp9-1qjnEA1hv5uiPIve7WUu\",2592000]\";}'
+    '_pk_id_1_dc78' => '1efc34b4eebcee5f.1471829518.4.1472524164.1472524164.'
+    'advanced-frontend' => 'it9a39jjlpaskpni88hugt1jg7'
+    '_frontend' => '0f14ead7ce83838f64bad6e4f6b41642ef53252389f83f5ac3b358b593037016a:2:{i:0;s:9:\"_frontend\";i:1;s:32:\"i-bDyrSZ0LcZn-KvkILO15o1D-RNAb3e\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '127.0.0.1:10086'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => '_frontendUser=74ded0b757b0dbfd3695b2fb31f13a5567df4c43d3ab1d5cc512f60c0323c8f3a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_frontendUser%22%3Bi%3A1%3Bs%3A49%3A%22%5B1007%2C%22yB8dcChCAp9-1qjnEA1hv5uiPIve7WUu%22%2C2592000%5D%22%3B%7D; _pk_id.1.dc78=1efc34b4eebcee5f.1471829518.4.1472524164.1472524164.; advanced-frontend=it9a39jjlpaskpni88hugt1jg7; _frontend=0f14ead7ce83838f64bad6e4f6b41642ef53252389f83f5ac3b358b593037016a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_frontend%22%3Bi%3A1%3Bs%3A32%3A%22i-bDyrSZ0LcZn-KvkILO15o1D-RNAb3e%22%3B%7D'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;D:\\wamp\\bin\\php\\php5.5.12;C:\\ProgramData\\ComposerSetup\\bin;D:\\git\\bin;D:\\wamp\\bin\\php\\php5.5.12;C:\\Program Files\\nodejs\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.9 (Win64) PHP/5.5.12 Server at 127.0.0.1 Port 10086</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win64) PHP/5.5.12'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '10086'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp/www'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'D:/wamp/www/yii2_niexy/frontend/web/index.php'
+    'REMOTE_PORT' => '54368'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=car%2Fall-order'
+    'REQUEST_URI' => '/yii2_niexy/frontend/web/index.php?r=car%2Fall-order'
+    'SCRIPT_NAME' => '/yii2_niexy/frontend/web/index.php'
+    'PHP_SELF' => '/yii2_niexy/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1472782280.593
+    'REQUEST_TIME' => 1472782280
+]
+2016-09-02 10:12:43 [127.0.0.1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined index: pay_price' in D:\wamp\www\yii2_niexy\frontend\views\car\allorder.php:26
+Stack trace:
+#0 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile()
+#1 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile()
+#2 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\Controller.php(378): yii\base\View->render()
+#3 D:\wamp\www\yii2_niexy\frontend\controllers\CarController.php(153): yii\base\Controller->render()
+#4 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\InlineAction.php(55): frontend\controllers\CarController->actionAllOrder()
+#5 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\InlineAction.php(55): ::call_user_func_array:{D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\InlineAction.php:55}()
+#6 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams()
+#7 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction()
+#8 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction()
+#9 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest()
+#10 D:\wamp\www\yii2_niexy\frontend\web\index.php(18): yii\base\Application->run()
+#11 {main}
+2016-09-02 10:12:43 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'car/all-order'
+]
+
+$_COOKIE = [
+    '_frontendUser' => '74ded0b757b0dbfd3695b2fb31f13a5567df4c43d3ab1d5cc512f60c0323c8f3a:2:{i:0;s:13:\"_frontendUser\";i:1;s:49:\"[1007,\"yB8dcChCAp9-1qjnEA1hv5uiPIve7WUu\",2592000]\";}'
+    '_pk_id_1_dc78' => '1efc34b4eebcee5f.1471829518.4.1472524164.1472524164.'
+    'advanced-frontend' => 'it9a39jjlpaskpni88hugt1jg7'
+    '_frontend' => '0f14ead7ce83838f64bad6e4f6b41642ef53252389f83f5ac3b358b593037016a:2:{i:0;s:9:\"_frontend\";i:1;s:32:\"i-bDyrSZ0LcZn-KvkILO15o1D-RNAb3e\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '127.0.0.1:10086'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.84 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => '_frontendUser=74ded0b757b0dbfd3695b2fb31f13a5567df4c43d3ab1d5cc512f60c0323c8f3a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_frontendUser%22%3Bi%3A1%3Bs%3A49%3A%22%5B1007%2C%22yB8dcChCAp9-1qjnEA1hv5uiPIve7WUu%22%2C2592000%5D%22%3B%7D; _pk_id.1.dc78=1efc34b4eebcee5f.1471829518.4.1472524164.1472524164.; advanced-frontend=it9a39jjlpaskpni88hugt1jg7; _frontend=0f14ead7ce83838f64bad6e4f6b41642ef53252389f83f5ac3b358b593037016a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_frontend%22%3Bi%3A1%3Bs%3A32%3A%22i-bDyrSZ0LcZn-KvkILO15o1D-RNAb3e%22%3B%7D'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;D:\\wamp\\bin\\php\\php5.5.12;C:\\ProgramData\\ComposerSetup\\bin;D:\\git\\bin;D:\\wamp\\bin\\php\\php5.5.12;C:\\Program Files\\nodejs\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.9 (Win64) PHP/5.5.12 Server at 127.0.0.1 Port 10086</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win64) PHP/5.5.12'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '10086'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp/www'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'D:/wamp/www/yii2_niexy/frontend/web/index.php'
+    'REMOTE_PORT' => '54417'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=car%2Fall-order'
+    'REQUEST_URI' => '/yii2_niexy/frontend/web/index.php?r=car%2Fall-order'
+    'SCRIPT_NAME' => '/yii2_niexy/frontend/web/index.php'
+    'PHP_SELF' => '/yii2_niexy/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1472782363.095
+    'REQUEST_TIME' => 1472782363
+]
+2016-09-02 13:20:14 [127.0.0.1][-][-][error][yii\base\InvalidParamException] exception 'yii\base\InvalidParamException' with message 'Response content must not be an array.' in D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\web\Response.php:961
+Stack trace:
+#0 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\web\Response.php(312): yii\web\Response->prepare()
+#1 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\Application.php(381): yii\web\Response->send()
+#2 D:\wamp\www\yii2_niexy\frontend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+2016-09-02 13:20:14 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'car/order-pay-success'
+    'id' => '8'
+]
+
+$_COOKIE = [
+    '_pk_id_1_dc78' => '174dd4f9ea2f62ef.1459416451.76.1471584948.1471584948.'
+    '_backendUser' => '8f6c25ec5992583ec6da2643ea215d4eee37119aef8ac4afb8023f596671635ea:2:{i:0;s:12:\"_backendUser\";i:1;s:46:\"[4,\"KFXb_AaIJByQwi3wNB8AsgH4WMCkZDsA\",2592000]\";}'
+    '_frontendUser' => '74ded0b757b0dbfd3695b2fb31f13a5567df4c43d3ab1d5cc512f60c0323c8f3a:2:{i:0;s:13:\"_frontendUser\";i:1;s:49:\"[1007,\"yB8dcChCAp9-1qjnEA1hv5uiPIve7WUu\",2592000]\";}'
+    '_identity-backend' => '4a3dc9c4f7b235eee1c3991894d09f1c870d186b51db307394500cd8faba71e8a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[7,\"p31rKbUs3u7yh2gQoQ-r3AmJb6Lq8q5X\",2592000]\";}'
+    'advanced-frontend' => 'fd3g39kiv0l5778oifor1kcin5'
+    '_frontend' => '5be89750ec38fb9fd4b8c7634e8fc1e4de9ba2ed00136fdacbbbbe6582142af1a:2:{i:0;s:9:\"_frontend\";i:1;s:32:\"OPQQBWrHba9ljiSk8pBrr4PQ5r2Q9fCt\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '127.0.0.1:10086'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:48.0) Gecko/20100101 Firefox/48.0 FirePHP/0.7.4'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_DNT' => '1'
+    'HTTP_COOKIE' => '_pk_id.1.dc78=174dd4f9ea2f62ef.1459416451.76.1471584948.1471584948.; _backendUser=8f6c25ec5992583ec6da2643ea215d4eee37119aef8ac4afb8023f596671635ea%3A2%3A%7Bi%3A0%3Bs%3A12%3A%22_backendUser%22%3Bi%3A1%3Bs%3A46%3A%22%5B4%2C%22KFXb_AaIJByQwi3wNB8AsgH4WMCkZDsA%22%2C2592000%5D%22%3B%7D; _frontendUser=74ded0b757b0dbfd3695b2fb31f13a5567df4c43d3ab1d5cc512f60c0323c8f3a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_frontendUser%22%3Bi%3A1%3Bs%3A49%3A%22%5B1007%2C%22yB8dcChCAp9-1qjnEA1hv5uiPIve7WUu%22%2C2592000%5D%22%3B%7D; _identity-backend=4a3dc9c4f7b235eee1c3991894d09f1c870d186b51db307394500cd8faba71e8a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B7%2C%22p31rKbUs3u7yh2gQoQ-r3AmJb6Lq8q5X%22%2C2592000%5D%22%3B%7D; advanced-frontend=fd3g39kiv0l5778oifor1kcin5; _frontend=5be89750ec38fb9fd4b8c7634e8fc1e4de9ba2ed00136fdacbbbbe6582142af1a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_frontend%22%3Bi%3A1%3Bs%3A32%3A%22OPQQBWrHba9ljiSk8pBrr4PQ5r2Q9fCt%22%3B%7D'
+    'HTTP_X_INSIGHT' => 'activate'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;D:\\wamp\\bin\\php\\php5.5.12;C:\\ProgramData\\ComposerSetup\\bin;D:\\git\\bin;D:\\wamp\\bin\\php\\php5.5.12;C:\\Program Files\\nodejs\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.9 (Win64) PHP/5.5.12 Server at 127.0.0.1 Port 10086</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win64) PHP/5.5.12'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '10086'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp/www'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'D:/wamp/www/yii2_niexy/frontend/web/index.php'
+    'REMOTE_PORT' => '62654'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=car%2Forder-pay-success&id=8'
+    'REQUEST_URI' => '/yii2_niexy/frontend/web/index.php?r=car%2Forder-pay-success&id=8'
+    'SCRIPT_NAME' => '/yii2_niexy/frontend/web/index.php'
+    'PHP_SELF' => '/yii2_niexy/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1472793614.047
+    'REQUEST_TIME' => 1472793614
+]
+2016-09-02 13:45:14 [127.0.0.1][7][fd3g39kiv0l5778oifor1kcin5][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined variable: statu' in D:\wamp\www\yii2_niexy\frontend\views\user\info.php:15
+Stack trace:
+#0 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile()
+#1 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile()
+#2 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\Controller.php(378): yii\base\View->render()
+#3 D:\wamp\www\yii2_niexy\frontend\controllers\UserController.php(94): yii\base\Controller->render()
+#4 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\InlineAction.php(55): frontend\controllers\UserController->actionInfo()
+#5 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\InlineAction.php(55): ::call_user_func_array:{D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\InlineAction.php:55}()
+#6 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams()
+#7 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction()
+#8 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction()
+#9 D:\wamp\www\yii2_niexy\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest()
+#10 D:\wamp\www\yii2_niexy\frontend\web\index.php(18): yii\base\Application->run()
+#11 {main}
+2016-09-02 13:45:14 [127.0.0.1][7][fd3g39kiv0l5778oifor1kcin5][info][application] $_GET = [
+    'r' => 'user/info'
+]
+
+$_COOKIE = [
+    '_pk_id_1_dc78' => '174dd4f9ea2f62ef.1459416451.76.1471584948.1471584948.'
+    '_backendUser' => '8f6c25ec5992583ec6da2643ea215d4eee37119aef8ac4afb8023f596671635ea:2:{i:0;s:12:\"_backendUser\";i:1;s:46:\"[4,\"KFXb_AaIJByQwi3wNB8AsgH4WMCkZDsA\",2592000]\";}'
+    '_frontendUser' => '74ded0b757b0dbfd3695b2fb31f13a5567df4c43d3ab1d5cc512f60c0323c8f3a:2:{i:0;s:13:\"_frontendUser\";i:1;s:49:\"[1007,\"yB8dcChCAp9-1qjnEA1hv5uiPIve7WUu\",2592000]\";}'
+    '_identity-backend' => '4a3dc9c4f7b235eee1c3991894d09f1c870d186b51db307394500cd8faba71e8a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[7,\"p31rKbUs3u7yh2gQoQ-r3AmJb6Lq8q5X\",2592000]\";}'
+    'advanced-frontend' => 'fd3g39kiv0l5778oifor1kcin5'
+    '_frontend' => '5be89750ec38fb9fd4b8c7634e8fc1e4de9ba2ed00136fdacbbbbe6582142af1a:2:{i:0;s:9:\"_frontend\";i:1;s:32:\"OPQQBWrHba9ljiSk8pBrr4PQ5r2Q9fCt\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 7
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '127.0.0.1:10086'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:48.0) Gecko/20100101 Firefox/48.0 FirePHP/0.7.4'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_DNT' => '1'
+    'HTTP_REFERER' => 'http://127.0.0.1:10086/yii2_niexy/frontend/web/index.php?r=site%2Fhome'
+    'HTTP_COOKIE' => '_pk_id.1.dc78=174dd4f9ea2f62ef.1459416451.76.1471584948.1471584948.; _backendUser=8f6c25ec5992583ec6da2643ea215d4eee37119aef8ac4afb8023f596671635ea%3A2%3A%7Bi%3A0%3Bs%3A12%3A%22_backendUser%22%3Bi%3A1%3Bs%3A46%3A%22%5B4%2C%22KFXb_AaIJByQwi3wNB8AsgH4WMCkZDsA%22%2C2592000%5D%22%3B%7D; _frontendUser=74ded0b757b0dbfd3695b2fb31f13a5567df4c43d3ab1d5cc512f60c0323c8f3a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_frontendUser%22%3Bi%3A1%3Bs%3A49%3A%22%5B1007%2C%22yB8dcChCAp9-1qjnEA1hv5uiPIve7WUu%22%2C2592000%5D%22%3B%7D; _identity-backend=4a3dc9c4f7b235eee1c3991894d09f1c870d186b51db307394500cd8faba71e8a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B7%2C%22p31rKbUs3u7yh2gQoQ-r3AmJb6Lq8q5X%22%2C2592000%5D%22%3B%7D; advanced-frontend=fd3g39kiv0l5778oifor1kcin5; _frontend=5be89750ec38fb9fd4b8c7634e8fc1e4de9ba2ed00136fdacbbbbe6582142af1a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_frontend%22%3Bi%3A1%3Bs%3A32%3A%22OPQQBWrHba9ljiSk8pBrr4PQ5r2Q9fCt%22%3B%7D'
+    'HTTP_X_INSIGHT' => 'activate'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;D:\\wamp\\bin\\php\\php5.5.12;C:\\ProgramData\\ComposerSetup\\bin;D:\\git\\bin;D:\\wamp\\bin\\php\\php5.5.12;C:\\Program Files\\nodejs\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.9 (Win64) PHP/5.5.12 Server at 127.0.0.1 Port 10086</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win64) PHP/5.5.12'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '10086'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp/www'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'D:/wamp/www/yii2_niexy/frontend/web/index.php'
+    'REMOTE_PORT' => '63645'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=user%2Finfo'
+    'REQUEST_URI' => '/yii2_niexy/frontend/web/index.php?r=user%2Finfo'
+    'SCRIPT_NAME' => '/yii2_niexy/frontend/web/index.php'
+    'PHP_SELF' => '/yii2_niexy/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1472795114.196
+    'REQUEST_TIME' => 1472795114
+]

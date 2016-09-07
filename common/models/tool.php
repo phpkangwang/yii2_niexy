@@ -130,4 +130,14 @@ class tool extends Model
         return $reInfo;
     }
     
+    /**
+     *  跳转页面
+     */
+    public static function JumpUrl($url)
+    {
+        echo " <script   language = 'javascript'type = 'text/javascript' > ";
+        echo " window.location.href = '$url' ";
+        echo " </script > ";
+    }
+    
 }

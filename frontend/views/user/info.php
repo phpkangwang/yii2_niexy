@@ -12,35 +12,35 @@
     </div>
   </div>
   <div class="clear-up3"></div>
-  <div class="weixin-list">
+  <div class="weixin-list" onclick="document.location='<?= Yii::$app->urlManager->createUrl('car/all-order')."&statu=1"?>'">
       <div class="list"><img src="<?= Yii::getAlias('@cdnUrl')?>/images/icon/fukuan.png"/></div>
       <div class="list-name">
         <p class="name-h">待付款</p>
       </div>
       <div class="list-arrow"><div class="arrow-down"></div></div>
   </div>
-  <div class="weixin-list2">
+  <div class="weixin-list2" onclick="document.location='<?= Yii::$app->urlManager->createUrl('car/all-order')."&statu=3"?>'">
       <div class="list"><img src="<?= Yii::getAlias('@cdnUrl')?>/images/icon/fahuo.png"/></div>
       <div class="list-name">
         <p class="name-h">待发货</p>
       </div>
       <div class="list-arrow"><div class="arrow-down"></div></div>
   </div>
-  <div class="weixin-list">
+  <div class="weixin-list" onclick="document.location='<?= Yii::$app->urlManager->createUrl('car/all-order')."&statu=4"?>'">
       <div class="list"><img src="<?= Yii::getAlias('@cdnUrl')?>/images/icon/shouhuo.png"/></div>
       <div class="list-name">
         <p class="name-h">待收货</p>
       </div>
       <div class="list-arrow"><div class="arrow-down"></div></div>
   </div>
-  <div class="weixin-list2">
+  <div class="weixin-list2" onclick="document.location='<?= Yii::$app->urlManager->createUrl('car/all-order')."&statu=5"?>'">
       <div class="list"><img src="<?= Yii::getAlias('@cdnUrl')?>/images/icon/pingjia.png"/></div>
       <div class="list-name">
         <p class="name-h">待评价</p>
       </div>
       <div class="list-arrow"><div class="arrow-down"></div></div>
   </div>
-  <div class="weixin-list">
+  <div class="weixin-list" onclick="document.location='<?= Yii::$app->urlManager->createUrl('car/all-order')."&statu=6"?>'">
       <div class="list"><img src="<?= Yii::getAlias('@cdnUrl')?>/images/icon/tuikuan.png"/></div>
       <div class="list-name">
         <p class="name-h">退款中</p>

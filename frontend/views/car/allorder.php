@@ -22,12 +22,12 @@
                   <?php }?>
                 </div>
                 <div class="order-sumprice">
-                共<span>8</span>份
-                <strong>总价格:<span>20</span>元</strong>
+                                         共<span>8</span>份
+                <strong>总价格:<span id="money"><?= $val['pay_price']/100?></span>元</strong>
                 </div>
             </div>
             
-            <a class="fixed-a order-button">结算</a>
+            <a class="fixed-a order-button" href="<?= Yii::getAlias('@cdnUrl')."/wxpay/demo/js_api_call.php?openid=".Yii::$app->user->identity->login_type_id."&money=".$val['pay_price']."&orderId=".$val['id']?>">结算</a>
          </div>
          <?php }}?>
          

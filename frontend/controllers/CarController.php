@@ -131,14 +131,39 @@ class CarController extends Controller
         echo json_encode($rs);
         return;
     }
+    /**
+     *  订单支付成功
+     */
+    //更新付款状态
+    public function actionOrderPaySuccess()
+    {
+        
+        $wxOrderid = yii::$app->request->get('wxOrderid');
+        Order::updateOrderId($id, $wxOrderid);
+        $rs = Order::orderPaySuccess($id);
+        echo json_encode($rs);
+        return;
+    }
+    
+    /**
+     *  根据订单id跳转到订单支付页面
+     */
+    public function JumpPay()
+    {
+        $id = yii::$app->request->get('id');
+        $url = Yii::getAlias('@cdnUrl')."/wxpay/demo/js_api_call.php?openid=".Yii::$app->user->identity->login_type_id."&money=".$val['pay_price']."&orderId=".$val['id'];
+        tool::JumpUrl($url);
+    }
+    
     
     /**
      *   渲染所有订单页面
      */
     public function actionAllOrder()
     {
+        $statu = yii::$app->request->get('statu');
         //获取我所有的订单
-        $allOrder = Order::getAllOrder();
+        $allOrder = Order::getAllOrder($statu);
         for ($j=0;$j<count($allOrder);$j++)
         {
            $contents = json_decode($allOrder[$j]['content'],true);
@@ -150,7 +175,7 @@ class CarController extends Controller
            }
            $allOrder[$j]['content']= $contents;
         }
-        return $this->render('allOrder',array('allOrder'=>$allOrder));
+        return $this->render('allorder',array('allOrder'=>$allOrder));
     }
     
     /**
