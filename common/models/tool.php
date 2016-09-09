@@ -9,7 +9,7 @@ use linslin\yii2\curl\Curl;
 class tool extends Model
 {
     /**
-     *  curl获取网址结果
+     *  get curl获取网址结果
      */
     public static function getCurl($url)
     {
@@ -18,6 +18,21 @@ class tool extends Model
         curl_setopt($ch,CURLOPT_HEADER,0);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1 );
         curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 10);
+        $res = curl_exec($ch);
+        curl_close($ch);
+        return json_decode($res,true);
+    }
+    
+    /**
+     *  post curl获取网址结果
+     */
+    public static function postCurl($url,$post_data)
+    {
+        $ch = curl_init();
+        curl_setopt($ch,CURLOPT_URL,$url);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1 );
+        curl_setopt($ch, CURLOPT_POST, 1);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $post_data);
         $res = curl_exec($ch);
         curl_close($ch);
         return json_decode($res,true);
