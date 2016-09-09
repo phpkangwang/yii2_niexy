@@ -203,6 +203,13 @@ class Car extends ActiveRecord
     public static function clealCar()
     {
         $userId = yii::$app->user->id;
+        if($userId == "")
+        {
+            $reInfo['code'] = -1;
+            $reInfo['message'] = "请先登录";
+            $reInfo['data'] = "";
+            return $reInfo;
+        }
         $carObj = self::findOne(['user_id'=>$userId]);
         if($carObj->delete())
         {

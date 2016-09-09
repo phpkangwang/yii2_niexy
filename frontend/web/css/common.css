@@ -658,6 +658,7 @@ border: 0px none;
     background-color: white;
     white-space: nowrap;
 	box-shadow: 1px 1px 6px #ccc;
+	
 }
 .bottommenu a{
     height:100%;
@@ -691,6 +692,7 @@ border: 0px none;
     height: 60%;
     margin-left:30%;
     z-index: 1;
+	position:relative;
 }
 .bottommenu .top2{
     left: 25%;
@@ -700,6 +702,21 @@ border: 0px none;
 }
 .bottommenu .top4{
     left: 75%;
+}
+
+.bottommenu .redpoint{
+	width:20px;
+	height:20px;
+	background: red;
+	border: 1px solid red;
+	border-radius:10px;
+	position: relative;
+	z-index:99;
+	left:70px;
+	top:-30px;
+	font-size:10px;
+	color:#fff;
+	text-align: center;
 }
 
 

@@ -53,8 +53,8 @@ class Order extends ActiveRecord
         if($model->save())
         {
             $insertId = Yii::$app->db->getLastInsertID();
-            //删除购物车订单里有的物品
-            Car::subCarOneGoodsNum($ids);
+            //清空购物车
+            Car::clealCar();
             
             $reInfo['code'] = 1;
             $reInfo['message'] = "创建订单成功";
@@ -71,8 +71,56 @@ class Order extends ActiveRecord
     //获取我所有的订单，按时间顺序排列
     public static function getAllOrder($statu)
     {
-        return self::find()->where('statu=:statu',array(':statu'=>$statu))->orderBy('created_at desc')->asArray()->all();
+        $userId = yii::$app->user->id;
+        return self::find()->where('user_id = :userId and statu=:statu',array(':userId'=>$userId,':statu'=>$statu))->orderBy('created_at desc')->asArray()->all();
     }
+    
+    //获取管理员订单页面按时间顺序排列
+    public static function getAdminOrder($id)
+    {
+        //获取所有已支付订单
+        $time = strtotime(date("Y-m-d",time()));
+        return self::find()->where('created_at > :time and statu >=2 and id > :id',array(':time' => $time,':id'=>$id))->orderBy('created_at desc')->asArray()->all();
+    }
+    
+    //接订单
+    public static function AcceptOrder($id)
+    {
+        $obj = Order::findOne($id);
+        $obj->statu = yii::$app->params['PAY_STATU']['NOT_SEND'];
+        if($obj->save())
+        {
+            $reInfo['code'] = 1;
+            $reInfo['message'] = "接单成功";
+            $reInfo['data'] = "";
+            return $reInfo;
+        }else{
+            $reInfo['code'] = -1;
+            $reInfo['message'] = "接单失败";
+            $reInfo['data'] = print_r($carObj->getErrors());
+            return $reInfo;
+        } 
+    }
+    
+    //退订单
+    public static function BackOrder($id)
+    {
+        $obj = Order::findOne($id);
+        $obj->statu = yii::$app->params['PAY_STATU']['REFUNDING'];
+        if($obj->save())
+        {
+            $reInfo['code'] = 1;
+            $reInfo['message'] = "退单请求成功";
+            $reInfo['data'] = "";
+            return $reInfo;
+        }else{
+            $reInfo['code'] = -1;
+            $reInfo['message'] = "退单请求失败";
+            $reInfo['data'] = print_r($carObj->getErrors());
+            return $reInfo;
+        }
+    }
+    
     
     //订单支付成功，修改订单状态
     public static function orderPaySuccess($orderId)

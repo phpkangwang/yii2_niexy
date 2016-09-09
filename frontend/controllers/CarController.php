@@ -137,7 +137,7 @@ class CarController extends Controller
     //更新付款状态
     public function actionOrderPaySuccess()
     {
-        
+        $id = yii::$app->request->get('id');
         $wxOrderid = yii::$app->request->get('wxOrderid');
         Order::updateOrderId($id, $wxOrderid);
         $rs = Order::orderPaySuccess($id);
@@ -148,11 +148,23 @@ class CarController extends Controller
     /**
      *  根据订单id跳转到订单支付页面
      */
-    public function JumpPay()
+    public function actionJumpPay()
     {
         $id = yii::$app->request->get('id');
-        $url = Yii::getAlias('@cdnUrl')."/wxpay/demo/js_api_call.php?openid=".Yii::$app->user->identity->login_type_id."&money=".$val['pay_price']."&orderId=".$val['id'];
+        $obj = Order::findOne($id);
+        $url = Yii::getAlias('@cdnUrl')."/wxpay/demo/js_api_call.php?openid=".Yii::$app->user->identity->login_type_id."&money=".$obj->pay_price."&orderId=".$obj->id;
         tool::JumpUrl($url);
+    }
+    
+    /**
+     *  根据订单id跳转到订单退款
+     */
+    public function actionJumpRefund()
+    {
+        $id = yii::$app->request->post('id');
+        $obj = Order::findOne($id);
+        echo $url = Yii::getAlias('@cdnUrl')."/wxpay/demo/refund.php?out_trade_no=".$obj->order_id."&refund_fee=".$obj->pay_price;die;
+        $rs = tool::getCurl($url);
     }
     
     
@@ -176,6 +188,62 @@ class CarController extends Controller
            $allOrder[$j]['content']= $contents;
         }
         return $this->render('allorder',array('allOrder'=>$allOrder));
+    }
+    
+    /**
+     *   渲染管理员订单页面
+     */
+    public function actionAdminOrder()
+    {
+        return $this->render('adminorder');
+    }
+    
+    /**
+     *  管理员 管理所有订单页面
+     */
+    public function actionGetAdminOrder()
+    {
+        $id = yii::$app->request->post('id') == "" ? 0 : yii::$app->request->post('id');
+        $allOrder = Order::getAdminOrder($id);
+        for ($j=0;$j<count($allOrder);$j++)
+        {
+            $contents = json_decode($allOrder[$j]['content'],true);
+            for($i=0;$i<count($contents);$i++)
+            {
+                $goodsInfo = Goods::getGoodsInfo($contents[$i]['goodsId']);
+                $contents[$i]['name'] = $goodsInfo['name'];
+                $contents[$i]['price'] = $goodsInfo['price'];
+            }
+            $allOrder[$j]['content']= $contents;
+            $userObj = User::findOne($allOrder[$j]['user_id']);
+            $allOrder[$j]['userinfo']['username'] = $userObj->username;
+            $allOrder[$j]['userinfo']['phone']   = $userObj->phone;
+            $allOrder[$j]['userinfo']['address'] = $userObj->address;
+        }
+        echo json_encode($allOrder);
+        return;
+    }
+    
+    /**
+     *  接订单
+     */
+    public function actionAcceptOrder()
+    {
+        $id = yii::$app->request->post('id');
+        $rs = Order::AcceptOrder($id);
+        echo json_encode($rs);
+        return;
+    }
+    
+    /**
+     *  退订单
+     */
+    public function actionBackOrder()
+    {
+        $id = yii::$app->request->post('id');
+        $rs = Order::BackOrder($id);
+        echo json_encode($rs);
+        return;
     }
     
     /**

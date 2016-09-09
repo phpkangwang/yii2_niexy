@@ -17,6 +17,7 @@ use common\models\tool;
 use common\models\BaseGlobal;
 use common\models\Goods;
 use common\models\Sms;
+use common\models\Car;
 
 /**
  * Site controller
@@ -101,10 +102,43 @@ class SiteController extends Controller
         $userObj = User::findOne($userId);
         Yii::$app->user->login($userObj);
         
-        
         //获取所有的热门推荐商品
         $indexShow = Goods::getAllShowGoods();
         return $this->render('home', ['show' => $indexShow]);
+    }
+    
+    /**
+     *  获取底部bannel的数量
+     */
+    public function actionGetRedPoint()
+    {
+        //获取购物车数量
+        $userId = yii::$app->user->id;
+        if($userId == "")
+        {
+            $reInfo['code'] = -1;
+            $reInfo['message'] = "请先登录";
+            $reInfo['data'] = "";
+            echo json_encode($reInfo);
+            return;
+        }
+        $arr = array();
+        $content = Car::getMyCarGoods();
+        
+        $arr['mycar'] = 0;
+        if($content != "")
+        {
+            foreach ($content as $val)
+            {
+                $arr['mycar'] += $val['num'];
+            } 
+        }
+        
+        $reInfo['code'] = 1;
+        $reInfo['message'] = "";
+        $reInfo['data'] = $arr;
+        echo json_encode($reInfo);
+        return;
     }
     
     //微信回调页面

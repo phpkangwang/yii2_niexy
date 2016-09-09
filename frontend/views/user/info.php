@@ -82,3 +82,12 @@
     </div>
     <div class="list-arrow"><div class="arrow-down"></div></div>
 </div>
+<?php if(yii::$app->user->identity->role == 1){?>
+    <div class="weixin-list2" onclick="document.location='<?= Yii::$app->urlManager->createUrl('car/admin-order')?>'">
+        <div class="list"><img src="<?= Yii::getAlias('@cdnUrl')?>/images/icon/dingdan.png"/></div>
+        <div class="list-name">
+          <p class="name-h">外卖订单</p>
+        </div>
+        <div class="list-arrow"><div class="arrow-down"></div></div>
+    </div>
+<?php }?>

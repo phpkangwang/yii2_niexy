@@ -27,7 +27,7 @@
                 </div>
             </div>
             
-            <a class="fixed-a order-button" href="<?= Yii::getAlias('@cdnUrl')."/wxpay/demo/js_api_call.php?openid=".Yii::$app->user->identity->login_type_id."&money=".$val['pay_price']."&orderId=".$val['id']?>">结算</a>
+            <a class="fixed-a order-button" href="<?= Yii::$app->urlManager->createUrl('car/jump-pay').'&id='.$val['id']?>">结算</a>
          </div>
          <?php }}?>
          

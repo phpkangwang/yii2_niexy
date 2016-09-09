@@ -35,13 +35,38 @@ AppAsset::register($this);
 
 <div class="bottommenu">
     <a href="<?= Yii::$app->urlManager->createUrl('site/index')?>" class="top1"><img src="images/top1.png" /><em>首页</em></a>
-    <a href="<?= Yii::$app->urlManager->createUrl('goods/index')?>" class="top2"><img src="images/top4.png" /><em>我要吃饭</em></a>
-    <a href="<?= Yii::$app->urlManager->createUrl('car/index')?>" class="top3"><img src="images/top3.png" /><em>购物车</em></a>
-    <a href="<?= Yii::$app->urlManager->createUrl('user/info')?>" class="top4"><img src="images/top2.png" /><em>会员中心</em></a>
+    <a href="<?= Yii::$app->urlManager->createUrl('goods/index')?>" class="top2"><img src="images/top4.png" /><em>我要点餐</em></a>
+    <a href="<?= Yii::$app->urlManager->createUrl('car/index')?>" class="top3"><img src="images/top3.png" /><div class="redpoint" id="redpoint_car">0</div><em>购物车</em></a>
+    <a href="<?= Yii::$app->urlManager->createUrl('user/info')?>" class="top4"><img src="images/top2.png" /><em>个人中心</em></a>
 </div>
 <?= Alert::widget() ?>
 <?= $content ?>
 <?php $this->endBody() ?>
 </body>
+<script type="text/javascript">
+    var data = {};
+    data._frontend = '<?php echo Yii::$app->request->getCsrfToken() ?>';
+    $.ajax({
+      type: 'post',
+      dataType: 'json',
+      url: '<?= Yii::$app->urlManager->createUrl('site/get-red-point') ?>',
+      data: data,
+      async:false,
+      success: function(res) {
+          if(res.code == 1)
+          {
+        	  $("#redpoint_car").text(res.data.mycar);
+              if(res.data.mycar > 0)
+              {
+                  $("#redpoint_car").show();
+              }else{
+            	  $("#redpoint_car").hide();
+              }
+          }else{
+        	  $("#redpoint_car").hide(); 
+          }
+      }
+    });
+</script>
 </html>
 <?php $this->endPage() ?>

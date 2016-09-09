@@ -14,12 +14,14 @@ $this->title = yii::$app->params['WEB_TITLE'];
    <div class="swiper-container bannerswiper">
 <div class="swiper-wrapper">
        <div class="swiper-slide bawarp"> <img  src="uploadfile/1.jpg" alt='1' /></div> 
-            
+         
+         <!--    
         <div class="swiper-slide bawarp"> <img  src="uploadfile/2.jpg" alt='2' /></div> 
             
         <div class="swiper-slide bawarp"> <img  src="uploadfile/3.jpg" alt='3' /></div> 
             
         <div class="swiper-slide bawarp"> <img  src="uploadfile/4.jpg" alt='4' /></div> 
+         -->
 </div>
 	  <div class="pagination"></div>
     </div>
@@ -54,7 +56,7 @@ $this->title = yii::$app->params['WEB_TITLE'];
  
  
  
-<!-- 栏目 -->
+<!-- 栏目
 <div class="bgstyle indexsub">
 	 <ul>
      
@@ -110,9 +112,7 @@ $this->title = yii::$app->params['WEB_TITLE'];
 		</li>
 	 </ul>
 </div>
-<!-- 栏目 END -->
-
-
+ 栏目 END -->
 
 <!-- 热门商品 -->
 <div class="indexhot">
@@ -146,6 +146,34 @@ $this->title = yii::$app->params['WEB_TITLE'];
 	 </div>
 </div>
 <!-- 热门商品 END -->
+
+<div class="indexhot">
+	 <div class="titlestyle">
+		<strong>每日推荐</strong><span class="fr" style="color:#666;font-weight:normal;"></span>
+	 </div>
+ 
+	 <div class="indexgoodslist clearfix">
+	    <div class="hotswiper">
+			 <ul class="swiper-wrapper"> 
+              <?php if(!empty($show)){
+                  foreach ($show as $val){
+              ?>
+              <li class="swiper-slide bgstyle">
+					<a href="<?= yii::$app->urlManager->createUrl('goods/info')."&id=".$val['id']?>"> 
+					<span class="pic"><img src="<?= Yii::getAlias('@cdnUrl').$val['s_image']?>" alt="点击查看详情"  height="80px" width="100px"/></span>
+					<span class="name"><?= $val['name']?> </span>
+                    <span class="name"><em>单价：</em><font color="#00CC33"><?= $val['price']?></font>元</span>
+					</a>
+				</li>  
+              <?php 
+                  break;}//end foreach
+                  }//end if?>    
+ 
+			 </ul>
+			
+       </div>	
+	 </div>
+</div>
 
 
 </div>

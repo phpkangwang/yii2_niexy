@@ -114,7 +114,7 @@ $(document).ready(function(){
 		         '<dd>'+
 				       '<strong><a href=""> '+res.data[i]['name']+' </a></strong>'+
 					   '<div class="listgoodsinfo">'+
-							'<span class="pr"> ￥'+res.data[i]['price']+'<font> '+res.data[i]['description']+'</font> </span>'+
+							'<span class="pr"> ￥'+res.data[i]['price']+'<p class="list-des"> '+res.data[i]['description']+'</font> </p>'+
 		               '</div>'+
 					   '<div class="clearfix">'+
 						   '<span class="lgadd fr">'+
@@ -155,6 +155,9 @@ $(document).ready(function(){
         {
         	var num = parseInt($(this).siblings('#numb').val())+1;
         	$(this).siblings("#numb").val(num);
+        	var redpoint_car = parseInt($("#redpoint_car").text());
+          	$("#redpoint_car").text(redpoint_car+1);
+          	$("#redpoint_car").show();
         }
     });
 
@@ -183,6 +186,12 @@ $(document).ready(function(){
             if(r)
             {
           	  $(this).siblings("#numb").val(num-1);
+              var redpoint_car = parseInt($("#redpoint_car").text());
+              $("#redpoint_car").text(redpoint_car-1);
+              if(redpoint_car-1 == 0)
+              {
+            	  $("#redpoint_car").hide(); 
+              }
             }
     	}
     });

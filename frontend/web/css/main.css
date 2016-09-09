@@ -167,7 +167,7 @@ a:hover{
 
 
 .weixin-frame{
-  margin-top: 5.99%;
+  margin-top: 1.99%;
   width: 100%;
   background: #fff;
   border: 1px solid #e1e1e1;
@@ -275,9 +275,12 @@ a:hover{
   margin-top: 99.9%;
 }
 
-
+.list-des{
+	color: black;
+	font-size: 13px;
+}
 .sale-frame{
-  margin-top: 5.99%;
+  margin-top: 1.99%;
   width: 100%;
   background: #fff;
   border: 1px solid #e1e1e1;
