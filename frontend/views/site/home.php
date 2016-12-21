@@ -190,12 +190,7 @@ $this->title = yii::$app->params['WEB_TITLE'];
 	paginationClickable: true,
     slidesPerView: 'auto'
   });
-  </script>
-
-
-
-
-<script type="text/javascript"> 
+  
 var EX = {
   addEvent:function(k,v){
     var me = this;
